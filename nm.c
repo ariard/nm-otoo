@@ -21,7 +21,6 @@ struct	s_subtype
 };
 
 typedef struct s_subtype	t_subtype;
-
 static	t_type		g_machosym[] =
 {
 	{0xe0, "stab"},

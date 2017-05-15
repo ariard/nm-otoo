@@ -6,11 +6,11 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2017/05/03 00:36:26 by ariard           ###   ########.fr        #
+#    Updated: 2017/05/15 18:07:47 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	nm
+NAME		=	ft_nm
 
 CC			=	gcc
 FLAGS		=	-Wall -Wextra -Werror
@@ -29,6 +29,10 @@ INC_DIR		=	includes/
 OBJ_DIR		=	objs/
 
 SRC_BASE	=	\
+handle_32.c\
+handle_64.c\
+handle_fat.c\
+main.c
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))
