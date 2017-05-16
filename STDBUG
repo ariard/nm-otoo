@@ -1,0 +1,18 @@
+[7m[33m79922[33m               main.c [1m[34m43 [0mstart[0m
+[7m[33m79922[33m               main.c [1m[34m18 [0mgoing init hashtab[0m
+[7m[33m79922[33m               main.c [1m[34m50 [0mdata init[0m
+[7m[33m79922[33m          handle_64.c [1m[34m26 [0mbegin parsing[0m
+[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __text, segname : __TEXT[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __stubs, segname : __TEXT[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __stub_helper, segname : __TEXT[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __cstring, segname : __TEXT[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __unwind_info, segname : __TEXT[0m
+[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __nl_symbol_ptr, segname : __DATA[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __got, segname : __DATA[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __la_symbol_ptr, segname : __DATA[0m
+[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __data, segname : __DATA[0m
+[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[33m79922[33m          handle_64.c [1m[34m32 [0mafter parse sym[0m

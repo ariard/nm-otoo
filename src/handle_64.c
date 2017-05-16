@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:28:41 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/16 00:39:35 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/16 21:35:20 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,33 @@
 
 void		handle_64(char *ptr, t_data *data)
 { 
-	int			ncmds;
-	int			i;
-	int			nsects;
-	struct mach_header_64	*header;
-	struct load_command	*lc;
-	struct section_64	*sect;
+	int							ncmds;
+	int							i;
+	int							nsects;
+	struct load_command			*lc;
 
-	header = (struct mach_header_64 *)ptr;
-	ncmds = header->ncmds;
-	lc = (void *)ptr + sizeof(*header);
+	ncmds = ((struct mach_header_64 *)ptr)->ncmds;
+	lc = (void *)ptr + sizeof(struct mach_header_64);
 	i = 0;
-//	hashtab_init(data->tabsections, 100, &ft_hash_string);
+	nsects = 0;
+	DG("begin parsing");
 	while (i < ncmds)
 	{
 		if (lc->cmd == LC_SYMTAB)
+		{
 			parse_symtab((struct symtab_command *)lc, ptr, data);
+			DG("after parse sym");
+
+		}
 		if (lc->cmd == LC_SEGMENT_64)
 		{
-			ft_printf("cmdsize %lld\n", ((struct segment_command_64 *)lc)->cmdsize);
-			ft_printf("segname %s\n", ((struct segment_command_64 *)lc)->segname);
-			nsects = ((struct segment_command_64 *)lc)->nsects;
-			sect = (void *)lc + sizeof(struct segment_command_64);
-			while (nsects--)
-			{	
-				ft_printf("----------\n");
-				ft_printf("sectname %s\n", sect->sectname);
-				ft_printf("segname %s\n", sect->segname);
-				sect = (void *)sect + sizeof(struct section_64);
-			}
-			ft_printf("\n");
+			parse_sections((struct segment_command_64 *)lc, &data->tabsections, &nsects);
+			DG("after parse sect");
 		}
 		lc = (void *)lc + lc->cmdsize;
 		i++;
 	}
-//	symtab_resolve
+//	hashtab_print(&data->tabsections, sections_print);	
 //	symtab_clean
-//	symtab_out
-	ft_printf("number cmds = %d\n", ncmds);
+	ft_lstiter(data->lstsym, &print_sym, NULL);
 }

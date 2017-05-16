@@ -1,4 +1,4 @@
-objs/handle_64.o: src/handle_64.c includes/nm.h \
+objs/print_sym.o: src/print_sym.c includes/nm.h \
   includes/../libft/includes/libft.h libft/includes/ft_types.h \
   libft/includes/error.h libft/includes/libft.h libft/includes/color.h \
   libft/includes/cliopts.h libft/includes/lst.h libft/includes/dlst.h \
