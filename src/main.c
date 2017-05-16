@@ -38,7 +38,7 @@ int			main(int ac, char **av)
 		ft_dprintf(2, "Argumnent needed");
 		return (1);
 	}
-	i = 0;
+	i = 1;
 	while (i < ac && av[i])
 	{
 		if ((fd = open(av[i], O_RDONLY)) < 0)
@@ -47,9 +47,10 @@ int			main(int ac, char **av)
 			return (1);
 		if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 			return (1);
-		parse_archi(ptr, t_data *data);
+		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)
 			return (1);
+		i++;
 	}
 	return (0);
 }

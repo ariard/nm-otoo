@@ -32,7 +32,9 @@ SRC_BASE	=	\
 handle_32.c\
 handle_64.c\
 handle_fat.c\
-main.c
+main.c\
+parse_sections.c\
+parse_symtab.c
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))

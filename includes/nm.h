@@ -24,8 +24,7 @@
 
 struct s_data
 {	
-	t_hashtab		*tabsections;
-}	
+};	
 
 typedef struct s_data		t_data;
 
@@ -33,6 +32,7 @@ void		handle_64(char *ptr, t_data *data);
 void		handle_32(char *ptr);
 void		handle_fat(char *ptr);
 void		parse_sections(char *ptr, t_data *data);
+void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
 
 
 

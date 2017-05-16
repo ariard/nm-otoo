@@ -14,13 +14,6 @@
 
 void		parse_sections(char *ptr, t_data *data)
 {
-	int						ncmds;
-	int						i;
-	struct mach_header_64	*header;
-	struct load_command		*lc;
-	struct symtab_command	*sym;	
-
-	header = (struct mach_header_64 *)ptr;
-	ncmds = header->ncmds;
-	lc = (void *)ptr + sizeof(*header);
-
+	(void)ptr;
+	(void)data;
+}
