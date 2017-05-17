@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int	global_var;
 int	global_var_init = 26;
 
@@ -36,6 +38,7 @@ int	main(void)
 {
 	global_var = 1;
 	static_var = 2;
+	printf("hello");
 
 	return 0;
 }

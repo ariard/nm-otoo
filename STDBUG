@@ -1,18 +1,57 @@
-[7m[33m79922[33m               main.c [1m[34m43 [0mstart[0m
-[7m[33m79922[33m               main.c [1m[34m18 [0mgoing init hashtab[0m
-[7m[33m79922[33m               main.c [1m[34m50 [0mdata init[0m
-[7m[33m79922[33m          handle_64.c [1m[34m26 [0mbegin parsing[0m
-[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __text, segname : __TEXT[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __stubs, segname : __TEXT[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __stub_helper, segname : __TEXT[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __cstring, segname : __TEXT[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __unwind_info, segname : __TEXT[0m
-[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __nl_symbol_ptr, segname : __DATA[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __got, segname : __DATA[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __la_symbol_ptr, segname : __DATA[0m
-[7m[33m79922[33m     parse_sections.c [1m[34m61 [0msectname : __data, segname : __DATA[0m
-[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
-[7m[33m79922[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
-[7m[33m79922[33m          handle_64.c [1m[34m32 [0mafter parse sym[0m
+[7m[32m59233[33m               main.c [1m[34m43 [0mstart[0m
+[7m[32m59233[33m               main.c [1m[34m18 [0mgoing init hashtab[0m
+[7m[32m59233[33m               main.c [1m[34m50 [0mdata init[0m
+[7m[32m59233[33m          handle_64.c [1m[34m26 [0mbegin parsing[0m
+[7m[32m59233[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __text, segname : __TEXT[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __stubs, segname : __TEXT[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __stub_helper, segname : __TEXT[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __cstring, segname : __TEXT[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __unwind_info, segname : __TEXT[0m
+[7m[32m59233[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __nl_symbol_ptr, segname : __DATA[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __la_symbol_ptr, segname : __DATA[0m
+[7m[32m59233[33m     parse_sections.c [1m[34m61 [0msectname : __common, segname : __DATA[0m
+[7m[32m59233[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[32m59233[33m          handle_64.c [1m[34m38 [0mafter parse sect[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m91 [0moffset 8304[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m67 [0m [0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m68 [0m__mh_execute_header[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m69 [0mindex 2[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m70 [0mtype f or 15 or 1111[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m71 [0msect 1[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m72 [0mdesc 10[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m73 [0mvalue 0[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m91 [0moffset 8304[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m67 [0m [0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m68 [0m_global[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m69 [0mindex 16[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m70 [0mtype f or 15 or 1111[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m71 [0msect 8[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m72 [0mdesc 0[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m73 [0mvalue 1018[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m91 [0moffset 8304[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m67 [0m [0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m68 [0m_main[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m69 [0mindex 1e[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m70 [0mtype f or 15 or 1111[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m71 [0msect 1[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m72 [0mdesc 0[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m73 [0mvalue f60[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m91 [0moffset 8304[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m67 [0m [0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m68 [0m_printf[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m69 [0mindex 24[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m70 [0mtype 1 or 1 or 1[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m71 [0msect 0[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m72 [0mdesc 100[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m73 [0mvalue 0[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m91 [0moffset 8304[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m67 [0m [0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m68 [0mdyld_stub_binder[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m69 [0mindex 2c[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m70 [0mtype 1 or 1 or 1[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m71 [0msect 0[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m72 [0mdesc 100[0m
+[7m[32m59233[33m       parse_symtab.c [1m[34m73 [0mvalue 0[0m
+[7m[32m59233[33m          handle_64.c [1m[34m32 [0mafter parse sym[0m
