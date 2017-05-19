@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:28:41 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/16 21:35:20 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/19 17:52:25 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void		handle_64(char *ptr, t_data *data)
 		i++;
 	}
 //	hashtab_print(&data->tabsections, sections_print);	
-//	symtab_clean
+//	symtab_del(data->lstsym);
+	symtab_sort(data->lstsym);
 	ft_lstiter(data->lstsym, &print_sym, NULL);
 }

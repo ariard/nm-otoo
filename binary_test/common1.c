@@ -2,6 +2,8 @@
 
 int	global;
 
+static int local = 0;
+
 int	main(void)
 {
 	int	same;

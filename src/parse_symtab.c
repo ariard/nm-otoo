@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 16:21:29 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/17 20:49:35 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/19 17:55:22 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,29 +46,30 @@ static int		sym_resolve(int num, t_hashtab *tabsections)
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 				t_hashtab *sections)
 {
+	sym->name = stringtable + el.n_un.n_strx;
 	if (el.n_type & N_STAB)
 		sym->type = '-';
 	else
 	{
 		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;
+		sym->type = ((N_EXT & el.n_type) && (el.n_value) && (!el.n_sect)) ?  'C' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_ABS) ? 'A' : sym->type;
 		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
 			sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
 	}
+	if ((el.n_type & N_PEXT) || !(el.n_type & N_EXT))
+		sym->type += 32;
 	sym->value = el.n_value;
-	sym->name = stringtable + el.n_un.n_strx;
-	DG(" ");
+/*	DG(" ");
 	DG("%s", sym->name);
 	DG("index %.4x", el.n_un.n_strx);
 	DG("type %x or %d or %b", el.n_type, el.n_type, el.n_type);
 	DG("sect %x", el.n_sect);
 	DG("desc %.2x", el.n_desc);
-	DG("value %.4x", sym->value);
+	DG("value %.4x", sym->value); */
 }
-
-// don t forget common and no sections symbol
 
 void			parse_symtab(struct symtab_command *tabsym, char *ptr, t_data *data)
 {
