@@ -31,9 +31,13 @@ static int		sym_resolve(int num, t_hashtab *tabsections)
 	type = 0;
 	if ((elem = (hashtab_lookup(tabsections, key, &sections_match))))
 	{
-		type = (ft_strcmp("__DATA", ((t_section *)elem->content)->segname) == 0) ? 'D' : type;
-		type = (ft_strcmp("__bss", ((t_section *)elem->content)->sectname) == 0) ? 'B' : type;
-		type = (ft_strcmp("__TEXT", ((t_section *)elem->content)->segname) == 0) ? 'T' : type;
+		type = (ft_strcmp("__data", ((t_section *)elem->content)->sectname) == 0) ?
+			'D' : type;
+		type = (ft_strcmp("__bss", ((t_section *)elem->content)->sectname) == 0) ?
+			'B' : type;
+		type = (ft_strcmp("__text", ((t_section *)elem->content)->sectname) == 0) ? 
+			'T' : type;
+		type = (type == 0) ? 'S' : type;
 	}
 	ft_strdel(&key);
 	return (type);
@@ -42,25 +46,16 @@ static int		sym_resolve(int num, t_hashtab *tabsections)
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 				t_hashtab *sections)
 {
-	unsigned char	mask;
-
 	if (el.n_type & N_STAB)
 		sym->type = '-';
 	else
 	{
-		if 	(el.n_type & N_PEXT)
-			sym->scope = 0;
-		else if (el.n_type & N_EXT)
-			sym->scope = 1;
-		if (el.n_type & N_TYPE)
-		{
-			mask = el.n_type >> 1;
-			sym->type = (mask & N_UNDF) ? 'U' : sym->type;
-			sym->type = (mask & N_ABS) ? 'A' : sym->type;
-			sym->type = (mask & N_SECT) ?  sym_resolve(el.n_sect, sections) : sym->type;
-			sym->type = (mask & N_PBUD) ? 'U' : sym->type;
-			sym->type = (mask & N_INDR) ? 'I' : sym->type;
-		}
+		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;
+		sym->type = ((N_TYPE & el.n_type) == N_ABS) ? 'A' : sym->type;
+		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
+			sym_resolve(el.n_sect, sections) : sym->type;
+		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
+		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
 	}
 	sym->value = el.n_value;
 	sym->name = stringtable + el.n_un.n_strx;
@@ -88,7 +83,6 @@ void			parse_symtab(struct symtab_command *tabsym, char *ptr, t_data *data)
 	while (++i < nsyms)
 	{
 		sym_init(&sym);
-		DG("offset %d", tabsym->symoff);
 		sym_info(&sym, stringtable, (((struct nlist_64 *)((void *)ptr + tabsym->symoff))[i]),
 			&data->tabsections);
 		ft_lsteadd(&data->lstsym, ft_lstnew(&sym, sizeof(t_sym)));

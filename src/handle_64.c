@@ -22,7 +22,7 @@ void		handle_64(char *ptr, t_data *data)
 	ncmds = ((struct mach_header_64 *)ptr)->ncmds;
 	lc = (void *)ptr + sizeof(struct mach_header_64);
 	i = 0;
-	nsects = 0;
+	nsects = 1;
 	DG("begin parsing");
 	while (i < ncmds)
 	{

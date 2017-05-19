@@ -32,7 +32,8 @@ SRC_BASE	=	\
 handle_32.c\
 handle_64.c\
 handle_fat.c\
-main.c\
+nm.c\
+otool.c\
 parse_sections.c\
 parse_symtab.c\
 print_sym.c

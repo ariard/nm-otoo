@@ -58,7 +58,7 @@ void			parse_sections(struct segment_command_64 *segm,
 	sect = (void *)segm + sizeof(struct segment_command_64);
 	while (segsects--)
 	{
-		DG("sectname : %s, segname : %s", sect->sectname, sect->segname);
+		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
 		sections_init(&section);
 		key = ft_itoa(*nsects);
 		*nsects += 1;
