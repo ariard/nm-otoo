@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2017/05/19 15:33:07 by ariard           ###   ########.fr        #
+#    Updated: 2017/05/20 20:07:00 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,6 @@ nm.c\
 parse_sections.c\
 parse_symtab.c\
 print_sym.c\
-ft_lst_insert_sort.c\
 symtab_sort.c
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))

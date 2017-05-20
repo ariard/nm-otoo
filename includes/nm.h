@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/16 21:02:39 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/20 20:07:07 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,10 @@ void		handle_fat(char *ptr);
 void		parse_sections(struct segment_command_64 *segm,
 			t_hashtab *tabsections, int *nsects);
 void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
-void		symtab_sort(t_list *lstsym);	
-int		print_sym(void *content);
-void		ft_lst_insert_sort(t_list **lstsym,  int (*f)());
+void		symtab_sort(t_list **lstsym);	
+int			print_sym(void *content);
 
-int		sections_match(const void *data_ref, const void *key);
-int		sections_print(const void *data_ref);
+int			sections_match(const void *data_ref, const void *key);
+int			sections_print(const void *data_ref);
 
 #endif

@@ -22,6 +22,11 @@ int	global_function(int p)
 		+ local_static_var;
 }
 
+void A()
+{
+	;
+}
+
 int	global_function2()
 {
 	int	x;
