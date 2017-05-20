@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/16 18:46:57 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/20 22:19:37 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void		data_init(t_data *data)
 {
 	data->lstsym = NULL;
-	DG("going init hashtab");
+	data->filetype = 0;
 	hashtab_init(&data->tabsections, 100, &ft_hash_string);
 }
 
@@ -32,7 +32,7 @@ static void		parse_archi(char *ptr, t_data *data)
 		handle_fat(ptr);
 }
 
-int				main(int ac, char **av)
+int				main(int argc, char **argv)
 {
 	int			fd;
 	t_data		data;
@@ -40,18 +40,16 @@ int				main(int ac, char **av)
 	char		*ptr;
 	struct stat buf;
 
-	DG("start");
-	if (ac < 2)
+	if (argc < 2)
 	{
 		ft_dprintf(2, "Argumnent needed");
 		return (1);
 	}
 	data_init(&data);
-	DG("data init");
 	i = 1;
-	while (i < ac && av[i])
+	while (i < argc && argv[i])
 	{
-		if ((fd = open(av[i], O_RDONLY)) < 0)
+		if ((fd = open(argv[i], O_RDONLY)) < 0)
 			return (1);
 		if (fstat(fd, &buf) < 0)
 			return (1);

@@ -1,4 +1,18 @@
-void	hexdump(char *ptr, int offset)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   otool.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
+/*   Updated: 2017/05/20 22:30:26 by ariard           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "nm.h"
+
+void	ft_hexdump(char *ptr, int offset)
 {
 	int	j;
 	
@@ -13,7 +27,7 @@ void	hexdump(char *ptr, int offset)
 	}
 }
 
-int	 main(int argc, char **argv)
+int	 main(int ac, char **av)
 {
 	int		fd;
 	int		i;
@@ -28,8 +42,7 @@ int	 main(int argc, char **argv)
 		if (fstat(fd, &buf) < 0)
 			return (1);
 		if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
-			return (1);
-		hexdump(ptr);
+			return (1);	
 		if (munmap(ptr, buf.st_size) < 0)
 			return (1);
 		i++;

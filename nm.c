@@ -8,23 +8,18 @@
 
 void		print_output(int nsyms, int symoff, int stroff, char *ptr)
 {
-	int			i;
-	int			j;
-	int			k;
-	char			*symbole;
-	char			*stringtable;
+	int					i;
+	char				*symbole;
+	char				*stringtable;
 	struct	nlist_64 	*array;
 
 	array = (void *)ptr + symoff;
 	stringtable = (void *)ptr + stroff;
 	printf("symoff %d\n", symoff);
 	printf("stroff %d\n", stroff);
+	printf("nsyms : %d\n", nsyms);
 	for (i = 0; i < nsyms; ++i)
-	{	
-		printf("%s  %s\n", symbole, stringtable + array[i].n_un.n_strx);
-		printf("%llx\n", array[i].n_value);
-		printf("%x\n", array[i].n_type);
-	}
+		printf("sym %d %s\n", i, stringtable + array[i].n_un.n_strx);
 }
 
 void		handle_64(char *ptr)
@@ -37,13 +32,12 @@ void		handle_64(char *ptr)
 
 	header = (struct mach_header_64 *) ptr;
 	ncmds = header->ncmds;
-	lc = (void *)ptr + sizeof(*header);
+	lc = (void *)ptr + sizeof(struct mach_header_64);
 	for (i = 0; i < ncmds; ++i)
 	{
 		if (lc->cmd == LC_SYMTAB)
 		{
 			sym = (struct symtab_command *)lc;
-			printf("%d symbols have been found\n", sym->nsyms);
 			print_output(sym->nsyms, sym->symoff, sym->stroff, ptr);
 			break;
 		}

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/20 20:07:07 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/20 21:37:15 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 struct s_data
 {	
 	t_list		*lstsym;
+	int			filetype;
 	t_hashtab	tabsections;
 };	
 
@@ -57,7 +58,7 @@ void		parse_sections(struct segment_command_64 *segm,
 			t_hashtab *tabsections, int *nsects);
 void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
 void		symtab_sort(t_list **lstsym);	
-int			print_sym(void *content);
+int			print_sym(void *content, t_data *data);
 
 int			sections_match(const void *data_ref, const void *key);
 int			sections_print(const void *data_ref);
