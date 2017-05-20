@@ -56,9 +56,11 @@ void		handle_fat(char *ptr);
 void		parse_sections(struct segment_command_64 *segm,
 			t_hashtab *tabsections, int *nsects);
 void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
-int			print_sym(void *content);
+void		symtab_sort(t_list *lstsym);	
+int		print_sym(void *content);
+void		ft_lst_insert_sort(t_list **lstsym,  int (*f)());
 
-int			sections_match(const void *data_ref, const void *key);
-int			sections_print(const void *data_ref);
+int		sections_match(const void *data_ref, const void *key);
+int		sections_print(const void *data_ref);
 
 #endif

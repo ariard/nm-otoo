@@ -6,40 +6,6 @@
 #include <sys/stat.h>
 #include <stdlib.h>
 
-struct 	s_type
-{
-	int	match;
-	char	*symbole;
-};
-
-typedef struct s_type		t_type; 
-
-struct	s_subtype
-{
-	int	subtype;
-	char	*symbole;
-};
-
-typedef struct s_subtype	t_subtype;
-static	t_type		g_machosym[] =
-{
-	{0xe0, "stab"},
-	{0x10, "limited global scope"},
-	{0xe, "y"},
-	{0x01, "external symbol"},
-	{0, "null"}
-};
-
-static 	t_subtype	g_machsubtype[] =
-{
-	{0x0, "U"},
-	{0x2, "A"},
-	{0xe, "S"},
-	{0xc, "pbud"},
-	{0xa, "I"},
-	{0, "null"},
-};
-
 void		print_output(int nsyms, int symoff, int stroff, char *ptr)
 {
 	int			i;
@@ -55,31 +21,9 @@ void		print_output(int nsyms, int symoff, int stroff, char *ptr)
 	printf("stroff %d\n", stroff);
 	for (i = 0; i < nsyms; ++i)
 	{	
-		j = 0;
-		while (g_machosym[j].match)
-		{
-			if (g_machosym[j].match & array[i].n_type)
-			{
-				symbole = g_machosym[j].symbole;
-				if (symbole[0] == 'y')
-				{	
-					k = 0;
-					while (g_machsub[k].subtype)
-					{
-						if (g_machsub[k].match & array[i].n_type)
-						{
-							symbole = g_machsub[k].symbole;
-							break;
-						}
-						k++;
-					}
-				}
-				break;
-			}
-			j++;
-		}
 		printf("%s  %s\n", symbole, stringtable + array[i].n_un.n_strx);
 		printf("%llx\n", array[i].n_value);
+		printf("%x\n", array[i].n_type);
 	}
 }
 

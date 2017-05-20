@@ -68,7 +68,7 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 	DG("type %x or %d or %b", el.n_type, el.n_type, el.n_type);
 	DG("sect %x", el.n_sect);
 	DG("desc %.2x", el.n_desc);
-	DG("value %.4x", sym->value); */
+	DG("value %.4x", sym->value);*/
 }
 
 void			parse_symtab(struct symtab_command *tabsym, char *ptr, t_data *data)

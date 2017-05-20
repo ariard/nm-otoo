@@ -35,7 +35,9 @@ handle_fat.c\
 nm.c\
 parse_sections.c\
 parse_symtab.c\
-print_sym.c
+print_sym.c\
+ft_lst_insert_sort.c\
+symtab_sort.c
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))
