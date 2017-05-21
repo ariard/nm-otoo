@@ -6,28 +6,48 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/20 22:30:26 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/21 16:56:54 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-void	ft_hexdump(char *ptr, int offset)
+static void		get_section_text(struct segment_command_64 *segm, char *ptr)
 {
-	int	j;
-	
-	j = 0;
-	while (offset--)
+	struct section_64	*sect;
+	int					segsects;
+
+	segsects = segm->nsects;
+	sect = (void *)segm + sizeof(struct segment_command_64);
+	while (segsects--)
 	{
-		while (j < 16)
+		if (!ft_strcmp("__text", sect->sectname))
 		{
-			ft_printf("%x ", *ptr);
-			ptr = (void *)ptr + 1;
+			ft_hexdump(sect, ptr);
+			DG("end hexdump");
 		}
+		sect = (void *)sect + sizeof(struct section_64);
 	}
 }
 
-int	 main(int ac, char **av)
+static void		get_segment(char *ptr)
+{
+	int						ncmds;
+	int						i;
+	struct load_command		*lc;
+
+	ncmds = ((struct mach_header_64 *)ptr)->ncmds;
+	lc = (void *)ptr + sizeof(struct mach_header_64);
+	i = 0;
+	while (i++ < ncmds)
+	{
+		if (lc->cmd == LC_SEGMENT_64)
+			get_section_text((struct segment_command_64 *)lc, ptr);
+		lc = (void *)lc + lc->cmdsize;
+	}
+}
+	
+int		main(int ac, char **av)
 {
 	int		fd;
 	int		i;
@@ -43,6 +63,7 @@ int	 main(int ac, char **av)
 			return (1);
 		if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 			return (1);	
+		get_segment(ptr);
 		if (munmap(ptr, buf.st_size) < 0)
 			return (1);
 		i++;
@@ -50,7 +71,4 @@ int	 main(int ac, char **av)
 	return (0);
 }
 
-//	otool
-//	-get sections text offset		
-//	-go here
 //	-print offset + line in hex AND print 16 bytes in value

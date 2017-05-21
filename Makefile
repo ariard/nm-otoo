@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2017/05/20 22:37:21 by ariard           ###   ########.fr        #
+#    Updated: 2017/05/21 16:19:55 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ handle_32.c\
 handle_64.c\
 handle_fat.c\
 nm.c\
+otool.c\
+ft_hexdump.c\
 parse_sections.c\
 parse_symtab.c\
 print_sym.c\

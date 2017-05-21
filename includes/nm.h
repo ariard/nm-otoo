@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/20 21:37:15 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/21 16:45:48 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ int			print_sym(void *content, t_data *data);
 
 int			sections_match(const void *data_ref, const void *key);
 int			sections_print(const void *data_ref);
+
+void		ft_hexdump(struct section_64 *sect, char *ptr);
 
 #endif
