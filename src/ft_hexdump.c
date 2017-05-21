@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/21 16:08:52 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/21 17:17:00 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/21 17:18:12 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,6 @@ void		ft_hexdump(struct section_64 *sect, char *ptr)
 	int		size;
 	void	*a;
 	
-	DG("name %s", sect->sectname);
-	DG("addres %x", sect->addr);
-	DG("size %x and dec %d", sect->size, sect->size);
-	DG("offset %d", sect->offset);
 	address = sect->addr; 
 	size = sect->size;
 	a = (void *)ptr + sect->offset;

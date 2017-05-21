@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/21 16:45:48 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/21 19:26:29 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,13 @@
 
 # include "../libft/includes/libft.h"
 
+#define	NM_NOPT		(1 << 1)
+#define	NM_ROPT		(1 << 2)
+
 struct s_data
 {	
+	t_flag		flag;	
+	char		**av_data;
 	t_list		*lstsym;
 	int			filetype;
 	t_hashtab	tabsections;
