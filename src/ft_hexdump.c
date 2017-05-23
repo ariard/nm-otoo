@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/21 16:08:52 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/21 17:18:12 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/23 21:31:34 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,14 @@ void		print_hex_text(int address, void *a, int size)
 	ft_printf("\n");
 }
 
-void		ft_hexdump(struct section_64 *sect, char *ptr)
+void		ft_hexdump(struct section_64 *sect, char *ptr, char *filename)
 {			
 	int		address;
 	int		size;
 	void	*a;
 	
+	ft_printf("%s:\n", filename);
+	ft_printf("Contents of (__TEXT, __text) section\n");
 	address = sect->addr; 
 	size = sect->size;
 	a = (void *)ptr + sect->offset;

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/23 20:55:34 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/23 21:31:19 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,6 @@ int			sections_print(const void *data_ref);
  * Otool
 */
 
-void		ft_hexdump(struct section_64 *sect, char *ptr);
+void		ft_hexdump(struct section_64 *sect, char *ptr, char *filename);
 
 #endif

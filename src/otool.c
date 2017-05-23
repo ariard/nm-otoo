@@ -6,13 +6,14 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/21 17:18:18 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/23 21:32:04 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-static void		get_section_text(struct segment_command_64 *segm, char *ptr)
+static void		get_section_text(struct segment_command_64 *segm, char *ptr,
+				char *filename)
 {
 	struct section_64	*sect;
 	int					segsects;
@@ -22,12 +23,12 @@ static void		get_section_text(struct segment_command_64 *segm, char *ptr)
 	while (segsects--)
 	{
 		if (!ft_strcmp("__text", sect->sectname))
-			ft_hexdump(sect, ptr);
+			ft_hexdump(sect, ptr, filename);
 		sect = (void *)sect + sizeof(struct section_64);
 	}
 }
 
-static void		get_segment(char *ptr)
+static void		get_segment(char *ptr, char *filename)
 {
 	int						ncmds;
 	int						i;
@@ -39,7 +40,8 @@ static void		get_segment(char *ptr)
 	while (i++ < ncmds)
 	{
 		if (lc->cmd == LC_SEGMENT_64)
-			get_section_text((struct segment_command_64 *)lc, ptr);
+			get_section_text((struct segment_command_64 *)lc, ptr,
+				filename);
 		lc = (void *)lc + lc->cmdsize;
 	}
 }
@@ -60,7 +62,7 @@ int		main(int ac, char **av)
 			return (1);
 		if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 			return (1);	
-		get_segment(ptr);
+		get_segment(ptr, av[i]);
 		if (munmap(ptr, buf.st_size) < 0)
 			return (1);
 		i++;

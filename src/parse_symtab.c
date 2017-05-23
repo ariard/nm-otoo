@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 16:21:29 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/23 21:00:33 by ariard           ###   ########.fr       */
+/*   Updated: 2017/05/23 21:19:31 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ static void		sym_stab(t_sym *sym, uint8_t type)
 {
 	int			i;
 
+	DG("stab");
 	sym->type = '-';
 	i = -1;
 	while (++i < 29)
@@ -89,12 +90,11 @@ static void		sym_stab(t_sym *sym, uint8_t type)
 	sym->desc = g_stabs[i].entry;
 }
 
-
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 				t_hashtab *sections)
 {
 	sym->name = stringtable + el.n_un.n_strx;
-	if (el.n_type & N_STAB)
+	if (N_STAB & el.n_type)
 		sym_stab(sym, el.n_type);
 	 else
 	{
