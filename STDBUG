@@ -1,814 +1,1399 @@
-[7m[32m57871[33m         ft_hexdump.c [1m[34m38 [0mname __text[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m39 [0maddres 6f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m40 [0msize 3285 and dec 12933[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m41 [0moffset 1776[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 6f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 700[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 710[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 720[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 730[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 740[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 750[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 760[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 770[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 780[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 790[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 7a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 7b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 7c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 7d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 7e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 7f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 800[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 810[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 820[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 830[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 840[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 850[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 860[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 870[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 880[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 890[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 8a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 8b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 8c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 8d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 8e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 8f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 900[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 910[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 920[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 930[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 940[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 950[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 960[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 970[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 980[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 990[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 9a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 9b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 9c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 9d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 9e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 9f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is a90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is aa0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ab0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ac0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ad0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ae0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is af0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is b90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ba0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is bb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is bc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is bd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is be0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is bf0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is c90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ca0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is cb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is cc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is cd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ce0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is cf0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is d90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is da0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is db0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is dc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is dd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is de0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is df0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is e90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ea0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is eb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ec0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ed0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ee0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ef0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is f90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is fa0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is fb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is fc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is fd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is fe0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is ff0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1000[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1010[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1020[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1030[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1040[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1050[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1060[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1070[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1080[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1090[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 10a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 10b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 10c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 10d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 10e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 10f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1100[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1110[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1120[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1130[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1140[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1150[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1160[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1170[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1180[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1190[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 11a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 11b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 11c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 11d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 11e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 11f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1200[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1210[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1220[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1230[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1240[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1250[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1260[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1270[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1280[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1290[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 12a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 12b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 12c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 12d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 12e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 12f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1300[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1310[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1320[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1330[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1340[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1350[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1360[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1370[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1380[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1390[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 13a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 13b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 13c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 13d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 13e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 13f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1400[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1410[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1420[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1430[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1440[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1450[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1460[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1470[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1480[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1490[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 14a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 14b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 14c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 14d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 14e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 14f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1500[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1510[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1520[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1530[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1540[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1550[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1560[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1570[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1580[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1590[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 15a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 15b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 15c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 15d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 15e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 15f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1600[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1610[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1620[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1630[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1640[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1650[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1660[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1670[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1680[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1690[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 16a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 16b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 16c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 16d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 16e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 16f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1700[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1710[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1720[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1730[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1740[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1750[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1760[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1770[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1780[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1790[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 17a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 17b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 17c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 17d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 17e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 17f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1800[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1810[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1820[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1830[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1840[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1850[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1860[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1870[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1880[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1890[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 18a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 18b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 18c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 18d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 18e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 18f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1900[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1910[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1920[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1930[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1940[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1950[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1960[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1970[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1980[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1990[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 19a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 19b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 19c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 19d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 19e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 19f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1a90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1aa0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ab0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ac0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ad0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ae0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1af0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1b90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ba0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1bb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1bc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1bd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1be0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1bf0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1c90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ca0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1cb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1cc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1cd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ce0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1cf0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1d90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1da0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1db0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1dc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1dd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1de0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1df0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1e90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ea0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1eb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ec0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ed0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ee0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ef0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1f90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1fa0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1fb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1fc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1fd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1fe0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 1ff0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2000[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2010[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2020[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2030[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2040[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2050[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2060[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2070[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2080[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2090[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 20a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 20b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 20c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 20d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 20e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 20f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2100[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2110[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2120[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2130[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2140[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2150[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2160[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2170[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2180[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2190[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 21a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 21b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 21c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 21d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 21e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 21f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2200[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2210[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2220[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2230[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2240[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2250[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2260[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2270[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2280[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2290[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 22a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 22b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 22c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 22d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 22e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 22f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2300[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2310[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2320[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2330[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2340[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2350[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2360[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2370[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2380[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2390[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 23a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 23b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 23c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 23d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 23e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 23f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2400[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2410[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2420[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2430[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2440[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2450[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2460[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2470[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2480[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2490[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 24a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 24b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 24c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 24d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 24e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 24f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2500[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2510[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2520[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2530[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2540[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2550[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2560[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2570[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2580[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2590[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 25a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 25b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 25c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 25d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 25e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 25f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2600[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2610[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2620[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2630[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2640[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2650[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2660[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2670[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2680[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2690[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 26a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 26b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 26c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 26d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 26e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 26f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2700[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2710[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2720[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2730[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2740[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2750[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2760[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2770[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2780[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2790[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 27a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 27b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 27c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 27d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 27e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 27f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2800[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2810[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2820[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2830[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2840[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2850[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2860[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2870[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2880[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2890[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 28a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 28b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 28c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 28d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 28e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 28f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2900[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2910[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2920[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2930[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2940[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2950[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2960[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2970[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2980[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2990[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 29a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 29b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 29c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 29d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 29e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 29f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2a90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2aa0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ab0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ac0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ad0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ae0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2af0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2b90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ba0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2bb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2bc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2bd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2be0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2bf0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2c90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ca0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2cb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2cc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2cd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ce0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2cf0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2d90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2da0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2db0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2dc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2dd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2de0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2df0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2e90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ea0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2eb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ec0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ed0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ee0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ef0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f00[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f10[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f20[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f30[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f40[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f50[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f60[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f70[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f80[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2f90[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2fa0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2fb0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2fc0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2fd0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2fe0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 2ff0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3000[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3010[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3020[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3030[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3040[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3050[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3060[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3070[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3080[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3090[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 30a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 30b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 30c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 30d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 30e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 30f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3100[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3110[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3120[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3130[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3140[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3150[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3160[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3170[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3180[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3190[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 31a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 31b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 31c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 31d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 31e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 31f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3200[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3210[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3220[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3230[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3240[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3250[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3260[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3270[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3280[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3290[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 32a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 32b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 32c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 32d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 32e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 32f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3300[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3310[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3320[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3330[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3340[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3350[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3360[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3370[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3380[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3390[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 33a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 33b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 33c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 33d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 33e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 33f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3400[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3410[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3420[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3430[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3440[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3450[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3460[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3470[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3480[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3490[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 34a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 34b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 34c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 34d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 34e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 34f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3500[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3510[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3520[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3530[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3540[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3550[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3560[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3570[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3580[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3590[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 35a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 35b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 35c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 35d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 35e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 35f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3600[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3610[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3620[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3630[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3640[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3650[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3660[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3670[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3680[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3690[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 36a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 36b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 36c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 36d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 36e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 36f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3700[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3710[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3720[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3730[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3740[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3750[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3760[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3770[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3780[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3790[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 37a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 37b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 37c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 37d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 37e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 37f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3800[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3810[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3820[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3830[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3840[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3850[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3860[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3870[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3880[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3890[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 38a0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 38b0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 38c0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 38d0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 38e0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 38f0[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3900[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3910[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3920[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3930[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3940[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3950[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3960[0m
-[7m[32m57871[33m         ft_hexdump.c [1m[34m48 [0maddress is 3970[0m
-[7m[32m57871[33m              otool.c [1m[34m27 [0mend hexdump[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__text], segname : __TEXT and num 1[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__stubs], segname : __TEXT and num 2[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__stub_helper], segname : __TEXT and num 3[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__cstring], segname : __TEXT and num 4[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__const], segname : __TEXT and num 5[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__unwind_info], segname : __TEXT and num 6[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__got], segname : __DATA and num 7[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__nl_symbol_ptr], segname : __DATA and num 8[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__la_symbol_ptr], segname : __DATA and num 9[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__const], segname : __DATA and num 10[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__data], segname : __DATA and num 11[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__common], segname : __DATA and num 12[0m
+[7m[31m98268[33m     parse_sections.c [1m[34m61 [0msectname : [__bss], segname : __DATA and num 13[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0mradr://5614542[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 78c[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 3c or 60 or 111100[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 5614542[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m__mh_execute_header[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype f or 15 or 1111[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 10[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m__DefaultRuneLocale[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 18[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___bzero[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2c[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___error[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 35[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___maskrune[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___mb_cur_max[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___memcpy_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 58[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___memmove_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 66[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___snprintf_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 75[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___sprintf_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 85[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___stack_chk_fail[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 94[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___stack_chk_guard[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex a6[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___stderrp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex b9[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___stdinp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex c4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___stdoutp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex ce[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___strcat_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex d9[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___strcpy_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex e7[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___strncpy_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex f5[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___tolower[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 104[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___toupper[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 10f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m___vsnprintf_chk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 11a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_abort[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 12b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_access[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 132[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_alarm[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 13a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_asprintf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 141[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_atoi[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 14b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_atol[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 151[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_bcopy[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 157[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_bsearch[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 15e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_chdir[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 167[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_clearerr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 16e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_close[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 178[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_closedir[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 17f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_compat_mode[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 189[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_confstr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 196[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_connect[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 19f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_dlclose[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1a8[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_dlerror[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1b1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_dlopen[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1ba[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_dlsym[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1c2[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_dup[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1c9[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_dup2[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1ce[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_endgrent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1d4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_endpwent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1de[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_endservent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1e8[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_environ[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1f4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_execve[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 1fd[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_exit[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 205[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fclose[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 20b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fcntl[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 213[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fdopen[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 21a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_feof[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 222[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_ferror[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 228[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fflush[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 230[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fgets[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 238[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fileno[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 23f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fopen[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 247[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fork[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 24e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fprintf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 254[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fputc[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 25d[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fputs[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 264[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_free[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 26b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_freeaddrinfo[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 271[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fstat$INODE64[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 27f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_fwrite[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 28e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_gai_strerror[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 296[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getaddrinfo[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2a4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getcwd[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2b1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getdtablesize[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2b9[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getegid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2c8[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_geteuid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2d1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getgid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2da[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getgrent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2e2[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getgroups[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2ec[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_gethostname[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 2f7[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getpeername[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 304[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getpgrp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 311[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getpid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 31a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getppid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 322[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getpwent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 32b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getpwnam[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 335[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getpwuid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 33f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getrlimit[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 349[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getrusage[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 354[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getservent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 35f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_gettimeofday[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 36b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_getuid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 379[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_ioctl[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 381[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_isatty[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 388[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_kill[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 390[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_killpg[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 396[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_localtime[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 39e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_lseek[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3a9[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_lstat$INODE64[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3b0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_malloc[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3bf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_mblen[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3c7[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_mbrlen[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3ce[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_mbrtowc[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3d6[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_mbsinit[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3df[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_mbstowcs[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3e8[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_mbtowc[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3f2[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_memchr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 3fa[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_memcmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 402[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_memcpy[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 40a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_memmove[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 412[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_memset[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 41b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_memset_pattern16[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 423[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_mmap[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 435[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_munmap[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 43b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_open[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 443[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_opendir$INODE64[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 449[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_pathconf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 45a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_pipe[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 464[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_printf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 46a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_putc[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 472[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_putchar[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 478[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_puts[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 481[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_qsort[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 487[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_raise[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 48e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_read[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 495[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_readdir$INODE64[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 49b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_readlink[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4ac[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_realloc[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4b6[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_regcomp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4bf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_regexec[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4c8[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_regfree[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4d1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_rootless_restricted_environment[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4da[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_select$1050[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 4fb[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setgid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 508[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setgrent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 510[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setlocale[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 51a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setpgid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 525[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setpwent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 52e[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setregid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 538[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setreuid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 542[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setrlimit[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 54c[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setservent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 557[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setuid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 563[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_setvbuf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 56b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_sigaction[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 574[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_siglongjmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 57f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_sigprocmask[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 58b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_sigsetjmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 598[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_sleep[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5a3[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_socket[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5aa[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_stat$INODE64[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5b2[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_stpcpy[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5c0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strcasecmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5c8[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strchr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5d4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strcmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5dc[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strcoll[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5e4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strcpy[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5ed[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strdup[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5f5[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strerror[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 5fd[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strftime[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 607[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strlen[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 611[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strncasecmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 619[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strncmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 626[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strncpy[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 62f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strpbrk[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 638[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strrchr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 641[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strsignal[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 64a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strstr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 655[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strtod[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 65d[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strtol[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 665[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_strtoul[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 66d[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_sysconf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 676[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tcgetattr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 67f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tcgetpgrp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 68a[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tcsetattr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 695[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tcsetpgrp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6a0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tgetent[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6ab[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 100[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tgetflag[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6b4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 100[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tgetnum[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6be[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 100[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tgetstr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6c7[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 100[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tgoto[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6d0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 100[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_time[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6d7[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tputs[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6dd[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 100[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_ttyname[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6e4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_tzset[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6ed[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_umask[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6f4[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_unlink[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 6fb[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_vfprintf[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 703[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_waitpid[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 70d[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcrtomb[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 716[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcschr[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 71f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcscmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 727[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcscoll[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 72f[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcscpy[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 738[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcslen[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 740[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcsncmp[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 748[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcsrtombs[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 751[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wctob[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 75c[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wctype[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 763[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_wcwidth[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 76b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0m_write[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 774[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m65 [0m [0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m66 [0mdyld_stub_binder[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m67 [0mindex 77b[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m68 [0mtype 1 or 1 or 1[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m69 [0msect 0[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m70 [0mdesc 200[0m
+[7m[31m98268[33m       parse_symtab.c [1m[34m71 [0mvalue 0[0m
