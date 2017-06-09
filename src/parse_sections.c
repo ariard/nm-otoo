@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/16 21:34:15 by ariard           ###   ########.fr       */
+/*   Updated: 2017/06/09 16:29:35 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,4 @@ void			parse_sections(struct segment_command_64 *segm,
 		ft_strdel(&key);
 		sect = (void *)sect + sizeof(struct section_64);
 	}
-}		
+}	

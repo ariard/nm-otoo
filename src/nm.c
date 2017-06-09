@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/23 20:16:38 by ariard           ###   ########.fr       */
+/*   Updated: 2017/06/09 16:36:02 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,10 @@ static void		parse_archi(char *ptr, t_data *data)
 	magic_number = *(unsigned int *)ptr;
 	if (magic_number == MH_MAGIC_64)
 		handle_64(ptr, data);
-	if (magic_number == FAT_CIGAM) 	
+	else if (magic_number == FAT_CIGAM) 	
 		handle_fat(ptr);
+	else if (magic_number == EI_MAG0)
+		handle_64_elf(ptr, data);
 }
 
 int				main(int argc, char **argv)

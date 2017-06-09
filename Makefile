@@ -31,12 +31,14 @@ NM_OBJ		=	$(OBJ_DIR)nm.o
 OTOOL_OBJ	=	$(OBJ_DIR)otool.o
 
 SRC_BASE	=	\
+ft_hexdump.c\
 handle_32.c\
 handle_64.c\
+handle_64_elf.c\
 handle_fat.c\
+main.c\
 nm.c\
 otool.c\
-ft_hexdump.c\
 parse_sections.c\
 parse_symtab.c\
 print_sym.c\

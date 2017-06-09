@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/23 21:31:19 by ariard           ###   ########.fr       */
+/*   Updated: 2017/06/09 18:19:55 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <mach-o/fat.h>
 
 # include "../libft/includes/libft.h"
+# include "elf.h"
 
 
 /*
@@ -36,6 +37,8 @@
 #define NM_uOPT		(1 << 7)
 #define NM_UOPT		(1 << 8)
 #define NM_JOPT		(1 << 9)
+
+#define	EI_MAG0		0x7F	
 
 struct s_data
 {	
@@ -87,6 +90,8 @@ void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
 void		symtab_sort(t_list **lstsym, t_data *data);
 void		symtab_del(t_list **lstsym, t_data *data);
 int			print_sym(void *content, t_data *data);
+
+void		handle_64_elf(char *ptr, t_data *data);
 
 int			sections_match(const void *data_ref, const void *key);
 int			sections_print(const void *data_ref);
