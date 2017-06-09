@@ -1,14 +1,2 @@
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__text], segname : __TEXT and num 1[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__stubs], segname : __TEXT and num 2[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__stub_helper], segname : __TEXT and num 3[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__cstring], segname : __TEXT and num 4[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__const], segname : __TEXT and num 5[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__unwind_info], segname : __TEXT and num 6[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__got], segname : __DATA and num 7[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__nl_symbol_ptr], segname : __DATA and num 8[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__la_symbol_ptr], segname : __DATA and num 9[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__const], segname : __DATA and num 10[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__data], segname : __DATA and num 11[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__common], segname : __DATA and num 12[0m
-[7m[31m17898[33m     parse_sections.c [1m[34m61 [0msectname : [__bss], segname : __DATA and num 13[0m
-[7m[31m17898[33m       parse_symtab.c [1m[34m84 [0mstab[0m
+[7m[35m85660[33m                 nm.c [1m[34m59 [0mnm start[0m
+[7m[35m85660[33m      handle_64_elf.c [1m[34m23 [0min ELF file[0m

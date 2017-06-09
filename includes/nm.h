@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/06/09 18:19:55 by ariard           ###   ########.fr       */
+/*   Updated: 2017/06/09 19:35:23 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@
 #define NM_UOPT		(1 << 8)
 #define NM_JOPT		(1 << 9)
 
-#define	EI_MAG0		0x7F	
 
 struct s_data
 {	

@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2017/05/21 16:19:55 by ariard           ###   ########.fr        #
+#    Updated: 2017/06/09 20:07:59 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,6 @@ handle_32.c\
 handle_64.c\
 handle_64_elf.c\
 handle_fat.c\
-main.c\
 nm.c\
 otool.c\
 parse_sections.c\
