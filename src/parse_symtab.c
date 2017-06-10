@@ -47,12 +47,13 @@ t_stabs			g_stabs[]=
 	{0x0, "null"},
 };
 
-static void		sym_init(t_sym *sym)
+void			sym_init(t_sym *sym)
 {	
 	sym->type = 0;
 	sym->name = NULL;
 	sym->desc = NULL;
 	sym->value = 0;
+	sym->index = 0;
 }
 
 static int		sym_resolve(int num, t_hashtab *tabsections)

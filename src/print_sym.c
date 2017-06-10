@@ -41,3 +41,14 @@ int			print_sym(void *content, t_data *data)
 		ft_printf(" %c %s\n", sym->type, sym->name);
 	return (0);
 }
+
+int			print_sym_elf(void *content, t_data *data)
+{
+	t_sym	*sym;
+
+	(void)data;
+	sym = content;
+	ft_printf("%016llx", sym->value);
+	ft_printf("%s\n", sym->name);
+	return (0);
+}

@@ -40,6 +40,7 @@ nm.c\
 otool.c\
 parse_sections.c\
 parse_symtab.c\
+parse_symtab_elf.c\
 print_sym.c\
 symtab_sort.c
 

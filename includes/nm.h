@@ -65,7 +65,8 @@ struct s_sym
 	char	type;
 	char	*name;
 	char	*desc;
-	int		value;
+	int	value;
+	int	index;
 };
 
 typedef struct s_sym		t_sym;
@@ -88,12 +89,17 @@ void		parse_sections(struct segment_command_64 *segm,
 void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
 void		symtab_sort(t_list **lstsym, t_data *data);
 void		symtab_del(t_list **lstsym, t_data *data);
-int			print_sym(void *content, t_data *data);
+int		print_sym(void *content, t_data *data);
 
 void		handle_64_elf(char *ptr, t_data *data);
+void		parse_symtab_elf(char *ptr, struct elf64_shdr *section_header,
+			t_data *data);
+int		print_sym_elf(void *content, t_data *data);
 
-int			sections_match(const void *data_ref, const void *key);
-int			sections_print(const void *data_ref);
+int		sections_match(const void *data_ref, const void *key);
+int		sections_print(const void *data_ref);
+	
+void		sym_init(t_sym *sym);		
 
 /*
  * Otool
