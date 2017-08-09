@@ -49,6 +49,8 @@ int			print_sym_elf(void *content, t_data *data)
 	(void)data;
 	sym = content;
 	ft_printf("%016llx", sym->value);
-	ft_printf("%s\n", sym->name);
+	if (sym->type)
+		ft_printf(" %c", sym->type);
+	ft_printf(" %s\n", sym->name);
 	return (0);
 }

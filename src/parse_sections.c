@@ -12,7 +12,7 @@
 
 #include "nm.h"
 
-static void		sections_init(t_section *section)
+void		sections_init(t_section *section)
 {
 	section->sectname = NULL;
 	section->segname = NULL;
@@ -27,7 +27,7 @@ static void		sections_info(t_section *section, struct section_64 *sect,
 	section->key = ft_strdup(key);
 }
 
-int				sections_match(const void *data_ref, const void *key)
+int			sections_match(const void *data_ref, const void *key)
 {
 	t_section	*section;
 
@@ -37,7 +37,7 @@ int				sections_match(const void *data_ref, const void *key)
 	return (1);
 }
 
-int				sections_print(const void *data_ref)
+int			sections_print(const void *data_ref)
 {
 	t_section	*section;
 
@@ -47,7 +47,7 @@ int				sections_print(const void *data_ref)
 }
 
 void			parse_sections(struct segment_command_64 *segm,
-				t_hashtab *tabsections, int *nsects)
+			t_hashtab *tabsections, int *nsects)
 {
 	int					segsects;
 	struct section_64	*sect;

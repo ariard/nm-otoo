@@ -1,2 +1,93 @@
-[7m[35m85660[33m                 nm.c [1m[34m59 [0mnm start[0m
-[7m[35m85660[33m      handle_64_elf.c [1m[34m23 [0min ELF file[0m
+[7m[34m52659[33m                 nm.c [1m[34m59 [0mnm start[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.interp] ind 0[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.note.ABI-tag] ind 1[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.note.gnu.build-id] ind 2[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.gnu.hash] ind 3[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.dynsym] ind 4[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.gnu.version] ind 6[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.gnu.version_r] ind 7[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.rela.dyn] ind 8[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.rela.plt] ind 9[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.init] ind 10[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.plt] ind 11[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.text] ind 12[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.fini] ind 13[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.rodata] ind 14[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.eh_frame_hdr] ind 15[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.eh_frame] ind 16[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.init_array] ind 17[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.fini_array] ind 18[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.jcr] ind 19[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.dynamic] ind 20[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.got] ind 21[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.got.plt] ind 22[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.data] ind 23[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.bss] ind 24[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [.comment] ind 25[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 0, section 0, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 1, value 400238, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 2, value 400254, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 3, value 400274, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 4, value 400298, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 5, value 4002b8, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 6, value 400318, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 7, value 400358, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 8, value 400360, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 9, value 400380, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 10, value 4003b0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 11, value 4003c8, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 12, value 4003e0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 13, value 400400, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 14, value 400594, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 15, value 4005a0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 16, value 4005c0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 17, value 4005f8, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 18, value 600e08, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 19, value 600e10, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 20, value 600e18, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 21, value 600e20, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 22, value 600ff0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 23, value 601000, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 24, value 601020, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 25, value 601024, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 3, section 26, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 1, info 4, section 65521, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 12, info 1, section 20, value 600e18, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 25, info 2, section 13, value 400430, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 27, info 2, section 13, value 400470, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 46, info 2, section 13, value 4004b0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 68, info 1, section 25, value 601024, size 1[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 83, info 1, section 19, value 600e10, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 122, info 2, section 13, value 4004d0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 134, info 1, section 18, value 600e08, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 165, info 4, section 65521, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 1, info 4, section 65521, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 172, info 1, section 17, value 4006e8, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 186, info 1, section 20, value 600e18, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 0, info 4, section 65521, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 198, info 0, section 18, value 600e10, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 215, info 1, section 21, value 600e20, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 224, info 0, section 18, value 600e08, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 243, info 0, section 16, value 4005c0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 262, info 1, section 23, value 601000, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 284, info 18, section 13, value 400590, size 2[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 300, info 32, section 0, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 388, info 32, section 24, value 601020, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 328, info 16, section 24, value 601024, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 294, info 18, section 14, value 400594, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 335, info 18, section 0, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 355, info 18, section 0, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 386, info 16, section 24, value 601020, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 399, info 32, section 0, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 414, info 17, section 15, value 4005a8, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 427, info 17, section 15, value 4005a0, size 4[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 442, info 18, section 13, value 400520, size 101[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 210, info 16, section 25, value 601028, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 392, info 18, section 13, value 400400, size 43[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 458, info 16, section 25, value 601024, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 470, info 18, section 13, value 4004f6, size 31[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 475, info 32, section 0, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 495, info 17, section 24, value 601028, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 507, info 32, section 0, value 0, size 0[0m
+[7m[34m52659[33m   parse_symtab_elf.c [1m[34m49 [0mindex 452, info 18, section 11, value 4003c8, size 0[0m
+[7m[34m52659[33m      handle_64_elf.c [1m[34m34 [0msectname [] ind 29[0m

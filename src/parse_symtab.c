@@ -76,7 +76,7 @@ static int		sym_resolve(int num, t_hashtab *tabsections)
 	}
 	ft_strdel(&key);
 	return (type);
-}	
+}
 
 static void		sym_stab(t_sym *sym, uint8_t type)
 {

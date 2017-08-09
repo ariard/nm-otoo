@@ -35,3 +35,32 @@ void		symtab_sort(t_list **lstsym, t_data *data)
 	if (data->flag & NM_ROPT)
 		ft_lst_reverse(lstsym);
 }
+
+char		ft_tolower2(char c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}
+
+int		sort_elf(t_sym *sym1, t_sym *sym2)
+{
+	char	*s1;
+	char	*s2;
+	int	i;
+
+	s1 = sym1->name;
+	s2 = sym2->name;
+	while (*s1 == '_')
+		s1++;
+	while (*s2 == '_')
+		s2++;
+	i = ft_strcmp(s1, s2);
+	s1 = ft_strmap(s1, ft_tolower2);
+	s2 = ft_strmap(s2, ft_tolower2);
+	if (!(i = ft_strcmp(s1, s2)))
+		i = (sym1->value > sym2->value ? 1 : -1);
+	ft_strdel(&s1);
+	ft_strdel(&s2);
+	return (i);
+}

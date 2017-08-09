@@ -21,25 +21,45 @@ int		resolve_elf_name(void *content, char *strtab)
 	return (0);
 }
 
+void		parse_sections_elf(char *sectname,
+	       	t_hashtab *tabsections, int index)
+{
+	t_section	section;	
+
+	sections_init(&section);
+	section.sectname = sectname;
+	section.key = ft_itoa(index + 1);
+	hashtab_insert(tabsections, ft_lstnew(&section, sizeof(t_section)),
+		section.key, sections_match);
+	DG("sectname [%s] ind %d", section.sectname, index);	
+}
+
 void		handle_64_elf(char *ptr, t_data *data)
 {
 	struct elf64_hdr	*header;
 	struct elf64_shdr	*section_header;
 	char			*strtab;
+	char			*shstrtab;
 	int			i;
 
 	header = (struct elf64_hdr *)ptr;
 	section_header = (struct elf64_shdr *)(ptr + header->e_shoff);
 	i = -1;
+	shstrtab = ptr + (section_header + header->e_shstrndx)->sh_offset;
 	while (++i < header->e_shnum)
 	{
 		section_header = section_header + 1;
 		if (section_header->sh_type == SHT_SYMTAB)
 			parse_symtab_elf(ptr, section_header, data);
-		if (section_header->sh_type == SHT_STRTAB && i != header->e_shstrndx)
+		else if (section_header->sh_type == SHT_STRTAB && i 
+			!= header->e_shstrndx)
 			strtab = ptr + section_header->sh_offset;
+		else
+			parse_sections_elf(&shstrtab[section_header->sh_name],
+				&data->tabsections, i);
 	}
 	ft_lstiter(data->lstsym, &resolve_elf_name, strtab);
+	lst_insert_sort(&data->lstsym, sort_elf);
 	ft_lstiter(data->lstsym, &print_sym_elf, data);
 }
 
