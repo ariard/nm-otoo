@@ -1,0 +1,12 @@
+nm mach-o
+otool mach-o
+
+bonus:
+nm options
+nm elf
+
+
+TODO :
+	- screener code
+	- cleaner repo
+	- tester contre correction partie obligatoire

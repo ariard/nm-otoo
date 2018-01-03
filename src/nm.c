@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2017/06/09 20:12:25 by ariard           ###   ########.fr       */
+/*   Updated: 2018/01/03 16:56:48 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void		parse_archi(char *ptr, t_data *data)
 		handle_64(ptr, data);
 	else if (magic_number == FAT_CIGAM) 	
 		handle_fat(ptr);
-	else if (magic_number &  0x7f)
+	else if (magic_number &  EH_MAGIC_64)
 		handle_64_elf(ptr, data);
 }
 
