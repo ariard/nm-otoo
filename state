@@ -5,8 +5,24 @@ bonus:
 nm options
 nm elf
 
+files : executable, object code, shared libraries, dynamic loaded-libraries, core dumps
+
+- check DYSYMTAB
+- check stab 5
+
+.o / .so / .dll / .a
+
+QUESTIONS :
+	- support 32 bits ?
+	- support fat file ?
+	- support archive/object file
 
 TODO :
 	- screener code
 	- cleaner repo
+	- ajouter DYLD (shared libraries)
 	- tester contre correction partie obligatoire
+
+
+LESSONS :
+	- lib debug project

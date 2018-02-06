@@ -1,0 +1,103 @@
+TOOLS : 
+
+P : [object1.c][object2.c] -> AS -> [object1.o][object2.o][library.a] -> LD -> [executable]
+
+as : translation of assembly code to object code
+
+ld : combine several object files and libraries, resolves references, produces an ouput file
+
+ar : creates and maintains groups of files combined into an archive (static librarie)
+
+OBJECT :
+
+executable : loader-readable form, meta-data + set of encoded instructions
+
+object file : sequence of machine-code statements 
+
+			executable
+		 /
+object1.o - object2.o
+		 \
+			library
+
+shared libraries : group of sequences of machine-code statements to be linked at load-time or run-time
+
+static libraries : group ofs sequences of machine-code statements to be linked at compile-time
+
+exported/external/global/private/public
+
+
+DIVERS :
+
+
+flat namespaces vs two-level namespaces
+
+compile-time | load-time | run-time
+
+archive : undefined reference
+
+meta-data of object files : 
+	- header
+	- code segment
+	- data segment
+	- read-only data segment
+	- BSS segment
+	- external definitions
+	- relocation
+	- dynamic linking
+	- debugging
+
+
+PRIMITIVES :
+
+symbol : identifiers to enforce uniqueness of instance
+
+symbol table : each identifiers is associated with meta-data informations
+
+string table : strings to represent each symbol
+
+
+MACH-O segments :
+
+each Mach-O segment has a particular structure
+
+LC_CODE_SIGNATURE : defines signature of binary
+
+LC_DATA_IN_CODE : table of non instructions in code
+
+LC_FUNCTION_STARTS : defines entry-point of executable
+
+LC_LOAD_DYLIB : defines the name of dynamic loaded-library
+
+LC_MAIN : defines main of a executable
+
+LC_SOURCE_VERSION : defines the source version of program
+
+LC_VERSION_MIN_MACOSX : defines the min macos x version
+
+LC_UUID : defines a universally unique identifier to identify information in system
+
+LC_LOAD_DYLINKER : specifies the dynamic linker to use
+
+LC_DYSYMTAB : specifies additional symbol table info used by the dynamic linker
+
+LC_DYLD_INFO_ONLY : specifies compressed dyld info only
+
+LC_SEGMENT_64 : maps a 64-bit segment into the the given task address space
+	_LINKEDIT : all structs created and maintened by the link editor
+
+	_DATA : tradition UNIX data segment
+
+	_TEXT : tradition UNIX text segment
+
+	_PAGEZERO : the pagezero segment
+
+
+
+Mach-o(5), stab(5), strip(1)
+
+
+HACKS :
+
+- auto-inspect against itself to accede syscall
+- manipulate UUID to provoke collision
