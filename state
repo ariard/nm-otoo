@@ -9,6 +9,19 @@ files : executable, object code, shared libraries, dynamic loaded-libraries, cor
 
 - check DYSYMTAB
 - check stab 5
+- do add multiple args
+- check value on otool bash
+
+TODO : 
+
+- all types of files (exe, obj, so, dll, core dump)
+- 64 bit/ 32 bit/fat file (/usr/bin/audiofile/ ; my_32_bit )
+- all types of symbols (undefined, absolute, text section symbol, data section symbol, bss section symbol, common symbol, debugger symbol table, other, indirect symbol) local/global
+
++ hardness
+
++ bonus : 8nm + 2 otool
+
 
 .o / .so / .dll / .a
 

@@ -8,6 +8,16 @@ ld : combine several object files and libraries, resolves references, produces a
 
 ar : creates and maintains groups of files combined into an archive (static librarie)
 
+libtool : takes the specified input object files and creates a library for use with link editor
+
+file : shows the type of the file and archi
+
+otool : lists the content of specific sections and segments within a Mach-O file
+
+pagestuff : displays information on each logical page that compose the image
+
+nm : display the object file symbol table
+
 OBJECT :
 
 executable : loader-readable form, meta-data + set of encoded instructions
@@ -25,6 +35,10 @@ shared libraries : group of sequences of machine-code statements to be linked at
 static libraries : group ofs sequences of machine-code statements to be linked at compile-time
 
 exported/external/global/private/public
+
+global = extern
+
+local = private
 
 
 DIVERS :
