@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/04 19:17:33 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/08 23:06:58 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,6 @@ static void		data_init(t_data *data)
 	hashtab_init(&data->tabsections, 100, &ft_hash_string);
 }
 
-static void		parse_archi(char *ptr, t_data *data)
-{
-	unsigned int		magic_number;
-
-	magic_number = *(unsigned int *)ptr;
-	if (magic_number == MH_MAGIC_64)
-		handle_64(ptr, data);
-	else if (magic_number == FAT_CIGAM) 	
-		handle_fat(ptr);
-	else if (magic_number &  EH_MAGIC_64)
-		handle_64_elf(ptr, data);
-}
-
 int				main(int argc, char **argv)
 {
 	int			fd;
@@ -57,27 +44,24 @@ int				main(int argc, char **argv)
 	struct stat buf;
 
 	DG("nm start");
-	if (argc < 2)
-	{
-		ft_dprintf(2, "Argumnent needed");
-		return (1);
-	}
 	data_init(&data);
 	cliopts_get(argv, g_nm_opts, &data);
 	i = data.av_data - argv;
-	while (i < argc && argv[i])
+	argv[i] = (argv[i]) ? argv[i] : "a.out";
+	while (argv[i] && i <= argc)
 	{
-		data.filename = argv[i];
-		if ((fd = open(argv[i], O_RDONLY)) < 0)
-			return (1);
+		data.filename = argv[i++];
+		if (argc - (data.av_data - argv) > 1)
+			ft_printf("\n%s:\n", data.filename);
+		if ((fd = open(data.filename, O_RDONLY)) < 0)
+			ft_dprintf(2, "nm : No such file %s\n", data.filename);
 		if (fstat(fd, &buf) < 0)
-			return (1);
+			continue;
 		if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
-			return (1);
+			continue;
 		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)
-			return (1);
-		i++;
+			continue;
 	}
 	return (0);
 }

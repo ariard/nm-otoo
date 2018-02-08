@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/01/03 16:56:20 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/08 22:32:54 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <sys/mman.h>
 # include <sys/stat.h>
 
+# include <inttypes.h>
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
 # include <mach-o/fat.h>
@@ -72,11 +73,11 @@ typedef struct s_section	t_section;
 
 struct s_sym
 {
-	char	type;
-	char	*name;
-	char	*desc;
-	int		value;
-	int		index;
+	char			type;
+	char			*name;
+	char			*desc;
+	int				value;
+	int				index;
 };
 
 typedef struct s_sym		t_sym;
@@ -104,12 +105,21 @@ typedef struct s_elfsect	t_elfsect;
 void		handle_64(char *ptr, t_data *data);
 void		handle_32(char *ptr);
 void		handle_fat(char *ptr);
-void		parse_sections(struct segment_command_64 *segm,
+
+void		parse_archi(char *ptr, t_data *data);
+void		parse_segment64(struct segment_command_64 *segm,
 			t_hashtab *tabsections, int *nsects);
 void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
+
 void		symtab_sort(t_list **lstsym, t_data *data);
 void		symtab_del(t_list **lstsym, t_data *data);
 int			print_sym(void *content, t_data *data);
+
+
+int			sections_match(const void *data_ref, const void *key);
+int			sections_print(const void *data_ref);
+void		sections_init(t_section *section);
+int			sections_del(void *data_ref);
 
 /* Elf binary */
 
@@ -119,10 +129,7 @@ void		parse_symtab_elf(char *ptr, struct elf64_shdr *section_header,
 int			print_sym_elf(void *content, t_data *data);
 int			sort_elf(t_sym *sym1, t_sym *sym2);
 
-int			sections_match(const void *data_ref, const void *key);
-int			sections_print(const void *data_ref);
-void		sections_init(t_section *section);
-	
+void		sym_del(void *data_ref, size_t size);
 void		sym_init(t_sym *sym);		
 
 /*

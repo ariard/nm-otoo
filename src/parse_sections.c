@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/06 18:10:37 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/08 22:53:37 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,23 @@ int			sections_print(const void *data_ref)
 	t_section	*section;
 
 	section = (t_section *)data_ref;
-	printf("sect:%s, seg:%s, key:%s\n", section->sectname, section->segname, section->key);
+	if (section->sectname)
+		DG("sect:%s, seg:%s, key:%s", section->sectname, section->segname, section->key);
 	return (0);
 }
 
-void			parse_sections(struct segment_command_64 *segm,
+int			sections_del(void *data_ref)
+{
+	t_section	*section;
+
+	section = (t_section *)data_ref;
+	section->sectname = NULL;
+	section->segname = NULL;
+	ft_strdel(&section->key);
+	return (0);
+}
+
+void			parse_segment64(struct segment_command_64 *segm,
 			t_hashtab *tabsections, int *nsects)
 {
 	int					segsects;
@@ -56,9 +68,10 @@ void			parse_sections(struct segment_command_64 *segm,
 
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command_64);
+//	DG("flag A");
 	while (segsects--)
 	{
-		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
+//		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
 		sections_init(&section);
 		key = ft_itoa(*nsects);
 		*nsects += 1;
@@ -68,4 +81,5 @@ void			parse_sections(struct segment_command_64 *segm,
 		ft_strdel(&key);
 		sect = (void *)sect + sizeof(struct section_64);
 	}
-}	
+//	DG("flag B");
+}

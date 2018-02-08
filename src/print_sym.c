@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 17:22:18 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/23 21:23:02 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/08 21:43:04 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int			print_sym(void *content, t_data *data)
 	if ((data->filetype & MH_OBJECT) && sym->type != 'U')
 		ft_printf("%016llx", sym->value);
 	else if (sym->type != 'U')
-		ft_printf("0000001%09llx", sym->value);
+		ft_printf("00000001%08llx", sym->value);
 	else
 		ft_printf("%16s", " ");
 	if (data->flag & NM_JOPT)

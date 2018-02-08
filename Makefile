@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2018/01/03 15:46:23 by ariard           ###   ########.fr        #
+#    Updated: 2018/02/08 15:45:58 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ handle_64_elf.c\
 handle_fat.c\
 nm.c\
 otool.c\
+parse_archi.c\
 parse_sections.c\
 parse_symtab.c\
 parse_symtab_elf.c\

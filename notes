@@ -73,6 +73,21 @@ string table : strings to represent each symbol
 
 MACH-O segments :
 
+segment A :
+	- section 0
+	- section 1
+	- ...
+
+segment B :
+	- section 0
+	- section 1
+	- section 2
+
+segment C :
+	- section 0
+	- ...
+
+
 each Mach-O segment has a particular structure
 
 LC_CODE_SIGNATURE : defines signature of binary
