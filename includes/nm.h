@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/08 22:32:54 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 19:12:39 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <mach-o/nlist.h>
 # include <mach-o/fat.h>
 # include <mach/machine.h>
+# include <mach-o/arch.h>
 
 # include "../libft/includes/libft.h"
 # include "elf.h"

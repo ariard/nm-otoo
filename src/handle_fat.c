@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/15 18:32:42 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 19:16:12 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,24 +22,26 @@ t_tool_cpu	g_cpu[] =
 
 void		handle_fat(char *ptr, t_data *data)
 {
-	int			ncmds;
-	int			offset;
-	void			*tmp;
-	int			i;
+	int					ncmds;
+	const NXArchInfo	*arch;
+	void				*tmp;
+	int					i;
 
+	(void)data;
 	ncmds = ntohl(((struct fat_header *)ptr)->nfat_arch);
 	tmp = ptr + sizeof(struct fat_header);
-	DG("sizeof %lu", sizeof(struct fat_header));
-	DG("sizeof %lu", sizeof(struct fat_arch));
 	i = 0;
 	while (i++ < ncmds)
 	{	
-		offset = ntohl(((struct fat_arch *)tmp)->offset);
-		// machine.h for guessing 32-bit or 64-bit
-		DG("offset %d\n", offset);
-		if (i == 2)
-			handle_64(ptr + offset, data);
-//		ft_printf("architecture %d\n", i);
+		arch = NXGetArchInfoFromCpuType(ntohl(((struct fat_arch *)tmp)->cputype),
+			ntohl(((struct fat_arch *)tmp)->cpusubtype));
+		ft_printf("%s (for %s):\n", data->filename, (arch) ? arch->name : "unknown");
+	 	parse_archi((void *)ptr + ntohl(((struct fat_arch *)tmp)->offset), data);
+		tmp = (void *)tmp + sizeof(struct fat_arch);
+	}
+}
+
+
 //		j = -1;
 //		cputype = (((struct fat_arch *)tmp)->cputype);
 //		ft_printf("	cputype %d\n", ntohl(cputype));
@@ -48,6 +50,3 @@ void		handle_fat(char *ptr, t_data *data)
 //				break;	
 //		ft_printf("cputype %d\n", g_cpu[j].endianf(cputype));
 //		ft_printf("	offset %d\n", ntohl(((struct fat_arch *)tmp)->offset));
-		tmp = (void *)tmp + sizeof(struct fat_arch);
-	}
-}
