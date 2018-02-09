@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 20:26:41 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 22:18:42 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void		handle_fat(char *ptr, t_data *data)
 	void				*tmp;
 	long int				i;
 
-	(void)data;
 	ncmds = ntohl(((struct fat_header *)ptr)->nfat_arch);
 	tmp = ptr + sizeof(struct fat_header);
 	if ((i = sysarchi_extract(ncmds, tmp, data)))

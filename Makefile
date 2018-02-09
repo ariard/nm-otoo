@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2018/02/09 19:21:55 by ariard           ###   ########.fr        #
+#    Updated: 2018/02/09 21:56:07 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRC_BASE	=	\
 ft_hexdump.c\
 handle_32.c\
 handle_64.c\
+handle_ar.c\
 handle_fat.c\
 nm.c\
 otool.c\

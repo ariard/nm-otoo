@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 21:28:30 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 22:17:58 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@
 # include <sys/sysctl.h>
 
 # include <inttypes.h>
+
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
 # include <mach-o/fat.h>
 # include <mach/machine.h>
 # include <mach-o/arch.h>
 
+# include <ar.h>
+
 # include "../libft/includes/libft.h"
-# include "elf.h"
 
 
 /*
@@ -44,14 +46,13 @@
 # define NM_UOPT		(1 << 8)
 # define NM_JOPT		(1 << 9)
 
-# define MH_FAITHFUL	(MH_OBJECT | MH_EXECUTE | MH_DYLIB)
+# define MH_ARCHV		0x213c617263683e0a
 
 struct s_data
 {	
 	t_flag					flag;	
 	char					**av_data;
 	t_list					*lstsym;
-	int						filetype;
 	char					*filename;
 	unsigned int			cpu;
 	char					bits;				
@@ -115,6 +116,7 @@ typedef struct s_elfsect	t_elfsect;
 void		handle_64(char *ptr, t_data *data);
 void		handle_32(char *ptr, t_data *data);
 void		handle_fat(char *ptr, t_data *data);
+void		handle_ar(char *ptr, t_data *data);
 
 void		parse_archi(char *ptr, t_data *data);
 void		parse_segment64(struct segment_command_64 *segm,

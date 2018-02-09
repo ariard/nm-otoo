@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 21:03:31 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 22:16:26 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ static void		data_init(t_data *data)
 	data->flag = 0;
 	data->av_data = NULL;
 	data->lstsym = NULL;
-	data->filetype = 0;
 	data->filename = NULL;
 	data->cpu = 16777223;
 	hashtab_init(&data->tabsections, 100, &ft_hash_string);
