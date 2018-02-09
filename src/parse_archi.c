@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 20:21:25 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 21:28:28 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@ void	parse_archi(char *ptr, t_data *data)
 {
 	unsigned int		magic_number;
 	const NXArchInfo	*arch;
+	int					filetype;
 
 	magic_number = *(unsigned int *)ptr;
-	if (magic_number == FAT_CIGAM)
+	filetype = ((struct mach_header *)ptr)->filetype;
+	if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE && filetype ^ MH_DYLIB)
+		ft_dprintf(2, "nm : %s isn't a valid object file", data->filename);
+	else if (magic_number == FAT_CIGAM)
 		handle_fat(ptr, data);
 	else
 	{

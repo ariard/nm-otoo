@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:19:55 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 21:24:44 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void			parse_segment64(struct segment_command_64 *segm,
 
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command_64);
-//	DG("flag A");
 	while (segsects--)
 	{
 //		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
@@ -81,5 +80,4 @@ void			parse_segment64(struct segment_command_64 *segm,
 		ft_strdel(&key);
 		sect = (void *)sect + sizeof(struct section_64);
 	}
-//	DG("flag B");
 }

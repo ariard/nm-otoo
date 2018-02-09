@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 16:21:29 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:32:33 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 21:28:37 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 			sym->type += 32;
 	}
 	sym->value = el.n_value;
-//	dprintf(3, "[%s] %d\n", sym->name, sym->value);
+//	dprintf(3, "[%s] %llx\n", sym->name, sym->value);
 }
 
 void			sym_del(void *data_ref, size_t size)

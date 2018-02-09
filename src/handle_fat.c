@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 20:21:18 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 20:26:41 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void		handle_fat(char *ptr, t_data *data)
 		tmp = (void *)tmp + sizeof(struct fat_arch);
 	}
 }
-
 
 //		j = -1;
 //		cputype = (((struct fat_arch *)tmp)->cputype);

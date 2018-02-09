@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:29:25 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:34:08 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 21:27:55 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ void		handle_32(char *ptr, t_data *data)
 	int							nsects;
 	struct load_command			*lc;
 
+	data->bits = 32;
 	ncmds = ((struct mach_header *)ptr)->ncmds;
-	if (((struct mach_header *)ptr)->filetype & MH_OBJECT)
-		data->filetype = MH_OBJECT;
+//	if (((struct mach_header *)ptr)->filetype & MH_OBJECT)
+//		data->filetype = MH_OBJECT;
 	lc = (void *)ptr + sizeof(struct mach_header);
 	i = 0;
 	nsects = 1;

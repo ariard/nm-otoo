@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 20:14:59 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 21:28:30 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,25 +34,17 @@
  * Nm
 */
 
-#define	NM_NOPT		(1 << 1)
-#define	NM_ROPT		(1 << 2)
-#define NM_POPT		(1 << 3)
-#define NM_GOPT		(1 << 4)
-#define NM_AOPT		(1 << 5)
-#define NM_OOPT		(1 << 6)
-#define NM_uOPT		(1 << 7)
-#define NM_UOPT		(1 << 8)
-#define NM_JOPT		(1 << 9)
+# define NM_NOPT		(1 << 1)
+# define NM_ROPT		(1 << 2)
+# define NM_POPT		(1 << 3)
+# define NM_GOPT		(1 << 4)
+# define NM_AOPT		(1 << 5)
+# define NM_OOPT		(1 << 6)
+# define NM_uOPT		(1 << 7)
+# define NM_UOPT		(1 << 8)
+# define NM_JOPT		(1 << 9)
 
-#define	ELF_NOTYPE	0
-#define ELF_OBJECT	1
-#define ELF_FUNC	2
-#define ELF_SECTION	3
-#define ELF_FILE	4
-#define ELF_COMMON	5
-#define ELF_TLS		6
-
-#define EH_MAGIC_64	0x7f
+# define MH_FAITHFUL	(MH_OBJECT | MH_EXECUTE | MH_DYLIB)
 
 struct s_data
 {	
@@ -62,6 +54,7 @@ struct s_data
 	int						filetype;
 	char					*filename;
 	unsigned int			cpu;
+	char					bits;				
 	t_hashtab				tabsections;
 };
 
@@ -82,7 +75,7 @@ struct s_sym
 	char			type;
 	char			*name;
 	char			*desc;
-	int				value;
+	uint64_t		value;
 	int				index;
 };
 
