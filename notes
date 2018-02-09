@@ -18,6 +18,8 @@ pagestuff : displays information on each logical page that compose the image
 
 nm : display the object file symbol table
 
+
+
 OBJECT :
 
 executable : loader-readable form, meta-data + set of encoded instructions
@@ -124,6 +126,12 @@ LC_SEGMENT_64 : maps a 64-bit segment into the the given task address space
 
 
 Mach-o(5), stab(5), strip(1)
+
+FORMAT :
+
+Fat - 64-bit - 32-bit
+architecture i386; x86_64; ARM; MIPS; PowerPC
+
 
 
 HACKS :

@@ -12,33 +12,33 @@
 
 #include "nm.h"
 
-t_tool_cpu	g_cpu[] =
-{
-	{CPU_TYPE_I386, 1, 32},
-	{CPU_TYPE_X86_64, 1, 64},
-	{0, 0, 0},
-};
-
-
-void		handle_fat(char *ptr, t_data *data)
+void		handle_fat(char *ptr)
 {
 	int			ncmds;
-	int			offset;
 	void			*tmp;
 	int			i;
 
 	ncmds = ntohl(((struct fat_header *)ptr)->nfat_arch);
 	tmp = ptr + sizeof(struct fat_header);
-	DG("sizeof %lu", sizeof(struct fat_header));
-	DG("sizeof %lu", sizeof(struct fat_arch));
 	i = 0;
+	// fix cputype + cpusubtype story
 	while (i++ < ncmds)
 	{	
-		offset = ntohl(((struct fat_arch *)tmp)->offset);
-		// machine.h for guessing 32-bit or 64-bit
-		DG("offset %d\n", offset);
-		if (i == 2)
-			handle_64(ptr + offset, data);
+		DG("%p\n", tmp);
+		DG("%d\n", tmp - (void *)ptr);
+		ft_printf("architecture %d\n", i);
+		ft_printf("	cputype %d\n", ntohl(((struct fat_arch *)tmp)->cputype));		
+		ft_printf("	cputype %d\n", (((struct fat_arch *)tmp)->cputype));		
+		ft_printf("	cpusubtype %d\n", ntohl(((struct fat_arch *)tmp)->cpusubtype));
+		ft_printf("	cpusubtype %d\n", (((struct fat_arch *)tmp)->cpusubtype));
+		//capabilities ?
+		ft_printf("	offset %d\n", ntohl(((struct fat_arch *)tmp)->offset));
+		ft_printf("	size %d\n", ntohl(((struct fat_arch *)tmp)->size));
+		ft_printf("	align %d\n", ntohl(((struct fat_arch *)tmp)->align));
+		tmp = (void *)tmp + sizeof(struct fat_arch);
+	}
+}
+
 //		ft_printf("architecture %d\n", i);
 //		j = -1;
 //		cputype = (((struct fat_arch *)tmp)->cputype);
@@ -47,7 +47,3 @@ void		handle_fat(char *ptr, t_data *data)
 //			if (!(g_cpu[j].endianf(cputype) ^ g_cpu[j].cputype))
 //				break;	
 //		ft_printf("cputype %d\n", g_cpu[j].endianf(cputype));
-//		ft_printf("	offset %d\n", ntohl(((struct fat_arch *)tmp)->offset));
-		tmp = (void *)tmp + sizeof(struct fat_arch);
-	}
-}

@@ -13,6 +13,7 @@
 #ifndef NM_H
 # define NM_H
 
+
 # include <sys/mman.h>
 # include <sys/stat.h>
 
@@ -20,6 +21,7 @@
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
 # include <mach-o/fat.h>
+# include <mach/machine.h>
 
 # include "../libft/includes/libft.h"
 # include "elf.h"
@@ -91,6 +93,17 @@ struct s_stabs
 
 typedef struct s_stabs		t_stabs;
 
+struct s_tool_cpu
+{
+	integer_t	cputype;
+//	uint32_t	(*endianf)(uint32_t);
+	char		endianf;
+	char		size;	
+};
+
+typedef struct s_tool_cpu	t_tool_cpu;
+
+extern t_tool_cpu		g_cpu[];
 
 struct s_elfsect
 {
@@ -104,7 +117,7 @@ typedef struct s_elfsect	t_elfsect;
 
 void		handle_64(char *ptr, t_data *data);
 void		handle_32(char *ptr);
-void		handle_fat(char *ptr);
+void		handle_fat(char *ptr, t_data *data);
 
 void		parse_archi(char *ptr, t_data *data);
 void		parse_segment64(struct segment_command_64 *segm,

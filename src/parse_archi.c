@@ -21,8 +21,8 @@ void	parse_archi(char *ptr, t_data *data)
 		handle_64(ptr, data);
 	else if (magic_number == MH_MAGIC)
 		handle_32(ptr);
-	else if (magic_number == FAT_CIGAM) 	
-		handle_fat(ptr);
-	else if (magic_number &  EH_MAGIC_64)
-		handle_64_elf(ptr, data);
+	else if (magic_number == FAT_CIGAM)
+		handle_fat(ptr, data);
+//	else if (magic_number &  EH_MAGIC_64)
+//		handle_64_elf(ptr, data);
 }
