@@ -6,36 +6,47 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:16:12 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 20:21:18 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-t_tool_cpu	g_cpu[] =
+long int	sysarchi_extract(int ncmds, void *tmp, t_data *data)
 {
-	{CPU_TYPE_I386, 1, 32},
-	{CPU_TYPE_X86_64, 1, 64},
-	{0, 0, 0},
-};
+	int		i;
 
+	i = 0;
+	DG("%d", data->cpu);
+	while (i++ < ncmds)
+	{
+		DG("%d", ntohl(((struct fat_arch *)tmp)->cputype));
+		if (data->cpu == ntohl(((struct fat_arch *)tmp)->cputype))
+			return (ntohl(((struct fat_arch *)tmp)->offset));
+		tmp = (void *)tmp + sizeof(struct fat_arch);
+	}
+	return (0);
+}
 
 void		handle_fat(char *ptr, t_data *data)
 {
 	int					ncmds;
 	const NXArchInfo	*arch;
 	void				*tmp;
-	int					i;
+	long int				i;
 
 	(void)data;
 	ncmds = ntohl(((struct fat_header *)ptr)->nfat_arch);
 	tmp = ptr + sizeof(struct fat_header);
+	if ((i = sysarchi_extract(ncmds, tmp, data)))
+		return (parse_archi((void *)ptr + i, data));
 	i = 0;
+	DG("print all archi");
 	while (i++ < ncmds)
 	{	
 		arch = NXGetArchInfoFromCpuType(ntohl(((struct fat_arch *)tmp)->cputype),
 			ntohl(((struct fat_arch *)tmp)->cpusubtype));
-		ft_printf("%s (for %s):\n", data->filename, (arch) ? arch->name : "unknown");
+		ft_printf("\n%s (for %s):\n", data->filename, (arch) ? arch->name : "unknown");
 	 	parse_archi((void *)ptr + ntohl(((struct fat_arch *)tmp)->offset), data);
 		tmp = (void *)tmp + sizeof(struct fat_arch);
 	}

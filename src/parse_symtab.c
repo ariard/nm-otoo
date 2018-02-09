@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 16:21:29 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/08 22:22:15 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 19:32:33 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void			sym_init(t_sym *sym)
 	sym->index = 0;
 }
 
-static int		sym_resolve(int num, t_hashtab *tabsections)
+int		sym_resolve(int num, t_hashtab *tabsections)
 {
 	char		*key;
 	int			type;
@@ -78,7 +78,7 @@ static int		sym_resolve(int num, t_hashtab *tabsections)
 	return (type);
 }
 
-static void		sym_stab(t_sym *sym, uint8_t type)
+void		sym_stab(t_sym *sym, uint8_t type)
 {
 	int			i;
 

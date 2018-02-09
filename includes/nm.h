@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:12:39 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 20:14:59 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 # include <sys/mman.h>
 # include <sys/stat.h>
+# include <sys/types.h>
+# include <sys/sysctl.h>
 
 # include <inttypes.h>
 # include <mach-o/loader.h>
@@ -54,12 +56,13 @@
 
 struct s_data
 {	
-	t_flag		flag;	
-	char		**av_data;
-	t_list		*lstsym;
-	int			filetype;
-	char		*filename;
-	t_hashtab	tabsections;
+	t_flag					flag;	
+	char					**av_data;
+	t_list					*lstsym;
+	int						filetype;
+	char					*filename;
+	unsigned int			cpu;
+	t_hashtab				tabsections;
 };
 
 typedef struct s_data		t_data;
@@ -117,34 +120,31 @@ typedef struct s_elfsect	t_elfsect;
 /* MachO binary */
 
 void		handle_64(char *ptr, t_data *data);
-void		handle_32(char *ptr);
+void		handle_32(char *ptr, t_data *data);
 void		handle_fat(char *ptr, t_data *data);
 
 void		parse_archi(char *ptr, t_data *data);
 void		parse_segment64(struct segment_command_64 *segm,
 			t_hashtab *tabsections, int *nsects);
+void		parse_segment32(struct segment_command *segm,
+			t_hashtab *tabsections, int *nsects);
 void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
+void		parse_symtab32(struct symtab_command *sym, char *ptr, t_data *data);
 
+
+void		sym_init(t_sym *sym);
 void		symtab_sort(t_list **lstsym, t_data *data);
 void		symtab_del(t_list **lstsym, t_data *data);
+int			sym_resolve(int num, t_hashtab *tabsections);
 int			print_sym(void *content, t_data *data);
+void		sym_stab(t_sym *sym, uint8_t type);
+void		sym_del(void *data_ref, size_t size);
 
 
 int			sections_match(const void *data_ref, const void *key);
 int			sections_print(const void *data_ref);
 void		sections_init(t_section *section);
 int			sections_del(void *data_ref);
-
-/* Elf binary */
-
-void		handle_64_elf(char *ptr, t_data *data);
-void		parse_symtab_elf(char *ptr, struct elf64_shdr *section_header,
-			t_data *data);
-int			print_sym_elf(void *content, t_data *data);
-int			sort_elf(t_sym *sym1, t_sym *sym2);
-
-void		sym_del(void *data_ref, size_t size);
-void		sym_init(t_sym *sym);		
 
 /*
  * Otool

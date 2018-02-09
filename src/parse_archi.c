@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:16:29 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 20:21:25 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	parse_archi(char *ptr, t_data *data)
 		if (magic_number == MH_MAGIC_64)
 			handle_64(ptr, data);
 		else if (magic_number == MH_MAGIC)
-			handle_32(ptr);
+			handle_32(ptr, data);
 		else
 		{
 			arch = NXGetArchInfoFromCpuType(ntohl(*((int *)ptr + 1)),
@@ -34,13 +34,3 @@ void	parse_archi(char *ptr, t_data *data)
 		}
 	}
 }
-
-// if single = 64 or 32
-//  if fat
-//  	read number of archi
-//  		print archi	
-//  			call 32 and 64
-//  			if supported archi
-//  				execute	
-
-

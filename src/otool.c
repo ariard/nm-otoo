@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2017/05/23 21:32:04 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/09 19:21:20 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,3 +71,5 @@ int		main(int ac, char **av)
 }
 
 //	-print offset + line in hex AND print 16 bytes in value
+//	-add bonus
+//	-add support fat file + 32 bit
