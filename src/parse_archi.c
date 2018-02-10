@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 21:13:16 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/10 21:31:57 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	parse_archi(char *ptr, t_data *data)
 	else if (magic_number == FAT_CIGAM)
 		handle_fat(ptr, data);
 	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE && filetype ^ MH_DYLIB
-		&& filetype ^ MH_FVMLIB)
+		&& filetype ^ MH_FVMLIB && filetype ^ MH_DYLINKER && filetype ^ MH_DYLIB_STUB)
 		ft_dprintf(2, "nm : %s isn't a valid object file", data->filename);
 	else
 	{

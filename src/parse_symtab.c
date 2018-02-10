@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 16:21:29 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 19:06:36 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/10 22:28:30 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,9 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 			sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
-		if ((el.n_type & N_PEXT) || !(el.n_type & N_EXT))
+		DG("[%s] n_type %08b N_PEXT %08b N_EXT %08b", sym->name, el.n_type, N_PEXT, N_EXT);	
+		DG("t0 %d t1 %d", BIT(el.n_type, 4) & N_PEXT, BIT(el.n_type, 0) & N_EXT);
+		if (!(BIT(el.n_type, 0) & N_EXT))
 			sym->type += 32;
 	}
 	sym->value = el.n_value;

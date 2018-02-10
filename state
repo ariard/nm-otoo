@@ -21,6 +21,7 @@ Ii ok
 
 - test : all or not, support otool
 - check endianess on fat file
+- check SYMDEF_SORTED (/usr/lib/libkmod.a /usr/lib/libkmodc++.a)
 - check stab 5 (/usr/bin/Rez) => print the full entry | align stabs
 
 + hardness
