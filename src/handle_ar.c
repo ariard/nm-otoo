@@ -15,31 +15,24 @@
 void		handle_ar(char *ptr, t_data *data)
 {
 	char	*tmp;
-	size_t	size;
+	char	*base;
 	size_t	file_size;
 
-	(void)data;
-	tmp = ptr + 8 + sizeof(struct ar_hdr);
-	while (tmp)
+	tmp = ptr + 8;
+	file_size = ft_atoi(((struct ar_hdr *)tmp)->ar_size);
+	tmp += sizeof(struct ar_hdr) + file_size;
+	DG("S : %d", file_size);
+	while (*tmp)
 	{
 		file_size = ft_atoi(((struct ar_hdr *)tmp)->ar_size);
 		tmp += sizeof(struct ar_hdr);
-		size = write(1, (char *)tmp, ft_strlen(tmp));
-		ft_printf("\n");
-		tmp += size;
+		base = tmp;
+		ft_printf("\n%s(%s):\n", data->filename, tmp);
+		tmp += ft_strlen(tmp);
 		while (!*tmp)
 			tmp++;
-		if ((unsigned int)tmp == MH_MAGIC_64)
-			ft_printf("\n handle\n");
-		tmp += file_size;
+		if (*(unsigned int *)tmp == MH_MAGIC_64)
+			parse_archi(tmp, data);	
+		tmp = base + file_size;
 	}
 }
-
-// ptr + 8 + struct ar_hdr
-//
-// 	while (tmp)
-// 		size = write(1, tmp, ft_strlen(tmp));
-//		tmp += size
-// 		if magic number == tmp
-// 			ft_printf("handle");
-// 		tmp += struct ar_hdr + ar_hdr->size
