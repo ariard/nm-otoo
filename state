@@ -12,16 +12,14 @@ TODO :
 
 script for test each bin against each bin and if failure print it
 
-- check that it s a valid object file
-- covering 64 bit/ 32 bit/fat file (/usr/bin/audiofile/ ; my_32_bit )
-- check all types of files (exe, obj, so, dll, core dump)
-exe : /bin/ + /usr/bin + /usr/bin/ + /sbin + /usr/local/bin
-
-
 - all types of symbols (undefined, absolute, text section symbol, data section symbol, bss section symbol, common symbol, debugger symbol table, other, indirect symbol) local/global
 
+A + I to be found in /usr/lib
+
+- check endianess on fat file
 - check stab 5
 - check DYSYMTAB
+
 
 + hardness
 
@@ -29,6 +27,7 @@ SAME on otool
 
 + bonus : 8nm + 2 otool
 
+exe : /bin/ + /usr/bin + /usr/bin/ + /sbin + /usr/local/bin
 
 .o / .so / .dll / .a
 
