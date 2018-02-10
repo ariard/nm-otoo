@@ -26,7 +26,7 @@ void		handle_32(char *ptr, t_data *data)
 	nsects = 1;
 	while (i < ncmds)
 	{
-		if (lc->cmd == LC_SEGMENT_64)
+		if (lc->cmd == LC_SEGMENT)
 			parse_segment32((struct segment_command *)lc, &data->tabsections, &nsects);
 		if (lc->cmd == LC_SYMTAB)
 			parse_symtab32((struct symtab_command *)lc, ptr, data);

@@ -32,7 +32,7 @@ int			print_sym(void *content, t_data *data)
 	if (sym->type != 'U')
 		ft_printf("%0*llx", (data->bits == 64) ? 16 : 8, sym->value);
 	else
-		ft_printf("%16s", " ");
+		ft_printf("%*s", (data->bits == 64) ? 16 : 8, " ");
 	if (data->flag & NM_JOPT)
 		ft_printf("%s\n", sym->name);
 	else if ((data->flag & NM_AOPT) && sym->type == 45)

@@ -23,8 +23,8 @@ static void		sections_info(t_section *section, struct section *sect,
 void			parse_segment32(struct segment_command *segm,
 			t_hashtab *tabsections, int *nsects)
 {
-	int					segsects;
-	struct section		*sect;
+	int				segsects;
+	struct section			*sect;
 	t_section			section;
 	char				*key;
 

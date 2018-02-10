@@ -92,7 +92,7 @@ void		sym_stab(t_sym *sym, uint8_t type)
 }
 
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
-				t_hashtab *sections)
+			t_hashtab *sections)
 {
 	sym->name = stringtable + el.n_un.n_strx;
 	if (N_STAB & el.n_type)

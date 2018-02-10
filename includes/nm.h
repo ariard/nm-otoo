@@ -77,7 +77,7 @@ struct s_sym
 	char			*name;
 	char			*desc;
 	uint64_t		value;
-	int				index;
+	int			index;
 };
 
 typedef struct s_sym		t_sym;
