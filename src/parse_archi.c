@@ -22,10 +22,11 @@ void	parse_archi(char *ptr, t_data *data)
 	filetype = ((struct mach_header *)ptr)->filetype;
 	if (!ft_strncmp((char *)ptr, ARMAG, SARMAG))
 		handle_ar(ptr, data);	
-	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE && filetype ^ MH_DYLIB)
-		ft_dprintf(2, "nm : %s isn't a valid object file", data->filename);
 	else if (magic_number == FAT_CIGAM)
 		handle_fat(ptr, data);
+	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE && filetype ^ MH_DYLIB
+		&& filetype ^ MH_FVMLIB)
+		ft_dprintf(2, "nm : %s isn't a valid object file", data->filename);
 	else
 	{
 		if (magic_number == MH_MAGIC_64)

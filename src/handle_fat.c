@@ -17,7 +17,6 @@ long int	sysarchi_extract(int ncmds, void *tmp, t_data *data)
 	int		i;
 
 	i = 0;
-	DG("%d", data->cpu);
 	while (i++ < ncmds)
 	{
 		DG("%d", ntohl(((struct fat_arch *)tmp)->cputype));
@@ -50,12 +49,3 @@ void		handle_fat(char *ptr, t_data *data)
 		tmp = (void *)tmp + sizeof(struct fat_arch);
 	}
 }
-
-//		j = -1;
-//		cputype = (((struct fat_arch *)tmp)->cputype);
-//		ft_printf("	cputype %d\n", ntohl(cputype));
-//		while (g_cpu[++j].cputype)
-//			if (!(g_cpu[j].endianf(cputype) ^ g_cpu[j].cputype))
-//				break;	
-//		ft_printf("cputype %d\n", g_cpu[j].endianf(cputype));
-//		ft_printf("	offset %d\n", ntohl(((struct fat_arch *)tmp)->offset));
