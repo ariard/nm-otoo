@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 17:22:18 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 21:36:32 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/10 20:21:00 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,5 @@ int			print_sym(void *content, t_data *data)
 		ft_printf(" %c %s %s\n", sym->type, sym->desc, sym->name);
 	else 
 		ft_printf(" %c %s\n", sym->type, sym->name);
-	return (0);
-}
-
-int			print_sym_elf(void *content, t_data *data)
-{
-	t_sym	*sym;
-
-	(void)data;
-	sym = content;
-	ft_printf("%016llx", sym->value);
-	if (sym->type)
-		ft_printf(" %c", sym->type);
-	ft_printf(" %s\n", sym->name);
 	return (0);
 }

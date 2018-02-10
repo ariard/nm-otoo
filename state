@@ -7,15 +7,19 @@ nm elf
 
 files : executable, object code, shared libraries, dynamic loaded-libraries, core dumps
 
-
 TODO : 
 
-script for test each bin against each bin and if failure print it
+Uu ok
+Aa ok
+Tt ok
+Dd ok 
+Bb ok
+Cc ok
+-  ok
+Ss ok
+Ii ok
 
-- all types of symbols (undefined, absolute, text section symbol, data section symbol, bss section symbol, common symbol, debugger symbol table, other, indirect symbol) local/global
-
-A + I to be found in /usr/lib
-
+- test : all or not, support otool
 - check endianess on fat file
 - check stab 5 (/usr/bin/Rez) => print the full entry | align stabs
 
@@ -28,6 +32,10 @@ SAME on otool
 exe : /bin/ + /usr/bin + /usr/bin/ + /sbin + /usr/local/bin
 
 .o / .so / .dll / .a
+
+
+/usr/lib/libobjc.dylib
+/usr/lib/libc++.1.dylib
 
 TODO :
 	- screener code

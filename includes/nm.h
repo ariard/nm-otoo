@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 22:17:58 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/10 19:05:49 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,8 @@ int			sections_match(const void *data_ref, const void *key);
 int			sections_print(const void *data_ref);
 void		sections_init(t_section *section);
 int			sections_del(void *data_ref);
+
+int			print_debug(void *content, t_data *data);
 
 /*
  * Otool
