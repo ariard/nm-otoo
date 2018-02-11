@@ -14,25 +14,25 @@
 
 void		handle_ar(char *ptr, t_data *data)
 {
+	size_t	size;
+	char	*name;
 	char	*tmp;
-	char	*base;
-	size_t	file_size;
 
-	tmp = ptr + 8;
-	file_size = ft_atoi(((struct ar_hdr *)tmp)->ar_size);
-	tmp += sizeof(struct ar_hdr) + file_size;
-	DG("S : %d", file_size);
-	while (*tmp)
-	{
-		file_size = ft_atoi(((struct ar_hdr *)tmp)->ar_size);
-		tmp += sizeof(struct ar_hdr);
-		base = tmp;
-		ft_printf("\n%s(%s):\n", data->filename, tmp);
-		tmp += ft_strlen(tmp);
-		while (!*tmp)
-			tmp++;
-		if (*(unsigned int *)tmp == MH_MAGIC_64)
-			parse_archi(tmp, data);	
-		tmp = base + file_size;
+	ptr += SARMAG;
+	ptr += ft_atoi(((struct ar_hdr *)ptr)->ar_size) + sizeof(struct ar_hdr);
+	while (ptr)
+	{ 
+		if (!ft_strncmp(ptr, ARMAG, SARMAG))
+			break;
+		tmp = ptr;
+		size = ft_atoi(((struct ar_hdr *)ptr)->ar_size) + sizeof(struct ar_hdr);
+		ptr += sizeof(struct ar_hdr);
+		name = ptr;
+		ptr += ft_strlen(ptr) + 1;
+		while (!*ptr)
+			ptr++;
+		ft_printf("\n%s(%s):\n", data->filename, name);
+		parse_archi(ptr, data);
+		ptr = tmp + size;
 	}
 }

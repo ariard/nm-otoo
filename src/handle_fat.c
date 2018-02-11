@@ -19,7 +19,7 @@ long int	sysarchi_extract(int narchs, void *tmp, t_data *data)
 	i = 0;
 	while (i++ < narchs)
 	{
-		DG("%d", ntohl(((struct fat_arch *)tmp)->cputype));
+//		DG("%d", ntohl(((struct fat_arch *)tmp)->cputype));
 		if (data->cpu == ntohl(((struct fat_arch *)tmp)->cputype))
 			return (ntohl(((struct fat_arch *)tmp)->offset));
 		tmp = (void *)tmp + sizeof(struct fat_arch);
@@ -39,9 +39,8 @@ void		handle_fat(char *ptr, t_data *data)
 	if ((i = sysarchi_extract(narchs, tmp, data)))
 		return (parse_archi((void *)ptr + i, data));
 	i = 0;
-	DG("print all archi");
 	while (i++ < narchs)
-	{	
+	{
 		arch = NXGetArchInfoFromCpuType(ntohl(((struct fat_arch *)tmp)->cputype),
 			ntohl(((struct fat_arch *)tmp)->cpusubtype));
 		if (narchs > 1)

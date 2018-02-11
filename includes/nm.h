@@ -56,7 +56,7 @@ struct s_data
 	char					**av_data;
 	t_list					*lstsym;
 	char					*filename;
-	unsigned int			cpu;
+	unsigned int				cpu;
 	char					bits;				
 	t_hashtab				tabsections;
 };
@@ -103,15 +103,16 @@ struct s_tool_cpu
 
 typedef struct s_tool_cpu	t_tool_cpu;
 
-extern t_tool_cpu		g_cpu[];
-
-struct s_elfsect
+struct s_symtable 
 {
-	char 	*value;
-	char	type;
+	int	symbol;
+	int	member;
 };
 
-typedef struct s_elfsect	t_elfsect;
+typedef struct s_symtable	t_symtable;
+
+extern t_tool_cpu		g_cpu[];
+
 
 /* MachO binary */
 
