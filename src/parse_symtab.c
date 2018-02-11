@@ -97,6 +97,7 @@ static void		sym_stab(t_sym *sym, struct nlist_64 el)
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 			t_hashtab *sections)
 {
+	(void)sections;
 	sym->name = stringtable + el.n_un.n_strx;
 	if (N_STAB & el.n_type)
 		sym_stab(sym, el);
@@ -105,17 +106,15 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;
 		sym->type = ((N_EXT & el.n_type) && (el.n_value) && (!el.n_sect)) ?  'C' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_ABS) ? 'A' : sym->type;
-		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
-			sym_resolve(el.n_sect, sections) : sym->type;
+		//sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
+		//	sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
-//		DG("[%s] n_type %08b N_PEXT %08b N_EXT %08b", sym->name, el.n_type, N_PEXT, N_EXT);	
-//		DG("t0 %d t1 %d", BIT(el.n_type, 4) & N_PEXT, BIT(el.n_type, 0) & N_EXT);
 		if (!(BIT(el.n_type, 0) & N_EXT))
 			sym->type += 32;
 	}
 	sym->value = el.n_value;
-	DG("[%s] %llx %d %d %s\n", sym->name, sym->value, el.n_sect, el.n_desc, sym->desc);
+//	DG("[%s] %llx\n", sym->name, sym->value);
 }
 
 void			sym_del(void *data_ref, size_t size)
@@ -131,6 +130,7 @@ void			sym_del(void *data_ref, size_t size)
 	sym->index = 0;
 	sym->sect = 0;
 	sym->debug = 0;
+	free(data_ref);
 }
 
 void			parse_symtab(struct symtab_command *tabsym, char *ptr, t_data *data)

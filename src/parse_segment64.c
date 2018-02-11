@@ -70,6 +70,7 @@ void			parse_segment64(struct segment_command_64 *segm,
 	sect = (void *)segm + sizeof(struct segment_command_64);
 	while (segsects--)
 	{
+		DG("flag A");
 //		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
 		sections_init(&section);
 		key = ft_itoa(*nsects);

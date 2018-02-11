@@ -19,7 +19,7 @@ Cc ok
 Ss ok
 Ii ok
 
-- test : all or not, support otool
+- test : all or not, support otool, check perfomance on school
 - (align) sym
 
 - check endianess on fat file

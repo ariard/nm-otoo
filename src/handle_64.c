@@ -14,10 +14,10 @@
 
 void		handle_64(char *ptr, t_data *data)
 { 
-	int							ncmds;
-	int							i;
-	int							nsects;
-	struct load_command			*lc;
+	int			ncmds;
+	int			i;
+	int			nsects;
+	struct load_command	*lc;
 
 	data->bits = 64;
 	ncmds = ((struct mach_header_64 *)ptr)->ncmds;

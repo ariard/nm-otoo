@@ -43,7 +43,7 @@ int				main(int argc, char **argv)
 	char		*ptr;
 	struct stat buf;
 
-	DG("nm start");
+//	DG("nm start");
 	data_init(&data);
 	cliopts_get(argv, g_nm_opts, &data);
 	i = data.av_data - argv;
@@ -62,6 +62,7 @@ int				main(int argc, char **argv)
 		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)
 			continue;
+		close(fd);
 	}
 	return (0);
 }
