@@ -48,12 +48,14 @@ t_stabs			g_stabs[]=
 };
 
 void			sym_init(t_sym *sym)
-{	
+{
 	sym->type = 0;
 	sym->name = NULL;
 	sym->desc = NULL;
 	sym->value = 0;
 	sym->index = 0;
+	sym->sect = 0;
+	sym->debug = 0;
 }
 
 int		sym_resolve(int num, t_hashtab *tabsections)
@@ -78,17 +80,18 @@ int		sym_resolve(int num, t_hashtab *tabsections)
 	return (type);
 }
 
-void		sym_stab(t_sym *sym, uint8_t type)
+static void		sym_stab(t_sym *sym, struct nlist_64 el)
 {
 	int			i;
 
-	DG("stab");
 	sym->type = '-';
 	i = -1;
 	while (++i < 29)
-		if (g_stabs[i].value == type)
+		if (g_stabs[i].value == el.n_type)
 			break;
 	sym->desc = g_stabs[i].entry;
+	sym->sect = el.n_sect;
+	sym->debug = el.n_desc;
 }
 
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
@@ -96,7 +99,7 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 {
 	sym->name = stringtable + el.n_un.n_strx;
 	if (N_STAB & el.n_type)
-		sym_stab(sym, el.n_type);
+		sym_stab(sym, el);
 	 else
 	{
 		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;
@@ -106,13 +109,13 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 			sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
-		DG("[%s] n_type %08b N_PEXT %08b N_EXT %08b", sym->name, el.n_type, N_PEXT, N_EXT);	
-		DG("t0 %d t1 %d", BIT(el.n_type, 4) & N_PEXT, BIT(el.n_type, 0) & N_EXT);
+//		DG("[%s] n_type %08b N_PEXT %08b N_EXT %08b", sym->name, el.n_type, N_PEXT, N_EXT);	
+//		DG("t0 %d t1 %d", BIT(el.n_type, 4) & N_PEXT, BIT(el.n_type, 0) & N_EXT);
 		if (!(BIT(el.n_type, 0) & N_EXT))
 			sym->type += 32;
 	}
 	sym->value = el.n_value;
-//	dprintf(3, "[%s] %llx\n", sym->name, sym->value);
+	DG("[%s] %llx %d %d %s\n", sym->name, sym->value, el.n_sect, el.n_desc, sym->desc);
 }
 
 void			sym_del(void *data_ref, size_t size)
@@ -126,6 +129,8 @@ void			sym_del(void *data_ref, size_t size)
 	sym->desc = NULL;
 	sym->value = 0;
 	sym->index = 0;
+	sym->sect = 0;
+	sym->debug = 0;
 }
 
 void			parse_symtab(struct symtab_command *tabsym, char *ptr, t_data *data)

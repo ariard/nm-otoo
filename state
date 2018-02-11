@@ -20,8 +20,12 @@ Ss ok
 Ii ok
 
 - test : all or not, support otool
+- (align) sym
+
 - check endianess on fat file
-- check stab 5 (/usr/bin/Rez) => print the full entry | align stabs
+
+=> check options
+=> check otool
 
 + hardness
 

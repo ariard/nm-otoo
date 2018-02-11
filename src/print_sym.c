@@ -27,8 +27,6 @@ int			print_sym(void *content, t_data *data)
 		return (0);
 	if (data->flag & NM_OOPT)
 		ft_printf("%s: ", data->filename);
-//	if ((data->filetype & MH_OBJECT) && sym->type != 'U')
-//		ft_printf("%016llx", sym->value);
 	if (sym->type != 'U')
 		ft_printf("%0*llx", (data->bits == 64) ? 16 : 8, sym->value);
 	else
@@ -36,7 +34,8 @@ int			print_sym(void *content, t_data *data)
 	if (data->flag & NM_JOPT)
 		ft_printf("%s\n", sym->name);
 	else if ((data->flag & NM_AOPT) && sym->type == 45)
-		ft_printf(" %c %s %s\n", sym->type, sym->desc, sym->name);
+		ft_printf(" %c %02d %04d %s %s\n", sym->type, sym->sect, sym->debug,
+		sym->desc, sym->name);
 	else 
 		ft_printf(" %c %s\n", sym->type, sym->name);
 	return (0);

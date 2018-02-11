@@ -12,12 +12,26 @@
 
 #include "nm.h"
 
+static void		sym_stab(t_sym *sym, struct nlist el)
+{
+	int			i;
+
+	sym->type = '-';
+	i = -1;
+	while (++i < 29)
+		if (g_stabs[i].value == el.n_type)
+			break;
+	sym->desc = g_stabs[i].entry;
+	sym->sect = el.n_sect;
+	sym->debug = el.n_desc;
+}
+
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
 				t_hashtab *sections)
 {
 	sym->name = stringtable + el.n_un.n_strx;
 	if (N_STAB & el.n_type)
-		sym_stab(sym, el.n_type);
+		sym_stab(sym, el);
 	 else
 	{
 		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;

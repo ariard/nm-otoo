@@ -80,6 +80,8 @@ struct s_sym
 	char			*desc;
 	uint64_t		value;
 	int			index;
+	int			sect;
+	int			debug;
 };
 
 typedef struct s_sym		t_sym;
@@ -111,8 +113,7 @@ struct s_symtable
 
 typedef struct s_symtable	t_symtable;
 
-extern t_tool_cpu		g_cpu[];
-
+extern t_stabs			g_stabs[];
 
 /* MachO binary */
 
@@ -135,7 +136,6 @@ void		symtab_sort(t_list **lstsym, t_data *data);
 void		symtab_del(t_list **lstsym, t_data *data);
 int			sym_resolve(int num, t_hashtab *tabsections);
 int			print_sym(void *content, t_data *data);
-void		sym_stab(t_sym *sym, uint8_t type);
 void		sym_del(void *data_ref, size_t size);
 
 
