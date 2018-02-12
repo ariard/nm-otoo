@@ -28,20 +28,20 @@ void		print_hex_text(void *a, int size)
 	ft_printf("\n");
 }
 
-void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data)
+void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data,
+		char *msg)
 {			
 	uint64_t	address;
 	int		size;
 	void	*a;
 	
-	(void)data;
-	ft_printf("(__TEXT,__text) section\n");
+	ft_printf("%s\n", msg);
 	address = sect->addr; 
 	size = sect->size;
 	a = (void *)ptr + sect->offset;
 	while (size > 0)
 	{
-		ft_printf("%016llx ", address);
+		ft_printf("%016llx%s", address, (data->flag & OT_DOPT) ? "	" : " ");
 		print_hex_text(a, size);
 		address += 16;
 		a += 16;

@@ -30,10 +30,6 @@
 
 # include "../libft/includes/libft.h"
 
-/*
- * Nm
-*/
-
 # define NM_NOPT		(1 << 1)
 # define NM_ROPT		(1 << 2)
 # define NM_POPT		(1 << 3)
@@ -44,6 +40,9 @@
 # define NM_UOPT		(1 << 8)
 # define NM_JOPT		(1 << 9)
 # define NM_aOPT		(1 << 10)
+
+# define OT_DOPT		(1 << 1)
+# define OT_HOPT		(1 << 2)
 
 # define BIT(x, y)		((x) & (1<<(y)))
 
@@ -149,7 +148,8 @@ int		print_debug(void *content, t_data *data);
  * Otool
 */
 
-void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data);
+void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data,
+		char *msg);
 void		ft_hexdump32(struct section *sect, char *ptr, t_data *data);
 void		get_segment64(char *ptr, t_data *data);
 void		get_segment32(char *ptr, t_data *data);

@@ -43,7 +43,8 @@ int			sections_print(const void *data_ref)
 
 	section = (t_section *)data_ref;
 	if (section->sectname)
-		DG("sect:%s, seg:%s, key:%s", section->sectname, section->segname, section->key);
+		DG("sect:%s, seg:%s, key:%s", section->sectname,
+		section->segname, section->key);
 	return (0);
 }
 

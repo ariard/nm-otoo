@@ -20,7 +20,7 @@ void		handle_ar(char *ptr, t_data *data)
 
 	ptr += SARMAG;
 	ptr += ft_atoi(((struct ar_hdr *)ptr)->ar_size) + sizeof(struct ar_hdr);
-	while (ptr)
+	while (*ptr)
 	{
 		if (!ft_strncmp(ptr, ARMAG, SARMAG))
 			break;
@@ -31,7 +31,7 @@ void		handle_ar(char *ptr, t_data *data)
 		ptr += ft_strlen(ptr) + 1;
 		while (!*ptr)
 			ptr++;
-		ft_printf("\n%s(%s):\n", data->filename, name);
+		ft_printf("%s%s(%s):\n", (data->bin) ? "\n" : "", data->filename, name);
 		parse_archi(ptr, data);
 		ptr = tmp + size;
 	}

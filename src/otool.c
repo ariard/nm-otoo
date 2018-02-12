@@ -46,17 +46,17 @@ int			main(int argc, char **argv)
 	struct stat 	buf;
 
 	data_init(&data);
-//	cliopts_get(argv, g_nm_opts, &data);
-//	i = data.av_data - argv;
-	i = 1;
+	cliopts_get(argv, g_ot_opts, &data);
+	i = data.av_data - argv;
 	while (argv[i] && i <= argc)
 	{
 		data.filename = argv[i++];
-		ft_printf("%s:\n", data.filename);
 		if (get_filesize(data.filename, &buf, &fd) < 0)
 			continue;
 		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
 			continue;
+		ft_printf("%s%s%s\n", (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "Archive : " : "", data.filename,
+			(!ft_strncmp(ptr, ARMAG, SARMAG)) ? "" : ":");
 		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)
 			continue;

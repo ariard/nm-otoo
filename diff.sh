@@ -7,7 +7,10 @@ then
 elif [ $1 = ot ]
 then
 	BIN=otool
-	OPT="-t"
+	if [ ! $3 ] 
+	then
+		OPT="-t"
+	fi
 	MYBIN=./ft_otool
 else
 	return

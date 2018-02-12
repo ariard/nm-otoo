@@ -22,8 +22,12 @@ static void		get_section_text64(struct segment_command_64 *segm,
 	sect = (void *)segm + sizeof(struct segment_command_64);
 	while (segsects--)
 	{
-		if (!ft_strcmp("__text", sect->sectname))
-			ft_hexdump64(sect, ptr, data);
+		if (!ft_strcmp("__text", sect->sectname) && !(data->flag &
+			OT_DOPT))
+			ft_hexdump64(sect, ptr, data, "(__TEXT,__text) section");
+		if (!ft_strcmp("__data", sect->sectname) && (data->flag &
+			OT_DOPT))
+			ft_hexdump64(sect, ptr, data, "(__DATA,__data) section");
 		sect = (void *)sect + sizeof(struct section_64);
 	}
 }
