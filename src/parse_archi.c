@@ -18,9 +18,9 @@ static void	handle_32and64(unsigned int magic_number, char *ptr,
 	const NXArchInfo	*arch;
 
 	if (magic_number == MH_MAGIC_64)
-		handle_64(ptr, data);
+		(data->bin) ? handle_64(ptr, data) : get_segment64(ptr, data);
 	else if (magic_number == MH_MAGIC)
-		handle_32(ptr, data);
+		(data->bin) ? handle_32(ptr, data) : get_segment32(ptr, data);
 	else
 	{
 		arch = NXGetArchInfoFromCpuType(ntohl(*((int *)ptr + 1)),
@@ -43,7 +43,8 @@ void		parse_archi(char *ptr, t_data *data)
 		handle_fat(ptr, data);
 	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE && filetype ^ MH_DYLIB
 		&& filetype ^ MH_FVMLIB && filetype ^ MH_DYLINKER && filetype ^ MH_DYLIB_STUB)
-		ft_dprintf(2, "nm : %s isn't a valid object file", data->filename);
+		ft_dprintf(2, "%s : %s isn't a valid object file", (data->bin) ?
+		"nm" : "otool", data->filename);
 	else
 		handle_32and64(magic_number, ptr, data);
 }

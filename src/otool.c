@@ -12,60 +12,55 @@
 
 #include "nm.h"
 
-static void		get_section_text(struct segment_command_64 *segm, char *ptr,
-				char *filename)
+t_cliopts		g_ot_opts[]=
 {
-	struct section_64	*sect;
-	int					segsects;
+	{'d', NULL, OT_DOPT, 0, NULL, 0},
+	{'h', NULL, OT_HOPT, 0, NULL, 0},
+};
 
-	segsects = segm->nsects;
-	sect = (void *)segm + sizeof(struct segment_command_64);
-	while (segsects--)
-	{
-		if (!ft_strcmp("__text", sect->sectname))
-			ft_hexdump(sect, ptr, filename);
-		sect = (void *)sect + sizeof(struct section_64);
-	}
+static void		data_init(t_data *data)
+{
+	data->flag = 0;
+	data->av_data = NULL;
+	data->lstsym = NULL;
+	data->filename = NULL;
+	data->cpu = 16777223;
+	data->bits = 0;
+	data->bin = 0;
+	hashtab_init(&data->tabsections, 100, &ft_hash_string);
 }
 
-static void		get_segment(char *ptr, char *filename)
+static int		get_filesize(char *name, struct stat *buf, int *fd)
 {
-	int						ncmds;
-	int						i;
-	struct load_command		*lc;
-
-	ncmds = ((struct mach_header_64 *)ptr)->ncmds;
-	lc = (void *)ptr + sizeof(struct mach_header_64);
-	i = 0;
-	while (i++ < ncmds)
-	{
-		if (lc->cmd == LC_SEGMENT_64)
-			get_section_text((struct segment_command_64 *)lc, ptr,
-				filename);
-		lc = (void *)lc + lc->cmdsize;
-	}
+	if ((*fd = open(name, O_RDONLY)) < 0)
+		ft_dprintf(2, "otool : No such file %s\n", name);
+	return (fstat(*fd, buf));
 }
 	
-int		main(int ac, char **av)
+int			main(int argc, char **argv)
 {
-	int		fd;
+	t_data		data;
 	int		i;
+	int		fd;
 	char		*ptr;
-	struct stat	buf;
-	
+	struct stat 	buf;
+
+	data_init(&data);
+//	cliopts_get(argv, g_nm_opts, &data);
+//	i = data.av_data - argv;
 	i = 1;
-	while (i < ac && av[i])
+	while (argv[i] && i <= argc)
 	{
-		if ((fd = open(av[i], O_RDONLY)) < 0)
-			return (1);
-		if (fstat(fd, &buf) < 0)
-			return (1);
-		if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
-			return (1);	
-		get_segment(ptr, av[i]);
+		data.filename = argv[i++];
+		ft_printf("%s:\n", data.filename);
+		if (get_filesize(data.filename, &buf, &fd) < 0)
+			continue;
+		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
+			continue;
+		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)
-			return (1);
-		i++;
+			continue;
+		close(fd);
 	}
 	return (0);
 }

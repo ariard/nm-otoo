@@ -33,6 +33,8 @@ static void		data_init(t_data *data)
 	data->lstsym = NULL;
 	data->filename = NULL;
 	data->cpu = 16777223;
+	data->bits = 0;
+	data->bin = 1;
 	hashtab_init(&data->tabsections, 100, &ft_hash_string);
 }
 

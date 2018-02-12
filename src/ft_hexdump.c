@@ -12,11 +12,10 @@
 
 #include "nm.h"
 
-void		print_hex_text(int address, void *a, int size)
+void		print_hex_text(void *a, int size)
 {
 	int		i;
 
-	ft_printf("%016llx         ", address);
 	if (size > 16)
 		i = 16;
 	else
@@ -29,21 +28,42 @@ void		print_hex_text(int address, void *a, int size)
 	ft_printf("\n");
 }
 
-void		ft_hexdump(struct section_64 *sect, char *ptr, char *filename)
+void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data)
 {			
-	int		address;
+	uint64_t	address;
 	int		size;
 	void	*a;
 	
-	ft_printf("%s:\n", filename);
-	ft_printf("Contents of (__TEXT, __text) section\n");
+	(void)data;
+	ft_printf("(__TEXT,__text) section\n");
 	address = sect->addr; 
 	size = sect->size;
 	a = (void *)ptr + sect->offset;
 	while (size > 0)
 	{
-		print_hex_text(address, a, size);
-		DG("address is %x", address);
+		ft_printf("%016llx ", address);
+		print_hex_text(a, size);
+		address += 16;
+		a += 16;
+		size -= 16;
+	}
+}
+
+void		ft_hexdump32(struct section *sect, char *ptr, t_data *data)
+{			
+	uint32_t	address;
+	int		size;
+	void	*a;
+	
+	(void)data;
+	ft_printf("(__TEXT, __text) section\n");
+	address = sect->addr; 
+	size = sect->size;
+	a = (void *)ptr + sect->offset;
+	while (size > 0)
+	{
+		ft_printf("%08llx ", address);
+		print_hex_text(a, size);
 		address += 16;
 		a += 16;
 		size -= 16;

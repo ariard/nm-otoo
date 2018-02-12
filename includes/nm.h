@@ -56,7 +56,8 @@ struct s_data
 	t_list			*lstsym;
 	char			*filename;
 	unsigned int		cpu;
-	char			bits;				
+	char			bits;
+	char			bin;		
 	t_hashtab		tabsections;
 };
 
@@ -70,7 +71,6 @@ struct s_section
 };
 
 typedef struct s_section	t_section;
-
 
 struct s_sym
 {
@@ -149,6 +149,10 @@ int		print_debug(void *content, t_data *data);
  * Otool
 */
 
-void		ft_hexdump(struct section_64 *sect, char *ptr, char *filename);
+void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data);
+void		ft_hexdump32(struct section *sect, char *ptr, t_data *data);
+void		get_segment64(char *ptr, t_data *data);
+void		get_segment32(char *ptr, t_data *data);
+
 
 #endif

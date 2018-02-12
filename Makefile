@@ -38,7 +38,8 @@ handle_ar.c\
 handle_fat.c\
 nm.c\
 otool.c\
-otool_fatheader.c\
+get_segment32.c\
+get_segment64.c\
 parse_archi.c\
 parse_segment32.c\
 parse_segment64.c\
