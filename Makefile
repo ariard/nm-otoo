@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2018/02/10 19:05:42 by ariard           ###   ########.fr        #
+#    Updated: 2018/02/12 16:43:24 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ nm.c\
 otool.c\
 get_segment32.c\
 get_segment64.c\
+display_header.c\
 parse_archi.c\
 parse_segment32.c\
 parse_segment64.c\

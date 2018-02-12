@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:21:20 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 18:19:40 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,9 @@ int			main(int argc, char **argv)
 			continue;
 		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
 			continue;
-		ft_printf("%s%s%s\n", (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "Archive : " : "", data.filename,
-			(!ft_strncmp(ptr, ARMAG, SARMAG)) ? "" : ":");
+		if (!(OT_HOPT & data.flag))
+			ft_printf("%s%s%s\n", (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "Archive : " 
+				: "", data.filename, (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "" : ":");
 		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)
 			continue;
@@ -64,7 +65,3 @@ int			main(int argc, char **argv)
 	}
 	return (0);
 }
-
-//	-print offset + line in hex AND print 16 bytes in value
-//	-add bonus
-//	-add support fat file + 32 bit

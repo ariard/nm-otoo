@@ -19,18 +19,7 @@ Cc ok
 Ss ok
 Ii ok
 
-- test : all or not, support otool, check perfomance on school
-- (align) sym
-
-- check endianess on fat file
-
-=> check otool
-
-+ hardness
-
-SAME on otool
-
-otool (h, f, d, a) + SYMDEF ?
++ hardness (fsanitize, cut-file, error);
 
 - tester contre correction partie obligatoire
 

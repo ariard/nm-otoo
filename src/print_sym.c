@@ -6,14 +6,28 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 17:22:18 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 20:21:00 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 18:44:22 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
+static void 	print_debugsym(t_sym *sym)
+{
+	int		l;
+	char	*new;
+	char	buff[10];
 
-int			print_sym(void *content, t_data *data)
+	l = ft_strlen(sym->desc);
+	ft_bzero(buff, 10);
+	ft_memset(buff, ' ', 5 - l);
+	new = ft_strjoin(buff, sym->desc);
+	ft_printf(" %c %02d %04d %s %s\n", sym->type, sym->sect, sym->d,
+		new, sym->name);
+	ft_strdel(&new);
+}
+
+int				print_sym(void *content, t_data *data)
 {
 	t_sym	*sym;
 
@@ -34,8 +48,7 @@ int			print_sym(void *content, t_data *data)
 	if (data->flag & NM_JOPT || data->flag & NM_uOPT)
 		ft_printf("%s\n", sym->name);
 	else if ((data->flag & NM_AOPT) && sym->type == 45)
-		ft_printf(" %c %02d %04d %s %s\n", sym->type, sym->sect, sym->d,
-		sym->desc, sym->name);
+		print_debugsym(sym);
 	else
 		ft_printf(" %c %s\n", sym->type, sym->name);
 	return (0);

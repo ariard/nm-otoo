@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 21:13:37 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 18:44:59 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ long int	sysarchi_extract(int narchs, void *tmp, t_data *data)
 	i = 0;
 	while (i++ < narchs)
 	{
-//		DG("%d", ntohl(((struct fat_arch *)tmp)->cputype));
 		if (data->cpu == ntohl(((struct fat_arch *)tmp)->cputype))
 			return (ntohl(((struct fat_arch *)tmp)->offset));
 		tmp = (void *)tmp + sizeof(struct fat_arch);

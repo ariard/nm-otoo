@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 17:52:45 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 21:40:11 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 18:43:47 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 int		sort_alpha(t_sym *sym1, t_sym *sym2)
 {
 	if (!ft_strcmp(sym1->name, sym2->name))
+	{
+		if (sym1->value == sym2->value)
+			return (ft_strcmp(sym2->desc, sym1->desc));
 		return ((sym1->value > sym2->value) ? 1 : -1);
+	}
 	return (ft_strcmp(sym1->name, sym2->name));
 }
 

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 21:31:57 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 18:19:39 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ static void	handle_32and64(unsigned int magic_number, char *ptr,
 {
 	const NXArchInfo	*arch;
 
-	if (magic_number == MH_MAGIC_64)
+	if (magic_number == MH_MAGIC_64 && !data->bin && (OT_HOPT & data->flag))
+		display_header(ptr, data);
+	else if (magic_number == MH_MAGIC && !data->bin && (OT_HOPT & data->flag))
+		display_header32(ptr, data);
+	else if (magic_number == MH_MAGIC_64)
 		(data->bin) ? handle_64(ptr, data) : get_segment64(ptr, data);
 	else if (magic_number == MH_MAGIC)
 		(data->bin) ? handle_32(ptr, data) : get_segment32(ptr, data);
@@ -38,7 +42,7 @@ void		parse_archi(char *ptr, t_data *data)
 	magic_number = *(unsigned int *)ptr;
 	filetype = ((struct mach_header *)ptr)->filetype;
 	if (!ft_strncmp((char *)ptr, ARMAG, SARMAG))
-		handle_ar(ptr, data);	
+		handle_ar(ptr, data);
 	else if (magic_number == FAT_CIGAM)
 		handle_fat(ptr, data);
 	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE && filetype ^ MH_DYLIB

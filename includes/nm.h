@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 22:16:46 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 18:23:03 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,8 +113,6 @@ typedef struct s_symtable	t_symtable;
 
 extern t_stabs			g_stabs[];
 
-/* MachO binary */
-
 void		handle_64(char *ptr, t_data *data);
 void		handle_32(char *ptr, t_data *data);
 void		handle_fat(char *ptr, t_data *data);
@@ -122,37 +120,35 @@ void		handle_ar(char *ptr, t_data *data);
 
 void		parse_archi(char *ptr, t_data *data);
 void		parse_segment64(struct segment_command_64 *segm,
-		t_hashtab *tabsections, int *nsects);
+			t_hashtab *tabsections, int *nsects);
 void		parse_segment32(struct segment_command *segm,
-		t_hashtab *tabsections, int *nsects);
+			t_hashtab *tabsections, int *nsects);
 void		parse_symtab(struct symtab_command *sym, char *ptr,
-		t_data *data);
+			t_data *data);
 void		parse_symtab32(struct symtab_command *sym, char *ptr,
-		t_data *data);
+			t_data *data);
 
 void		sym_init(t_sym *sym);
 void		symtab_sort(t_list **lstsym, t_data *data);
 void		symtab_del(t_list **lstsym, t_data *data);
-int		sym_resolve(int num, t_hashtab *tabsections);
-int		print_sym(void *content, t_data *data);
+int			sym_resolve(int num, t_hashtab *tabsections);
+int			print_sym(void *content, t_data *data);
 void		sym_del(void *data_ref, size_t size);
 
-int		sections_match(const void *data_ref, const void *key);
-int		sections_print(const void *data_ref);
+int			sections_match(const void *data_ref, const void *key);
+int			sections_print(const void *data_ref);
 void		sections_init(t_section *section);
-int		sections_del(void *data_ref);
+int			sections_del(void *data_ref);
 
-int		print_debug(void *content, t_data *data);
-
-/*
- * Otool
-*/
+int			print_debug(void *content, t_data *data);
 
 void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data,
-		char *msg);
-void		ft_hexdump32(struct section *sect, char *ptr, t_data *data);
+			char *msg);
+void		ft_hexdump32(struct section *sect, char *ptr, t_data *data,
+			char *msg);
 void		get_segment64(char *ptr, t_data *data);
 void		get_segment32(char *ptr, t_data *data);
-
+void		display_header(char *ptr, t_data *data);
+void		display_header32(char *ptr, t_data *data);
 
 #endif
