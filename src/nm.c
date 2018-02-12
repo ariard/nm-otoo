@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 23:20:15 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 23:39:50 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,19 @@ static void		launch_parser(char *ptr, t_data *data, size_t filesize)
 	parse_archi(ptr, data);
 }
 
+static void		check_arg(int i, int argc, char **argv)
+{
+	if (i == argc)
+	{
+		if (argc > 1)
+		{
+			ft_dprintf(2, "nm : option isn't recognized");
+			exit(0);
+		}
+		argv[i] = "a.out";
+	}
+}
+
 int				main(int argc, char **argv)
 {
 	t_data		data;
@@ -65,7 +78,7 @@ int				main(int argc, char **argv)
 	data_init(&data);
 	cliopts_get(argv, g_nm_opts, &data);
 	i = (data.av_data) ? data.av_data - argv : argc;
-	argv[i] = (argv[i]) ? argv[i] : "a.out";
+	check_arg(i, argc, argv);
 	while (argv[i] && i <= argc)
 	{
 		data.filename = argv[i++];

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 23:18:49 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 23:39:49 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,18 @@ static void		launch_parser(char *ptr, t_data *data, size_t filesize)
 	parse_archi(ptr, data);
 }
 
+static void		check_arg(int i, int argc)
+{
+	if (i == argc)
+	{
+		if (argc > 1)
+		{
+			ft_dprintf(2, "otool : option isn't recognized");
+			exit(0);
+		}
+	}
+}
+
 int				main(int argc, char **argv)
 {
 	t_data		data;
@@ -56,6 +68,7 @@ int				main(int argc, char **argv)
 	data_init(&data);
 	cliopts_get(argv, g_ot_opts, &data);
 	i = (data.av_data) ? data.av_data - argv : argc;
+	check_arg(i, argc);
 	while (argv[i] && i <= argc)
 	{
 		data.filename = argv[i++];
