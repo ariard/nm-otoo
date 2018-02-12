@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 22:01:13 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 23:20:15 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int				main(int argc, char **argv)
 
 	data_init(&data);
 	cliopts_get(argv, g_nm_opts, &data);
-	i = data.av_data - argv;
+	i = (data.av_data) ? data.av_data - argv : argc;
 	argv[i] = (argv[i]) ? argv[i] : "a.out";
 	while (argv[i] && i <= argc)
 	{

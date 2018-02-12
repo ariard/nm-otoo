@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 22:01:58 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 23:18:49 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int				main(int argc, char **argv)
 
 	data_init(&data);
 	cliopts_get(argv, g_ot_opts, &data);
-	i = data.av_data - argv;
+	i = (data.av_data) ? data.av_data - argv : argc;
 	while (argv[i] && i <= argc)
 	{
 		data.filename = argv[i++];
