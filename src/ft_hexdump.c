@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/21 16:08:52 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:11:51 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 20:17:51 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@ void		ft_hexdump64(struct section_64 *sect, char *ptr, t_data *data,
 	int			size;
 	void		*a;
 
+	(void)data;
 	ft_printf("%s\n", msg);
 	address = sect->addr;
 	size = sect->size;
 	a = (void *)ptr + sect->offset;
 	while (size > 0)
 	{
-		ft_printf("%016llx%s", address, (data->flag & OT_DOPT) ? "	" : " ");
+		ft_printf("%016llx%s", address, "	");
 		print_hex_text(a, size);
 		address += 16;
 		a += 16;
@@ -63,7 +64,7 @@ void		ft_hexdump32(struct section *sect, char *ptr, t_data *data,
 	a = (void *)ptr + sect->offset;
 	while (size > 0)
 	{
-		ft_printf("%08llx ", address, (data->flag & OT_DOPT) ? "  " : " ");
+		ft_printf("%08llx ", address, "	");
 		print_hex_text(a, size);
 		address += 16;
 		a += 16;

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:14:16 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 20:17:26 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ static void		get_section_text32(struct segment_command *segm,
 	while (segsects--)
 	{
 		if (!ft_strcmp("__text", sect->sectname))
-			ft_hexdump32(sect, ptr, data, "(__TEXT,__text) section");
+			ft_hexdump32(sect, ptr, data, "Contents of (__TEXT,__text) section");
 		if (!ft_strcmp("__data", sect->sectname) && (data->flag &
 			OT_DOPT))
-			ft_hexdump32(sect, ptr, data, "(__DATA,__data) section");
+			ft_hexdump32(sect, ptr, data, "Contents of (__DATA,__data) section");
 		sect = (void *)sect + sizeof(struct section);
 	}
 }

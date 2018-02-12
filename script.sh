@@ -7,9 +7,22 @@ YELLOW="\x1b[33m"
 
 rm -f script_false
 
+if [ $1 = nm ]
+then
+	BIN=nm
+	MYBIN=./ft_nm
+elif [ $1 = ot ]
+then
+	BIN=otool
+	OPT="-t"
+	MYBIN=./ft_otool	
+else
+	return
+fi
+
 for i in $@ ;
 do
-	diff <(./ft_nm	$i 2>err) <( nm $i 2>>err)
+	diff <( $MYBIN	$i 2>err) <( $BIN $OPT $i 2>>err)
 	if [ $? -ne 0 ]
 	then
 		echo "$RED$i:\n$RESET"

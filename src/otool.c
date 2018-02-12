@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:35:45 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 20:19:53 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,15 @@ static int		get_filesize(char *name, struct stat *buf, int *fd)
 
 static void		wrapper(char *ptr, t_data *data)
 {
+	unsigned int		magic_number;
+	int					filetype;
+
+	magic_number = *(unsigned int *)ptr;
+	filetype = ((struct mach_header *)ptr)->filetype;
+	if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE
+		&& filetype ^ MH_DYLIB && filetype ^ MH_FVMLIB
+		&& filetype ^ MH_DYLINKER && filetype ^ MH_DYLIB_STUB)
+		return;
 	ft_printf("%s%s%s\n", (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "Archive : "
 		: "", data->filename, (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "" : ":");
 }
