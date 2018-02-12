@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:29:25 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 21:55:46 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:13:25 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void		handle_32(char *ptr, t_data *data)
 {
-	int			ncmds;
-	int			i;
-	int			nsects;
+	int					ncmds;
+	int					i;
+	int					nsects;
 	struct load_command	*lc;
 
 	data->bits = 32;

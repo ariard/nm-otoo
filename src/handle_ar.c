@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 22:17:03 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 22:56:15 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:09:28 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		handle_ar(char *ptr, t_data *data)
 	while (*ptr)
 	{
 		if (!ft_strncmp(ptr, ARMAG, SARMAG))
-			break;
+			break ;
 		tmp = ptr;
 		size = ft_atoi(((struct ar_hdr *)ptr)->ar_size) + sizeof(struct ar_hdr);
 		ptr += sizeof(struct ar_hdr);

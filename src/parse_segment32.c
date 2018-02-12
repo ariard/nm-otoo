@@ -6,11 +6,18 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 19:27:39 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:02:31 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
+
+void			sections_init(t_section *section)
+{
+	section->sectname = NULL;
+	section->segname = NULL;
+	section->key = NULL;
+}
 
 static void		sections_info(t_section *section, struct section *sect,
 				char *key)
@@ -23,8 +30,8 @@ static void		sections_info(t_section *section, struct section *sect,
 void			parse_segment32(struct segment_command *segm,
 			t_hashtab *tabsections, int *nsects)
 {
-	int				segsects;
-	struct section			*sect;
+	int					segsects;
+	struct section		*sect;
 	t_section			section;
 	char				*key;
 
@@ -32,7 +39,6 @@ void			parse_segment32(struct segment_command *segm,
 	sect = (void *)segm + sizeof(struct segment_command);
 	while (segsects--)
 	{
-//		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
 		sections_init(&section);
 		key = ft_itoa(*nsects);
 		*nsects += 1;

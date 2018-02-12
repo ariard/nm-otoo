@@ -6,17 +6,17 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 18:21:02 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:12:55 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-static void		get_section_text64(struct segment_command_64 *segm, 
-			char *ptr, t_data *data) 
+static void		get_section_text64(struct segment_command_64 *segm,
+				char *ptr, t_data *data)
 {
 	struct section_64	*sect;
-	int			segsects;
+	int					segsects;
 
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command_64);
@@ -32,10 +32,10 @@ static void		get_section_text64(struct segment_command_64 *segm,
 	}
 }
 
-void		get_segment64(char *ptr, t_data *data)
+void			get_segment64(char *ptr, t_data *data)
 {
-	int				ncmds;
-	int				i;
+	int						ncmds;
+	int						i;
 	struct load_command		*lc;
 
 	data->bits = 64;

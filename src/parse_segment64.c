@@ -6,18 +6,11 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 19:02:34 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 18:59:49 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
-
-void			sections_init(t_section *section)
-{
-	section->sectname = NULL;
-	section->segname = NULL;
-	section->key = NULL;
-}
 
 static void		sections_info(t_section *section, struct section_64 *sect,
 			char *key)
@@ -27,7 +20,7 @@ static void		sections_info(t_section *section, struct section_64 *sect,
 	section->key = ft_strdup(key);
 }
 
-int			sections_match(const void *data_ref, const void *key)
+int				sections_match(const void *data_ref, const void *key)
 {
 	t_section	*section;
 
@@ -37,7 +30,7 @@ int			sections_match(const void *data_ref, const void *key)
 	return (1);
 }
 
-int			sections_print(const void *data_ref)
+int				sections_print(const void *data_ref)
 {
 	t_section	*section;
 
@@ -48,7 +41,7 @@ int			sections_print(const void *data_ref)
 	return (0);
 }
 
-int			sections_del(void *data_ref)
+int				sections_del(void *data_ref)
 {
 	t_section	*section;
 
@@ -60,18 +53,17 @@ int			sections_del(void *data_ref)
 }
 
 void			parse_segment64(struct segment_command_64 *segm,
-			t_hashtab *tabsections, int *nsects)
+				t_hashtab *tabsections, int *nsects)
 {
-	int			segsects;
+	int					segsects;
 	struct section_64	*sect;
-	t_section		section;
-	char			*key;
+	t_section			section;
+	char				*key;
 
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command_64);
 	while (segsects--)
 	{
-//		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
 		sections_init(&section);
 		key = ft_itoa(*nsects);
 		*nsects += 1;

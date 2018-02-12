@@ -6,13 +6,13 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 18:19:40 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:35:45 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-t_cliopts		g_ot_opts[]=
+t_cliopts		g_ot_opts[] =
 {
 	{'d', NULL, OT_DOPT, 0, NULL, 0},
 	{'h', NULL, OT_HOPT, 0, NULL, 0},
@@ -36,14 +36,20 @@ static int		get_filesize(char *name, struct stat *buf, int *fd)
 		ft_dprintf(2, "otool : No such file %s\n", name);
 	return (fstat(*fd, buf));
 }
-	
-int			main(int argc, char **argv)
+
+static void		wrapper(char *ptr, t_data *data)
+{
+	ft_printf("%s%s%s\n", (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "Archive : "
+		: "", data->filename, (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "" : ":");
+}
+
+int				main(int argc, char **argv)
 {
 	t_data		data;
-	int		i;
-	int		fd;
+	int			i;
+	int			fd;
 	char		*ptr;
-	struct stat 	buf;
+	struct stat buf;
 
 	data_init(&data);
 	cliopts_get(argv, g_ot_opts, &data);
@@ -56,8 +62,7 @@ int			main(int argc, char **argv)
 		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
 			continue;
 		if (!(OT_HOPT & data.flag))
-			ft_printf("%s%s%s\n", (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "Archive : " 
-				: "", data.filename, (!ft_strncmp(ptr, ARMAG, SARMAG)) ? "" : ":");
+			wrapper(ptr, &data);
 		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)
 			continue;

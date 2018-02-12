@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 17:52:45 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 18:43:47 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:01:48 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int		sort_numeric(t_sym *sym1, t_sym *sym2)
 	return ((sym1->value > sym2->value) ? 1 : -1);
 }
 
-void		symtab_sort(t_list **lstsym, t_data *data)
+void	symtab_sort(t_list **lstsym, t_data *data)
 {
 	if (data->flag & NM_POPT)
-	   return ;
+		return ;
 	if (data->flag & NM_NOPT)
 		lst_insert_sort(lstsym, sort_numeric);
 	else
@@ -42,7 +42,7 @@ void		symtab_sort(t_list **lstsym, t_data *data)
 		ft_lst_reverse(lstsym);
 }
 
-char		ft_tolower2(char c)
+char	ft_tolower2(char c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

@@ -6,13 +6,13 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/16 17:22:18 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 18:44:22 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:29:33 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-static void 	print_debugsym(t_sym *sym)
+static void		print_debugsym(t_sym *sym)
 {
 	int		l;
 	char	*new;
@@ -37,15 +37,15 @@ int				print_sym(void *content, t_data *data)
 		return (0);
 	if ((data->flag & NM_UOPT) && (sym->type == 85 || sym->type == 117))
 		return (0);
-	if ((data->flag & NM_uOPT) && sym->type != 'U')
+	if ((data->flag & NM_MUOPT) && sym->type != 'U')
 		return (0);
-	if (data->flag & NM_OOPT || data->flag & NM_aOPT)
+	if (data->flag & NM_OOPT || data->flag & NM_MAOPT)
 		ft_printf("%s: ", data->filename);
 	if (sym->type != 'U' && !(data->flag & NM_JOPT))
 		ft_printf("%0*llx", (data->bits == 64) ? 16 : 8, sym->value);
-	else if (!(data->flag & NM_uOPT) && !(data->flag & NM_JOPT))
+	else if (!(data->flag & NM_MUOPT) && !(data->flag & NM_JOPT))
 		ft_printf("%*s", (data->bits == 64) ? 16 : 8, " ");
-	if (data->flag & NM_JOPT || data->flag & NM_uOPT)
+	if (data->flag & NM_JOPT || data->flag & NM_MUOPT)
 		ft_printf("%s\n", sym->name);
 	else if ((data->flag & NM_AOPT) && sym->type == 45)
 		print_debugsym(sym);

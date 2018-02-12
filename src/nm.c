@@ -6,13 +6,13 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/09 22:16:26 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:35:59 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-t_cliopts		g_nm_opts[]=
+t_cliopts		g_nm_opts[] =
 {
 	{'n', NULL, NM_NOPT, 0, NULL, 0},
 	{'r', NULL, NM_ROPT, 0, NULL, 0},
@@ -20,10 +20,10 @@ t_cliopts		g_nm_opts[]=
 	{'g', NULL, NM_GOPT, 0, NULL, 0},
 	{'a', NULL, NM_AOPT, 0, NULL, 0},
 	{'o', NULL, NM_OOPT, 0, NULL, 0},
-	{'u', NULL, NM_uOPT, 0, NULL, 0},
+	{'u', NULL, NM_MUOPT, 0, NULL, 0},
 	{'U', NULL, NM_UOPT, 0, NULL, 0},
 	{'j', NULL, NM_JOPT, 0, NULL, 0},
-	{'A', NULL, NM_aOPT, 0, NULL, 0},
+	{'A', NULL, NM_MAOPT, 0, NULL, 0},
 };
 
 static void		data_init(t_data *data)
@@ -44,15 +44,14 @@ static int		get_filesize(char *name, struct stat *buf, int *fd)
 		ft_dprintf(2, "nm : No such file %s\n", name);
 	return (fstat(*fd, buf));
 }
-	
 
-int			main(int argc, char **argv)
+int				main(int argc, char **argv)
 {
 	t_data		data;
-	int		i;
-	int		fd;
+	int			i;
+	int			fd;
 	char		*ptr;
-	struct stat 	buf;
+	struct stat buf;
 
 	data_init(&data);
 	cliopts_get(argv, g_nm_opts, &data);

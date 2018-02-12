@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/10 19:03:08 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 20:04:48 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:03:11 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		print_debug(void *content, t_data *data)
 {
-	t_sym 		*sym;
+	t_sym	*sym;
 
 	(void)data;
 	sym = content;

@@ -6,17 +6,17 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:28:41 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/10 20:21:02 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:10:44 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
 void		handle_64(char *ptr, t_data *data)
-{ 
-	int			ncmds;
-	int			i;
-	int			nsects;
+{
+	int					ncmds;
+	int					i;
+	int					nsects;
 	struct load_command	*lc;
 
 	data->bits = 64;

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 18:19:39 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 19:07:44 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	handle_32and64(unsigned int magic_number, char *ptr,
 void		parse_archi(char *ptr, t_data *data)
 {
 	unsigned int		magic_number;
-	int			filetype;
+	int					filetype;
 
 	magic_number = *(unsigned int *)ptr;
 	filetype = ((struct mach_header *)ptr)->filetype;
@@ -45,8 +45,9 @@ void		parse_archi(char *ptr, t_data *data)
 		handle_ar(ptr, data);
 	else if (magic_number == FAT_CIGAM)
 		handle_fat(ptr, data);
-	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE && filetype ^ MH_DYLIB
-		&& filetype ^ MH_FVMLIB && filetype ^ MH_DYLINKER && filetype ^ MH_DYLIB_STUB)
+	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE
+		&& filetype ^ MH_DYLIB && filetype ^ MH_FVMLIB
+		&& filetype ^ MH_DYLINKER && filetype ^ MH_DYLIB_STUB)
 		ft_dprintf(2, "%s : %s isn't a valid object file", (data->bin) ?
 		"nm" : "otool", data->filename);
 	else
