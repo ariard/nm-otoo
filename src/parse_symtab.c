@@ -97,7 +97,6 @@ static void		sym_stab(t_sym *sym, struct nlist_64 el)
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 			t_hashtab *sections)
 {
-	(void)sections;
 	sym->name = stringtable + el.n_un.n_strx;
 	if (N_STAB & el.n_type)
 		sym_stab(sym, el);
@@ -106,8 +105,8 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;
 		sym->type = ((N_EXT & el.n_type) && (el.n_value) && (!el.n_sect)) ?  'C' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_ABS) ? 'A' : sym->type;
-		//sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
-		//	sym_resolve(el.n_sect, sections) : sym->type;
+		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
+			sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
 		if (!(BIT(el.n_type, 0) & N_EXT))

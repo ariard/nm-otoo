@@ -23,6 +23,7 @@ t_cliopts		g_nm_opts[]=
 	{'u', NULL, NM_uOPT, 0, NULL, 0},
 	{'U', NULL, NM_UOPT, 0, NULL, 0},
 	{'j', NULL, NM_JOPT, 0, NULL, 0},
+	{'A', NULL, NM_aOPT, 0, NULL, 0},
 };
 
 static void		data_init(t_data *data)

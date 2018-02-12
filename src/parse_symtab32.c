@@ -41,7 +41,7 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
 			sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
-		if ((el.n_type & N_PEXT) || !(el.n_type & N_EXT))
+		if (!(BIT(el.n_type, 0) & N_EXT))
 			sym->type += 32;
 	}
 	sym->value = el.n_value;

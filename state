@@ -24,7 +24,6 @@ Ii ok
 
 - check endianess on fat file
 
-=> check options
 => check otool
 
 + hardness
@@ -36,10 +35,6 @@ SAME on otool
 exe : /bin/ + /usr/bin + /usr/bin/ + /sbin + /usr/local/bin
 
 .o / .so / .dll / .a
-
-
-/usr/lib/libobjc.dylib
-/usr/lib/libc++.1.dylib
 
 TODO :
 	- screener code

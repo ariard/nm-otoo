@@ -45,6 +45,7 @@
 # define NM_uOPT		(1 << 7)
 # define NM_UOPT		(1 << 8)
 # define NM_JOPT		(1 << 9)
+# define NM_aOPT		(1 << 10)
 
 # define MH_ARCHV		0x213c617263683e0a
 
@@ -124,9 +125,9 @@ void		handle_ar(char *ptr, t_data *data);
 
 void		parse_archi(char *ptr, t_data *data);
 void		parse_segment64(struct segment_command_64 *segm,
-			t_hashtab *tabsections, int *nsects);
+		t_hashtab *tabsections, int *nsects);
 void		parse_segment32(struct segment_command *segm,
-			t_hashtab *tabsections, int *nsects);
+		t_hashtab *tabsections, int *nsects);
 void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
 void		parse_symtab32(struct symtab_command *sym, char *ptr, t_data *data);
 
@@ -134,8 +135,8 @@ void		parse_symtab32(struct symtab_command *sym, char *ptr, t_data *data);
 void		sym_init(t_sym *sym);
 void		symtab_sort(t_list **lstsym, t_data *data);
 void		symtab_del(t_list **lstsym, t_data *data);
-int			sym_resolve(int num, t_hashtab *tabsections);
-int			print_sym(void *content, t_data *data);
+int		sym_resolve(int num, t_hashtab *tabsections);
+int		print_sym(void *content, t_data *data);
 void		sym_del(void *data_ref, size_t size);
 
 
