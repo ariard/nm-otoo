@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:09:06 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:03:04 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ long int	sysarchi_extract(int narchs, void *tmp, t_data *data)
 	return (0);
 }
 
+static void	otool_special(t_data *data)
+{
+	if (!data->bin)
+		data->flag |= OT_FOPT;
+}
+
 void		handle_fat(char *ptr, t_data *data)
 {
 	int					narchs;
@@ -33,6 +39,7 @@ void		handle_fat(char *ptr, t_data *data)
 	void				*tmp;
 	long int			i;
 
+	otool_special(data);
 	narchs = ntohl(((struct fat_header *)ptr)->nfat_arch);
 	tmp = ptr + sizeof(struct fat_header);
 	if ((i = sysarchi_extract(narchs, tmp, data)))

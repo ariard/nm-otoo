@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:35:27 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 20:52:38 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@
 
 # define OT_DOPT		(1 << 1)
 # define OT_HOPT		(1 << 2)
+# define OT_FOPT		(1 << 3)
+# define OT_AOPT		(1 << 4)
 
 # define BIT(x, y)		((x) & (1<<(y)))
 

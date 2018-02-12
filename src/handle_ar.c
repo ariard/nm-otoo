@@ -6,11 +6,19 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 22:17:03 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:09:28 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:03:44 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
+
+static void	otool_special(t_data *data)
+{
+	if (!data->bin && !(OT_HOPT & data->flag))
+		ft_printf("Archive : %s\n", data->filename);
+	if (!data->bin)
+		data->flag |= OT_AOPT;
+}
 
 void		handle_ar(char *ptr, t_data *data)
 {
@@ -18,6 +26,7 @@ void		handle_ar(char *ptr, t_data *data)
 	char	*name;
 	char	*tmp;
 
+	otool_special(data);
 	ptr += SARMAG;
 	ptr += ft_atoi(((struct ar_hdr *)ptr)->ar_size) + sizeof(struct ar_hdr);
 	while (*ptr)
