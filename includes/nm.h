@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 20:52:38 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 22:01:15 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ struct	s_data
 	char			**av_data;
 	t_list			*lstsym;
 	char			*filename;
+	size_t			filesize;
+	char			*origin;
 	unsigned int	cpu;
 	char			bits;
 	char			bin;
@@ -111,9 +113,9 @@ void	handle_ar(char *ptr, t_data *data);
 
 void	parse_archi(char *ptr, t_data *data);
 void	parse_segment64(struct segment_command_64 *segm,
-		t_hashtab *tabsections, int *nsects);
+		t_hashtab *tabsections, int *nsects, t_data *data);
 void	parse_segment32(struct segment_command *segm,
-		t_hashtab *tabsections, int *nsects);
+		t_hashtab *tabsections, int *nsects, t_data *data);
 void	parse_symtab(struct symtab_command *sym, char *ptr,
 		t_data *data);
 void	parse_symtab32(struct symtab_command *sym, char *ptr,
@@ -130,6 +132,10 @@ int		sections_match(const void *data_ref, const void *key);
 int		sections_print(const void *data_ref);
 void	sections_init(t_section *section);
 int		sections_del(void *data_ref);
+
+void	check_32(struct segment_command *segm, t_data *data);
+void	check_64(struct segment_command_64 *segm, t_data *data);
+void	check_sym(struct symtab_command *tab, t_data *data);
 
 int		print_debug(void *content, t_data *data);
 

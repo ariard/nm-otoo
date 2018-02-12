@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 20:06:06 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 22:01:13 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static void		data_init(t_data *data)
 	data->av_data = NULL;
 	data->lstsym = NULL;
 	data->filename = NULL;
+	data->filesize = 0;
+	data->origin = NULL;
 	data->cpu = 16777223;
 	data->bits = 0;
 	data->bin = 1;
@@ -43,6 +45,13 @@ static int		get_filesize(char *name, struct stat *buf, int *fd)
 	if ((*fd = open(name, O_RDONLY)) < 0)
 		ft_dprintf(2, "nm : No such file %s\n", name);
 	return (fstat(*fd, buf));
+}
+
+static void		launch_parser(char *ptr, t_data *data, size_t filesize)
+{
+	data->filesize = filesize;
+	data->origin = ptr;
+	parse_archi(ptr, data);
 }
 
 int				main(int argc, char **argv)
@@ -66,7 +75,7 @@ int				main(int argc, char **argv)
 			continue;
 		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
 			continue;
-		parse_archi(ptr, &data);
+		launch_parser(ptr, &data, buf.st_size);
 		if (munmap(ptr, buf.st_size) < 0)
 			continue;
 		close(fd);

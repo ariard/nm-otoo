@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2018/02/12 16:43:24 by ariard           ###   ########.fr        #
+#    Updated: 2018/02/12 22:01:17 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ handle_ar.c\
 handle_fat.c\
 nm.c\
 otool.c\
+check_file.c\
 get_segment32.c\
 get_segment64.c\
 display_header.c\

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 18:59:49 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:42:47 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,14 @@ int				sections_del(void *data_ref)
 }
 
 void			parse_segment64(struct segment_command_64 *segm,
-				t_hashtab *tabsections, int *nsects)
+				t_hashtab *tabsections, int *nsects, t_data *data)
 {
 	int					segsects;
 	struct section_64	*sect;
 	t_section			section;
 	char				*key;
 
+	check_64(segm, data);
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command_64);
 	while (segsects--)

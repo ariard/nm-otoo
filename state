@@ -23,6 +23,8 @@ Ii ok
 
 - tester contre correction partie obligatoire
 
+check tlcsh
+
 LESSONS :
 	- lib debug project
 	- micro-hardening : mem corruption, uncatch error, etc

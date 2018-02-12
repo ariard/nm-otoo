@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:02:31 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:36:30 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@ static void		sections_info(t_section *section, struct section *sect,
 }
 
 void			parse_segment32(struct segment_command *segm,
-			t_hashtab *tabsections, int *nsects)
+				t_hashtab *tabsections, int *nsects, t_data *data)
 {
 	int					segsects;
 	struct section		*sect;
 	t_section			section;
 	char				*key;
 
+	check_32(segm, data);
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command);
 	while (segsects--)

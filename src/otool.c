@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 20:45:22 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 22:01:58 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,13 @@ static int		get_filesize(char *name, struct stat *buf, int *fd)
 	return (fstat(*fd, buf));
 }
 
+static void		launch_parser(char *ptr, t_data *data, size_t filesize)
+{
+	data->filesize = filesize;
+	data->origin = ptr;
+	parse_archi(ptr, data);
+}
+
 int				main(int argc, char **argv)
 {
 	t_data		data;
@@ -56,7 +63,7 @@ int				main(int argc, char **argv)
 			continue;
 		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
 			continue;
-		parse_archi(ptr, &data);
+		launch_parser(ptr, &data, buf.st_size);
 		if (munmap(ptr, buf.st_size) < 0)
 			continue;
 		close(fd);

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:28:41 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 19:10:44 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:28:15 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void		handle_64(char *ptr, t_data *data)
 	{
 		if (lc->cmd == LC_SEGMENT_64)
 			parse_segment64((struct segment_command_64 *)lc,
-			&data->tabsections, &nsects);
+			&data->tabsections, &nsects, data);
 		if (lc->cmd == LC_SYMTAB)
 			parse_symtab((struct symtab_command *)lc, ptr, data);
 		lc = (void *)lc + lc->cmdsize;

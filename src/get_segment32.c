@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 21:04:46 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/12 21:30:09 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static void		get_section_text32(struct segment_command *segm,
 	struct section		*sect;
 	int					segsects;
 
+	check_32(segm, data);
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command);
 	while (segsects--)
