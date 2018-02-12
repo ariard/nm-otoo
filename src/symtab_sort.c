@@ -29,7 +29,7 @@ int		sort_numeric(t_sym *sym1, t_sym *sym2)
 void		symtab_sort(t_list **lstsym, t_data *data)
 {
 	if (data->flag & NM_POPT)
-	   return ;	
+	   return ;
 	if (data->flag & NM_NOPT)
 		lst_insert_sort(lstsym, sort_numeric);
 	else

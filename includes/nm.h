@@ -13,7 +13,6 @@
 #ifndef NM_H
 # define NM_H
 
-
 # include <sys/mman.h>
 # include <sys/stat.h>
 # include <sys/types.h>
@@ -31,7 +30,6 @@
 
 # include "../libft/includes/libft.h"
 
-
 /*
  * Nm
 */
@@ -47,28 +45,28 @@
 # define NM_JOPT		(1 << 9)
 # define NM_aOPT		(1 << 10)
 
-# define MH_ARCHV		0x213c617263683e0a
-
 # define BIT(x, y)		((x) & (1<<(y)))
+
+# define MMAP(x, y, z)		(x = mmap(0, y, PROT_READ, MAP_PRIVATE, z, 0))
 
 struct s_data
 {	
-	t_flag					flag;	
-	char					**av_data;
-	t_list					*lstsym;
-	char					*filename;
-	unsigned int				cpu;
-	char					bits;				
-	t_hashtab				tabsections;
+	t_flag			flag;	
+	char			**av_data;
+	t_list			*lstsym;
+	char			*filename;
+	unsigned int		cpu;
+	char			bits;				
+	t_hashtab		tabsections;
 };
 
 typedef struct s_data		t_data;
 
 struct s_section
 {
-	char		*sectname;
-	char		*segname;
-	char		*key;
+	char			*sectname;
+	char			*segname;
+	char			*key;
 };
 
 typedef struct s_section	t_section;
@@ -82,7 +80,7 @@ struct s_sym
 	uint64_t		value;
 	int			index;
 	int			sect;
-	int			debug;
+	int			d;
 };
 
 typedef struct s_sym		t_sym;
@@ -90,8 +88,8 @@ typedef struct s_sym		t_sym;
 
 struct s_stabs
 {
-	char	value;
-	char	*entry;
+	char			value;
+	char			*entry;
 };
 
 typedef struct s_stabs		t_stabs;
@@ -108,8 +106,8 @@ typedef struct s_tool_cpu	t_tool_cpu;
 
 struct s_symtable 
 {
-	int	symbol;
-	int	member;
+	int			symbol;
+	int			member;
 };
 
 typedef struct s_symtable	t_symtable;
@@ -128,9 +126,10 @@ void		parse_segment64(struct segment_command_64 *segm,
 		t_hashtab *tabsections, int *nsects);
 void		parse_segment32(struct segment_command *segm,
 		t_hashtab *tabsections, int *nsects);
-void		parse_symtab(struct symtab_command *sym, char *ptr, t_data *data);
-void		parse_symtab32(struct symtab_command *sym, char *ptr, t_data *data);
-
+void		parse_symtab(struct symtab_command *sym, char *ptr,
+		t_data *data);
+void		parse_symtab32(struct symtab_command *sym, char *ptr,
+		t_data *data);
 
 void		sym_init(t_sym *sym);
 void		symtab_sort(t_list **lstsym, t_data *data);
@@ -139,13 +138,12 @@ int		sym_resolve(int num, t_hashtab *tabsections);
 int		print_sym(void *content, t_data *data);
 void		sym_del(void *data_ref, size_t size);
 
-
-int			sections_match(const void *data_ref, const void *key);
-int			sections_print(const void *data_ref);
+int		sections_match(const void *data_ref, const void *key);
+int		sections_print(const void *data_ref);
 void		sections_init(t_section *section);
-int			sections_del(void *data_ref);
+int		sections_del(void *data_ref);
 
-int			print_debug(void *content, t_data *data);
+int		print_debug(void *content, t_data *data);
 
 /*
  * Otool

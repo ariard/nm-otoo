@@ -21,7 +21,7 @@ void		handle_ar(char *ptr, t_data *data)
 	ptr += SARMAG;
 	ptr += ft_atoi(((struct ar_hdr *)ptr)->ar_size) + sizeof(struct ar_hdr);
 	while (ptr)
-	{ 
+	{
 		if (!ft_strncmp(ptr, ARMAG, SARMAG))
 			break;
 		tmp = ptr;

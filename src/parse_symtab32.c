@@ -14,7 +14,7 @@
 
 static void		sym_stab(t_sym *sym, struct nlist el)
 {
-	int			i;
+	int		i;
 
 	sym->type = '-';
 	i = -1;
@@ -23,11 +23,11 @@ static void		sym_stab(t_sym *sym, struct nlist el)
 			break;
 	sym->desc = g_stabs[i].entry;
 	sym->sect = el.n_sect;
-	sym->debug = el.n_desc;
+	sym->d = el.n_desc;
 }
 
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
-				t_hashtab *sections)
+			t_hashtab *sections)
 {
 	sym->name = stringtable + el.n_un.n_strx;
 	if (N_STAB & el.n_type)
@@ -35,9 +35,10 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
 	 else
 	{
 		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;
-		sym->type = ((N_EXT & el.n_type) && (el.n_value) && (!el.n_sect)) ?  'C' : sym->type;
+		sym->type = ((N_EXT & el.n_type) && (el.n_value) && (!el.n_sect))
+			? 'C' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_ABS) ? 'A' : sym->type;
-		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
+		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?
 			sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
@@ -45,15 +46,15 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
 			sym->type += 32;
 	}
 	sym->value = el.n_value;
-//	dprintf(3, "[%s] %d\n", sym->name, sym->value);
 }
 
-void			parse_symtab32(struct symtab_command *tabsym, char *ptr, t_data *data)
+void			parse_symtab32(struct symtab_command *tabsym,
+			char *ptr, t_data *data)
 {
-	int					i;
-	int					nsyms;
-	char				*stringtable;
-	t_sym				sym;
+	int		i;
+	int		nsyms;
+	char		*stringtable;
+	t_sym		sym;
 
 	stringtable = (void *)ptr + tabsym->stroff;
 	nsyms = tabsym->nsyms;
@@ -61,8 +62,8 @@ void			parse_symtab32(struct symtab_command *tabsym, char *ptr, t_data *data)
 	while (++i < nsyms)
 	{
 		sym_init(&sym);
-		sym_info(&sym, stringtable, (((struct nlist *)((void *)ptr + tabsym->symoff))[i]),
-			&data->tabsections);
+		sym_info(&sym, stringtable, (((struct nlist *)((void *)ptr
+			+ tabsym->symoff))[i]), &data->tabsections);
 		ft_lsteadd(&data->lstsym, ft_lstnew(&sym, sizeof(t_sym)));
 	}
 }

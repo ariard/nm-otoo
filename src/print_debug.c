@@ -18,7 +18,6 @@ int		print_debug(void *content, t_data *data)
 
 	(void)data;
 	sym = content;
-//	DG("[%s] %llx", sym->name, sym->value);
 	if (sym->type != 'U')
 		ft_printf("%llx", sym->value);
 	else

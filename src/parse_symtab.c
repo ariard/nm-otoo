@@ -55,25 +55,25 @@ void			sym_init(t_sym *sym)
 	sym->value = 0;
 	sym->index = 0;
 	sym->sect = 0;
-	sym->debug = 0;
+	sym->d = 0;
 }
 
-int		sym_resolve(int num, t_hashtab *tabsections)
+int			sym_resolve(int num, t_hashtab *tabsections)
 {
 	char		*key;
-	int			type;
+	int		type;
 	t_list		*elem;
 
 	key = ft_itoa(num);
 	type = 0;
 	if ((elem = (hashtab_lookup(tabsections, key, &sections_match))))
 	{
-		type = (ft_strcmp("__data", ((t_section *)elem->content)->sectname) == 0) ?
-			'D' : type;
-		type = (ft_strcmp("__bss", ((t_section *)elem->content)->sectname) == 0) ?
-			'B' : type;
-		type = (ft_strcmp("__text", ((t_section *)elem->content)->sectname) == 0) ? 
-			'T' : type;
+		type = (ft_strcmp("__data",
+			((t_section *)elem->content)->sectname) == 0) ? 'D' : type;
+		type = (ft_strcmp("__bss",
+			((t_section *)elem->content)->sectname) == 0) ? 'B' : type;
+		type = (ft_strcmp("__text", 
+			((t_section *)elem->content)->sectname) == 0) ? 'T' : type;
 		type = (type == 0) ? 'S' : type;
 	}
 	ft_strdel(&key);
@@ -82,7 +82,7 @@ int		sym_resolve(int num, t_hashtab *tabsections)
 
 static void		sym_stab(t_sym *sym, struct nlist_64 el)
 {
-	int			i;
+	int		i;
 
 	sym->type = '-';
 	i = -1;
@@ -91,7 +91,7 @@ static void		sym_stab(t_sym *sym, struct nlist_64 el)
 			break;
 	sym->desc = g_stabs[i].entry;
 	sym->sect = el.n_sect;
-	sym->debug = el.n_desc;
+	sym->d = el.n_desc;
 }
 
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
@@ -100,12 +100,13 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist_64 el,
 	sym->name = stringtable + el.n_un.n_strx;
 	if (N_STAB & el.n_type)
 		sym_stab(sym, el);
-	 else
+	else
 	{
 		sym->type = ((N_TYPE & el.n_type) ==  N_UNDF) ? 'U' : sym->type;
-		sym->type = ((N_EXT & el.n_type) && (el.n_value) && (!el.n_sect)) ?  'C' : sym->type;
+		sym->type = ((N_EXT & el.n_type) && (el.n_value) && (!el.n_sect)) ?
+			'C' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_ABS) ? 'A' : sym->type;
-		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?  
+		sym->type = ((N_TYPE & el.n_type)  == N_SECT) ?
 			sym_resolve(el.n_sect, sections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
@@ -128,7 +129,7 @@ void			sym_del(void *data_ref, size_t size)
 	sym->value = 0;
 	sym->index = 0;
 	sym->sect = 0;
-	sym->debug = 0;
+	sym->d = 0;
 	free(data_ref);
 }
 
@@ -145,8 +146,8 @@ void			parse_symtab(struct symtab_command *tabsym, char *ptr, t_data *data)
 	while (++i < nsyms)
 	{
 		sym_init(&sym);
-		sym_info(&sym, stringtable, (((struct nlist_64 *)((void *)ptr + tabsym->symoff))[i]),
-			&data->tabsections);
+		sym_info(&sym, stringtable, (((struct nlist_64 *)((void *)ptr
+			+ tabsym->symoff))[i]), &data->tabsections);
 		ft_lsteadd(&data->lstsym, ft_lstnew(&sym, sizeof(t_sym)));
 	}
 }

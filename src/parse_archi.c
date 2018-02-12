@@ -12,11 +12,28 @@
 
 #include "nm.h"
 
-void	parse_archi(char *ptr, t_data *data)
+static void	handle_32and64(unsigned int magic_number, char *ptr,
+		t_data *data)
+{
+	const NXArchInfo	*arch;
+
+	if (magic_number == MH_MAGIC_64)
+		handle_64(ptr, data);
+	else if (magic_number == MH_MAGIC)
+		handle_32(ptr, data);
+	else
+	{
+		arch = NXGetArchInfoFromCpuType(ntohl(*((int *)ptr + 1)),
+			ntohl(*((int *)ptr + 2)));
+		ft_dprintf(2, "%s : Not supported\n", (arch) ? arch->name
+			: "(unknown)");
+	}
+}
+
+void		parse_archi(char *ptr, t_data *data)
 {
 	unsigned int		magic_number;
-	const NXArchInfo	*arch;
-	int					filetype;
+	int			filetype;
 
 	magic_number = *(unsigned int *)ptr;
 	filetype = ((struct mach_header *)ptr)->filetype;
@@ -28,16 +45,5 @@ void	parse_archi(char *ptr, t_data *data)
 		&& filetype ^ MH_FVMLIB && filetype ^ MH_DYLINKER && filetype ^ MH_DYLIB_STUB)
 		ft_dprintf(2, "nm : %s isn't a valid object file", data->filename);
 	else
-	{
-		if (magic_number == MH_MAGIC_64)
-			handle_64(ptr, data);
-		else if (magic_number == MH_MAGIC)
-			handle_32(ptr, data);
-		else
-		{
-			arch = NXGetArchInfoFromCpuType(ntohl(*((int *)ptr + 1)),
-				ntohl(*((int *)ptr + 2)));
-			ft_dprintf(2, "%s : Not supported\n", (arch) ? arch->name : "(unknown)");
-		}
-	}
+		handle_32and64(magic_number, ptr, data);
 }

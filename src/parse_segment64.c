@@ -12,7 +12,7 @@
 
 #include "nm.h"
 
-void		sections_init(t_section *section)
+void			sections_init(t_section *section)
 {
 	section->sectname = NULL;
 	section->segname = NULL;
@@ -20,7 +20,7 @@ void		sections_init(t_section *section)
 }
 
 static void		sections_info(t_section *section, struct section_64 *sect,
-				char *key)
+			char *key)
 {
 	section->sectname = sect->sectname;
 	section->segname = sect->segname;
@@ -31,7 +31,7 @@ int			sections_match(const void *data_ref, const void *key)
 {
 	t_section	*section;
 
-	section = (t_section *)data_ref; 
+	section = (t_section *)data_ref;
 	if (!(ft_strcmp(section->key, (char *)key)))
 		return (0);
 	return (1);
@@ -61,16 +61,15 @@ int			sections_del(void *data_ref)
 void			parse_segment64(struct segment_command_64 *segm,
 			t_hashtab *tabsections, int *nsects)
 {
-	int					segsects;
+	int			segsects;
 	struct section_64	*sect;
-	t_section			section;
-	char				*key;
+	t_section		section;
+	char			*key;
 
 	segsects = segm->nsects;
 	sect = (void *)segm + sizeof(struct segment_command_64);
 	while (segsects--)
 	{
-		DG("flag A");
 //		DG("sectname : [%s], segname : %s and num %d", sect->sectname, sect->segname, *nsects);
 		sections_init(&section);
 		key = ft_itoa(*nsects);

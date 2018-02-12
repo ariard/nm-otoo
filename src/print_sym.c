@@ -34,9 +34,9 @@ int			print_sym(void *content, t_data *data)
 	if (data->flag & NM_JOPT || data->flag & NM_uOPT)
 		ft_printf("%s\n", sym->name);
 	else if ((data->flag & NM_AOPT) && sym->type == 45)
-		ft_printf(" %c %02d %04d %s %s\n", sym->type, sym->sect, sym->debug,
+		ft_printf(" %c %02d %04d %s %s\n", sym->type, sym->sect, sym->d,
 		sym->desc, sym->name);
-	else 
+	else
 		ft_printf(" %c %s\n", sym->type, sym->name);
 	return (0);
 }

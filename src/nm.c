@@ -36,15 +36,22 @@ static void		data_init(t_data *data)
 	hashtab_init(&data->tabsections, 100, &ft_hash_string);
 }
 
-int				main(int argc, char **argv)
+static int		get_filesize(char *name, struct stat *buf, int *fd)
 {
-	int			fd;
-	t_data		data;
-	int			i;
-	char		*ptr;
-	struct stat buf;
+	if ((*fd = open(name, O_RDONLY)) < 0)
+		ft_dprintf(2, "nm : No such file %s\n", name);
+	return (fstat(*fd, buf));
+}
+	
 
-//	DG("nm start");
+int			main(int argc, char **argv)
+{
+	t_data		data;
+	int		i;
+	int		fd;
+	char		*ptr;
+	struct stat 	buf;
+
 	data_init(&data);
 	cliopts_get(argv, g_nm_opts, &data);
 	i = data.av_data - argv;
@@ -54,11 +61,9 @@ int				main(int argc, char **argv)
 		data.filename = argv[i++];
 		if (argc - (data.av_data - argv) > 1)
 			ft_printf("\n%s:\n", data.filename);
-		if ((fd = open(data.filename, O_RDONLY)) < 0)
-			ft_dprintf(2, "nm : No such file %s\n", data.filename);
-		if (fstat(fd, &buf) < 0)
+		if (get_filesize(data.filename, &buf, &fd) < 0)
 			continue;
-		if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
+		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
 			continue;
 		parse_archi(ptr, &data);
 		if (munmap(ptr, buf.st_size) < 0)

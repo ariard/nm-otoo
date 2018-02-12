@@ -22,18 +22,17 @@ void		handle_64(char *ptr, t_data *data)
 	data->bits = 64;
 	ncmds = ((struct mach_header_64 *)ptr)->ncmds;
 	lc = (void *)ptr + sizeof(struct mach_header_64);
-	i = 0;
+	i = -1;
 	nsects = 1;
-	while (i < ncmds)
+	while (++i < ncmds)
 	{
 		if (lc->cmd == LC_SEGMENT_64)
-			parse_segment64((struct segment_command_64 *)lc, &data->tabsections, &nsects);
+			parse_segment64((struct segment_command_64 *)lc,
+			&data->tabsections, &nsects);
 		if (lc->cmd == LC_SYMTAB)
 			parse_symtab((struct symtab_command *)lc, ptr, data);
 		lc = (void *)lc + lc->cmdsize;
-		i++;
 	}
-//	hashtab_print(&data->tabsections, sections_print);
 	symtab_sort(&data->lstsym, data);
 	ft_lstiter(data->lstsym, &print_sym, data);
 	hashtab_clean(&data->tabsections, sections_del);

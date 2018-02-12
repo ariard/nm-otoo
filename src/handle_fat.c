@@ -29,10 +29,10 @@ long int	sysarchi_extract(int narchs, void *tmp, t_data *data)
 
 void		handle_fat(char *ptr, t_data *data)
 {
-	int					narchs;
+	int			narchs;
 	const NXArchInfo	*arch;
-	void				*tmp;
-	long int				i;
+	void			*tmp;
+	long int		i;
 
 	narchs = ntohl(((struct fat_header *)ptr)->nfat_arch);
 	tmp = ptr + sizeof(struct fat_header);
