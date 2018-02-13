@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 21:36:30 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:23:54 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void			parse_segment32(struct segment_command *segm,
 
 	check_32(segm, data);
 	segsects = segm->nsects;
-	sect = (void *)segm + sizeof(struct segment_command);
+	MC(sect = (void *)segm + sizeof(struct segment_command));
 	while (segsects--)
 	{
 		sections_init(&section);
@@ -47,6 +47,6 @@ void			parse_segment32(struct segment_command *segm,
 		hashtab_insert(tabsections, ft_lstnew(&section, sizeof(t_section)),
 			key, sections_match);
 		ft_strdel(&key);
-		sect = (void *)sect + sizeof(struct section);
+		MC(sect = (void *)sect + sizeof(struct section));
 	}
 }

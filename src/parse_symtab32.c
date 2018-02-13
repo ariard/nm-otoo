@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 19:27:55 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 21:36:43 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:42:09 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static void		sym_stab(t_sym *sym, struct nlist el)
 }
 
 static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
-				t_hashtab *sections)
+				t_data *data)
 {
-	sym->name = stringtable + el.n_un.n_strx;
+	MC(sym->name = stringtable + el.n_un.n_strx);
 	if (N_STAB & el.n_type)
 		sym_stab(sym, el);
 	else
@@ -50,7 +50,7 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
 			? 'C' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_ABS) ? 'A' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_SECT) ?
-			sym_resolve(el.n_sect, sections) : sym->type;
+			sym_resolve(el.n_sect, &data->tabsections) : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_PBUD) ? 'U' : sym->type;
 		sym->type = ((N_TYPE & el.n_type) == N_INDR) ? 'I' : sym->type;
 		if (!(BIT(el.n_type, 0) & N_EXT))
@@ -62,20 +62,21 @@ static void		sym_info(t_sym *sym, char *stringtable, struct nlist el,
 void			parse_symtab32(struct symtab_command *tabsym,
 				char *ptr, t_data *data)
 {
-	int		i;
-	int		nsyms;
-	char	*stringtable;
-	t_sym	sym;
+	int				i;
+	int				nsyms;
+	char			*stringtable;
+	t_sym			sym;
+	struct nlist	*el;
 
 	check_sym(tabsym, data);
-	stringtable = (void *)ptr + tabsym->stroff;
+	MC(stringtable = (void *)ptr + tabsym->stroff);
 	nsyms = tabsym->nsyms;
 	i = -1;
 	while (++i < nsyms)
 	{
 		sym_init(&sym);
-		sym_info(&sym, stringtable, (((struct nlist *)((void *)ptr
-			+ tabsym->symoff))[i]), &data->tabsections);
+		MC(el = ((struct nlist *)((void *)ptr + tabsym->symoff)));
+		sym_info(&sym, stringtable, el[i], data);
 		ft_lsteadd(&data->lstsym, ft_lstnew(&sym, sizeof(t_sym)));
 	}
 }

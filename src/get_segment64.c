@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 22:02:07 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:40:31 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void		get_section_text64(struct segment_command_64 *segm,
 
 	check_64(segm, data);
 	segsects = segm->nsects;
-	sect = (void *)segm + sizeof(struct segment_command_64);
+	MC(sect = (void *)segm + sizeof(struct segment_command_64));
 	while (segsects--)
 	{
 		if (!ft_strcmp("__text", sect->sectname) && !(data->flag &
@@ -31,7 +31,7 @@ static void		get_section_text64(struct segment_command_64 *segm,
 			OT_DOPT))
 			ft_hexdump64(sect, ptr, data, "Contents of (__DATA,__data) "
 				"section");
-		sect = (void *)sect + sizeof(struct section_64);
+		MC(sect = (void *)sect + sizeof(struct section_64));
 	}
 }
 
@@ -46,13 +46,13 @@ void			get_segment64(char *ptr, t_data *data)
 		ft_printf("%s:\n", data->filename);
 	data->bits = 64;
 	ncmds = ((struct mach_header_64 *)ptr)->ncmds;
-	lc = (void *)ptr + sizeof(struct mach_header_64);
+	MC(lc = (void *)ptr + sizeof(struct mach_header_64));
 	i = 0;
 	while (i++ < ncmds)
 	{
 		if (lc->cmd == LC_SEGMENT_64)
 			get_section_text64((struct segment_command_64 *)lc, ptr,
 				data);
-		lc = (void *)lc + lc->cmdsize;
+		MC(lc = (void *)lc + lc->cmdsize);
 	}
 }

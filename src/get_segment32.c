@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 21:30:09 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:40:16 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void		get_section_text32(struct segment_command *segm,
 
 	check_32(segm, data);
 	segsects = segm->nsects;
-	sect = (void *)segm + sizeof(struct segment_command);
+	MC(sect = (void *)segm + sizeof(struct segment_command));
 	while (segsects--)
 	{
 		if (!ft_strcmp("__text", sect->sectname))
@@ -30,7 +30,7 @@ static void		get_section_text32(struct segment_command *segm,
 			OT_DOPT))
 			ft_hexdump32(sect, ptr, data, "Contents of (__DATA,__data) "
 				"section");
-		sect = (void *)sect + sizeof(struct section);
+		MC(sect = (void *)sect + sizeof(struct section));
 	}
 }
 
@@ -45,13 +45,13 @@ void			get_segment32(char *ptr, t_data *data)
 		ft_printf("%s:\n", data->filename);
 	data->bits = 32;
 	ncmds = ((struct mach_header *)ptr)->ncmds;
-	lc = (void *)ptr + sizeof(struct mach_header);
+	MC(lc = (void *)ptr + sizeof(struct mach_header));
 	i = 0;
 	while (i++ < ncmds)
 	{
 		if (lc->cmd == LC_SEGMENT)
 			get_section_text32((struct segment_command *)lc, ptr,
 				data);
-		lc = (void *)lc + lc->cmdsize;
+		MC(lc = (void *)lc + lc->cmdsize);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 22:01:15 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:40:32 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,9 @@
 
 # define BIT(x, y)		((x) & (1<<(y)))
 
-# define MMAP(x, y, z)		(x = mmap(0, y, PROT_READ, MAP_PRIVATE, z, 0))
+# define MMAP(x, y, z)	(x = mmap(0, y, PROT_READ, MAP_PRIVATE, z, 0))
+
+# define MC(x)			sanitize(x, sizeof(x), data);
 
 struct	s_data
 {
@@ -147,5 +149,7 @@ void	get_segment64(char *ptr, t_data *data);
 void	get_segment32(char *ptr, t_data *data);
 void	display_header(char *ptr, t_data *data);
 void	display_header32(char *ptr, t_data *data);
+
+void	sanitize(void *ptr, size_t size, t_data *data);
 
 #endif

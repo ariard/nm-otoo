@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 21:58:14 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:34:48 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void		parse_archi(char *ptr, t_data *data)
 	unsigned int		magic_number;
 	int					filetype;
 
+	MC(ptr);
 	magic_number = *(unsigned int *)ptr;
 	filetype = ((struct mach_header *)ptr)->filetype;
 	if (!ft_strncmp((char *)ptr, ARMAG, SARMAG))

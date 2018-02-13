@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:29:25 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 21:41:14 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:28:44 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void		handle_32(char *ptr, t_data *data)
 
 	data->bits = 32;
 	ncmds = ((struct mach_header *)ptr)->ncmds;
-	lc = (void *)ptr + sizeof(struct mach_header);
+	MC(lc = (void *)ptr + sizeof(struct mach_header));
 	i = -1;
 	nsects = 1;
 	while (++i < ncmds)
@@ -32,7 +32,7 @@ void		handle_32(char *ptr, t_data *data)
 		if (lc->cmd == LC_SYMTAB)
 			parse_symtab32((struct symtab_command *)lc,
 			ptr, data);
-		lc = (void *)lc + lc->cmdsize;
+		MC(lc = (void *)lc + lc->cmdsize);
 	}
 	symtab_sort(&data->lstsym, data);
 	ft_lstiter(data->lstsym, &print_sym, data);

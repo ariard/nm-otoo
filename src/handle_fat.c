@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/12 22:02:32 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/13 21:23:00 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ long int	sysarchi_extract(int narchs, void *tmp, t_data *data)
 	{
 		if (data->cpu == ntohl(((struct fat_arch *)tmp)->cputype))
 			return (ntohl(((struct fat_arch *)tmp)->offset));
-		tmp = (void *)tmp + sizeof(struct fat_arch);
+		MC(tmp = (void *)tmp + sizeof(struct fat_arch));
 	}
 	return (0);
 }
@@ -40,7 +40,7 @@ void		handle_fat(char *ptr, t_data *data)
 	long int			i;
 
 	narchs = ntohl(((struct fat_header *)ptr)->nfat_arch);
-	tmp = ptr + sizeof(struct fat_header);
+	MC(tmp = ptr + sizeof(struct fat_header));
 	if ((i = sysarchi_extract(narchs, tmp, data)))
 		return (parse_archi((void *)ptr + i, data));
 	otool_special(data);
@@ -57,6 +57,6 @@ void		handle_fat(char *ptr, t_data *data)
 			ft_printf("%s:\n", data->filename);
 		parse_archi((void *)ptr + ntohl(((struct fat_arch *)tmp)->offset),
 			data);
-		tmp = (void *)tmp + sizeof(struct fat_arch);
+		MC(tmp = (void *)tmp + sizeof(struct fat_arch));
 	}
 }

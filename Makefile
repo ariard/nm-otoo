@@ -6,7 +6,7 @@
 #    By: ariard <ariard@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/03 00:35:24 by ariard            #+#    #+#              #
-#    Updated: 2018/02/12 22:01:17 by ariard           ###   ########.fr        #
+#    Updated: 2018/02/13 21:40:33 by ariard           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ handle_fat.c\
 nm.c\
 otool.c\
 check_file.c\
+sanitize.c\
 get_segment32.c\
 get_segment64.c\
 display_header.c\
