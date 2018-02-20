@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 22:17:23 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/13 21:23:54 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 18:27:44 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void			parse_segment32(struct segment_command *segm,
 	t_section			section;
 	char				*key;
 
-	check_32(segm, data);
+	EV(check_32(segm, data));
 	segsects = segm->nsects;
 	MC(sect = (void *)segm + sizeof(struct segment_command));
 	while (segsects--)

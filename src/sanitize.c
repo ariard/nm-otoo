@@ -6,24 +6,20 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 21:13:59 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/20 15:18:22 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 18:26:38 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-void	sanitize(void *ptr, size_t size, t_data *data)
+char	sanitize(void *ptr, size_t size, t_data *data)
 {
-	if (!ptr)
+	if (!ptr || ((char *)ptr < data->origin || (char *)ptr + size > data->origin
+		+ data->filesize))
 	{
-		ft_dprintf(2, "%s : file corrupted", (data->bin) ? "nm" : "otool");
-		exit(1);
+		ft_dprintf(2, "%s : %s corrupted", (data->bin) ? "nm" : "otool",
+			data->filename);
+		return (1);
 	}
-	if ((char *)ptr < data->origin || (char *)ptr + size > data->origin
-		+ data->filesize)
-	{
-		ft_dprintf(2, "%s : %s corrupted", data->filename,
-			(data->bin) ? "nm" : "otool");
-		exit(1);
-	}
+	return (0);
 }

@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/20 15:26:04 by ariard           ###   ########.fr       */
+/*   Created: 2018/02/20 19:51:30 by ariard            #+#    #+#             */
+/*   Updated: 2018/02/20 20:46:37 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
 static void	handle_32and64(unsigned int magic_number, char *ptr,
-		t_data *data)
+			t_data *data)
 {
 	const NXArchInfo	*arch;
 
@@ -27,12 +27,14 @@ static void	handle_32and64(unsigned int magic_number, char *ptr,
 		(data->bin) ? handle_32(ptr, data) : get_segment32(ptr, data);
 	else
 	{
-		MC(ptr + 1)
-		MC(ptr + 2)
+		MC(ptr + 1);
+		MC(ptr + 2);
 		arch = NXGetArchInfoFromCpuType(ntohl(*((int *)ptr + 1)),
 			ntohl(*((int *)ptr + 2)));
-		ft_dprintf(2, "%s : Not supported\n", (arch) ? arch->name
-			: "(unknown)");
+		ft_dprintf(2, " %s %s : %s not supported\n", data->filename,
+			(data->bin) ? "nm" : "otool", (arch) ? arch->name : "(unknown)");
+		if (arch)
+			NXFreeArchInfo(arch);
 	}
 }
 
@@ -51,7 +53,7 @@ void		parse_archi(char *ptr, t_data *data)
 	else if (filetype ^ MH_OBJECT && filetype ^ MH_EXECUTE
 		&& filetype ^ MH_DYLIB && filetype ^ MH_FVMLIB
 		&& filetype ^ MH_DYLINKER && filetype ^ MH_DYLIB_STUB)
-		ft_dprintf(2, "%s : %s isn't a valid object file", (data->bin) ?
+		ft_dprintf(2, "%s : %s isn't a valid object file\n", (data->bin) ?
 		"nm" : "otool", data->filename);
 	else
 		handle_32and64(magic_number, ptr, data);

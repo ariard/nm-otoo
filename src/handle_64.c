@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:28:41 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/20 15:24:34 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 20:42:26 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void		handle_64(char *ptr, t_data *data)
 			&data->tabsections, &nsects, data);
 		if (lc->cmd == LC_SYMTAB)
 			parse_symtab((struct symtab_command *)lc, ptr, data);
-		MC(lc = (void *)lc + lc->cmdsize);
+		MBC(lc = (void *)lc + lc->cmdsize);
 	}
 	symtab_sort(&data->lstsym, data);
 	ft_lstiter(data->lstsym, &print_sym, data);

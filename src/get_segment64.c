@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 21:59:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/20 15:25:38 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 18:26:48 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void		get_section_text64(struct segment_command_64 *segm,
 	struct section_64	*sect;
 	int					segsects;
 
-	check_64(segm, data);
+	EV(check_64(segm, data));
 	segsects = segm->nsects;
 	MC(sect = (void *)segm + sizeof(struct segment_command_64));
 	while (segsects--)

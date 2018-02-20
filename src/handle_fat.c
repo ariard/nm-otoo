@@ -6,44 +6,35 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 18:30:07 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/13 21:23:00 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 20:33:00 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-long int	sysarchi_extract(int narchs, void *tmp, t_data *data)
+static uint32_t		extract_offset(void *tmp, t_data *data)
 {
-	int		i;
-
-	i = 0;
-	while (i++ < narchs)
+	if (((struct fat_arch *)tmp)->offset == 0)
 	{
-		if (data->cpu == ntohl(((struct fat_arch *)tmp)->cputype))
-			return (ntohl(((struct fat_arch *)tmp)->offset));
-		MC(tmp = (void *)tmp + sizeof(struct fat_arch));
+		ft_dprintf(2, "%s: %s bad offset in header\n", (data->bin) ?
+			"nm" : "otool", data->filename);
+		return (0);
 	}
-	return (0);
+	return (ntohl(((struct fat_arch *)tmp)->offset));
 }
 
-static void	otool_special(t_data *data)
+static void			otool_special(t_data *data)
 {
 	if (!data->bin)
 		data->flag |= OT_FOPT;
 }
 
-void		handle_fat(char *ptr, t_data *data)
+static void			branch_all(char *ptr, void *tmp, int narchs, t_data *data)
 {
-	int					narchs;
+	int					i;
 	const NXArchInfo	*arch;
-	void				*tmp;
-	long int			i;
+	uint32_t			off;
 
-	narchs = ntohl(((struct fat_header *)ptr)->nfat_arch);
-	MC(tmp = ptr + sizeof(struct fat_header));
-	if ((i = sysarchi_extract(narchs, tmp, data)))
-		return (parse_archi((void *)ptr + i, data));
-	otool_special(data);
 	i = 0;
 	while (i++ < narchs)
 	{
@@ -55,8 +46,34 @@ void		handle_fat(char *ptr, t_data *data)
 				? arch->name : "unknown");
 		else
 			ft_printf("%s:\n", data->filename);
-		parse_archi((void *)ptr + ntohl(((struct fat_arch *)tmp)->offset),
-			data);
+		if (arch)
+			NXFreeArchInfo(arch);
+		if (!(off = extract_offset(tmp, data)))
+			return ;
+		parse_archi((void *)ptr + off, data);
 		MC(tmp = (void *)tmp + sizeof(struct fat_arch));
 	}
+}
+
+void				handle_fat(char *ptr, t_data *data)
+{
+	int			i;
+	int			narchs;
+	void		*tmp;
+	uint32_t	off;
+
+	narchs = ntohl(((struct fat_header *)ptr)->nfat_arch);
+	MC(tmp = ptr + sizeof(struct fat_header));
+	i = -1;
+	while (++i < narchs)
+	{
+		if (!(off = extract_offset(tmp, data)))
+			return ;
+		if (data->cpu == ntohl(((struct fat_arch *)tmp)->cputype))
+			return (parse_archi(ptr + off, data));
+		MC(tmp = (void *)tmp + sizeof(struct fat_arch));
+	}
+	MC(tmp = ptr + sizeof(struct fat_header));
+	otool_special(data);
+	branch_all(ptr, tmp, narchs, data);
 }

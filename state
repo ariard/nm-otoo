@@ -1,7 +1,10 @@
-- print archive.a on multi-files
-- 32-bit data otool -h
-- sanitize inputs => script test
-- check on !
+- clean repo
+- commit end
+- new repo
+- test pdf
+- test all
+- test bonus
+- test hardening
 
 LESSONS:
 	- (SANITIZE FUCKING INPUTS)

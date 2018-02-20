@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:29:11 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/20 15:35:28 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 20:43:29 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,13 @@
 
 # define MMAP(x, y, z)	(x = mmap(0, y, PROT_READ, MAP_PRIVATE, z, 0))
 
-# define MC(x)			sanitize(x, sizeof(x), data);
+# define MC(x)			if (sanitize(x, sizeof(x), data)) { return ; }
+# define MBC(x)			if (sanitize(x, sizeof(x), data)) { break ; }
+# define MCS2(x)		if (sanitize(x, sizeof(x), data)) { return (1) ; }
+# define EV(x)			if (x) { return ; }
+
+# define NOT_AR(x)		ft_strncmp(x, ARMAG, SARMAG)
+		
 
 struct	s_data
 {
@@ -135,9 +141,9 @@ int		sections_print(const void *data_ref);
 void	sections_init(t_section *section);
 int		sections_del(void *data_ref);
 
-void	check_32(struct segment_command *segm, t_data *data);
-void	check_64(struct segment_command_64 *segm, t_data *data);
-void	check_sym(struct symtab_command *tab, t_data *data);
+char	check_32(struct segment_command *segm, t_data *data);
+char	check_64(struct segment_command_64 *segm, t_data *data);
+char	check_sym(struct symtab_command *tab, t_data *data);
 
 int		print_debug(void *content, t_data *data);
 
@@ -150,6 +156,6 @@ void	get_segment32(char *ptr, t_data *data);
 void	display_header(char *ptr, t_data *data);
 void	display_header32(char *ptr, t_data *data);
 
-void	sanitize(void *ptr, size_t size, t_data *data);
+char	sanitize(void *ptr, size_t size, t_data *data);
 
 #endif

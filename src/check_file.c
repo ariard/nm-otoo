@@ -6,53 +6,56 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/12 21:17:47 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/20 15:17:52 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 19:59:14 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "nm.h"
 
-void		check_32(struct segment_command *segm, t_data *data)
+char		check_32(struct segment_command *segm, t_data *data)
 {
 	char	*tmp;
 
 	tmp = data->origin;
-	MC(segm)
+	MCS2(segm);
 	tmp += segm->fileoff + segm->filesize;
 	if (tmp > (data->origin + data->filesize))
 	{
 		ft_dprintf(2, "%s: %s truncated or malformed object\n", (data->bin) ?
 			"nm" : "otool", data->filename);
-		exit(1);
+		return (1);
 	}
+	return (0);
 }
 
-void		check_64(struct segment_command_64 *segm, t_data *data)
+char		check_64(struct segment_command_64 *segm, t_data *data)
 {
 	char	*tmp;
 
 	tmp = data->origin;
-	MC(segm)
+	MCS2(segm);
 	tmp += segm->fileoff + segm->filesize;
 	if (tmp > (data->origin + data->filesize))
 	{
 		ft_dprintf(2, "%s: %s truncated or malformed object\n", (data->bin) ?
 			"nm" : "otool", data->filename);
-		exit(1);
+		return (1);
 	}
+	return (0);
 }
 
-void		check_sym(struct symtab_command *tab, t_data *data)
+char		check_sym(struct symtab_command *tab, t_data *data)
 {
 	char	*tmp;
 
 	tmp = data->origin;
-	MC(tab)
+	MCS2(tab);
 	tmp += tab->strsize + tab->stroff;
 	if (tmp > (data->origin + data->filesize))
 	{
 		ft_dprintf(2, "%s: %s truncated or malformed object\n", (data->bin) ?
 			"nm" : "otool", data->filename);
-		exit(1);
+		return (1);
 	}
+	return (0);
 }

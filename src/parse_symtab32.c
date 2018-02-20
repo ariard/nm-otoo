@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 19:27:55 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/13 21:42:09 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 18:27:33 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void			parse_symtab32(struct symtab_command *tabsym,
 	t_sym			sym;
 	struct nlist	*el;
 
-	check_sym(tabsym, data);
+	EV(check_sym(tabsym, data));
 	MC(stringtable = (void *)ptr + tabsym->stroff);
 	nsyms = tabsym->nsyms;
 	i = -1;
