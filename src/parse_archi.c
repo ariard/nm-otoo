@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 15:19:15 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/13 21:34:48 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 15:26:04 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ static void	handle_32and64(unsigned int magic_number, char *ptr,
 		(data->bin) ? handle_32(ptr, data) : get_segment32(ptr, data);
 	else
 	{
+		MC(ptr + 1)
+		MC(ptr + 2)
 		arch = NXGetArchInfoFromCpuType(ntohl(*((int *)ptr + 1)),
 			ntohl(*((int *)ptr + 2)));
 		ft_dprintf(2, "%s : Not supported\n", (arch) ? arch->name
@@ -42,7 +44,7 @@ void		parse_archi(char *ptr, t_data *data)
 	MC(ptr);
 	magic_number = *(unsigned int *)ptr;
 	filetype = ((struct mach_header *)ptr)->filetype;
-	if (!ft_strncmp((char *)ptr, ARMAG, SARMAG))
+	if (!ft_strncmp(ptr, ARMAG, SARMAG))
 		handle_ar(ptr, data);
 	else if (magic_number == FAT_CIGAM)
 		handle_fat(ptr, data);

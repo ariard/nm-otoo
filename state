@@ -1,0 +1,8 @@
+- print archive.a on multi-files
+- 32-bit data otool -h
+- sanitize inputs => script test
+- check on !
+
+LESSONS:
+	- (SANITIZE FUCKING INPUTS)
+	- RAND on RAND to corrupt file

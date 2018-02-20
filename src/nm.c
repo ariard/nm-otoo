@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 17:26:53 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/13 21:11:01 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 15:35:48 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,12 +82,12 @@ int				main(int argc, char **argv)
 	while (argv[i] && i <= argc)
 	{
 		data.filename = argv[i++];
-		if (argc - (data.av_data - argv) > 1)
-			ft_printf("\n%s:\n", data.filename);
 		if (get_filesize(data.filename, &buf, &fd) < 0)
 			continue;
 		if (MMAP(ptr, buf.st_size, fd) == MAP_FAILED)
 			continue;
+		if ((argc - (data.av_data - argv) > 1) && ft_strncmp(ptr, ARMAG, SARMAG))
+			ft_printf("\n%s:\n", data.filename);
 		launch_parser(ptr, &data, buf.st_size);
 		if (munmap(ptr, buf.st_size) < 0)
 			continue;

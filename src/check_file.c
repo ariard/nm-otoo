@@ -6,7 +6,7 @@
 /*   By: ariard <ariard@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/12 21:17:47 by ariard            #+#    #+#             */
-/*   Updated: 2018/02/13 21:34:47 by ariard           ###   ########.fr       */
+/*   Updated: 2018/02/20 15:17:52 by ariard           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void		check_32(struct segment_command *segm, t_data *data)
 	char	*tmp;
 
 	tmp = data->origin;
+	MC(segm)
 	tmp += segm->fileoff + segm->filesize;
 	if (tmp > (data->origin + data->filesize))
 	{
@@ -31,6 +32,7 @@ void		check_64(struct segment_command_64 *segm, t_data *data)
 	char	*tmp;
 
 	tmp = data->origin;
+	MC(segm)
 	tmp += segm->fileoff + segm->filesize;
 	if (tmp > (data->origin + data->filesize))
 	{
@@ -45,6 +47,7 @@ void		check_sym(struct symtab_command *tab, t_data *data)
 	char	*tmp;
 
 	tmp = data->origin;
+	MC(tab)
 	tmp += tab->strsize + tab->stroff;
 	if (tmp > (data->origin + data->filesize))
 	{
